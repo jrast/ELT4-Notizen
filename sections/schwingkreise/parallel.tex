@@ -1,0 +1,178 @@
+\subsection{Freie Schwingung von Parallelschwingkreisen}
+\index{Schwingkreis!parallel}
+\begin{wrapfigure}{l}{0.5\textwidth}
+	\centering
+	\input{tikzPictures/ParallelSKbeschriftet}
+	\caption{Parallelschwingkreis}
+	\label{fig:ParallelSkBeschriftet}
+\end{wrapfigure}
+Im folgenden werden die Gleichungen für die freie Schwingung eines
+Parallelschwingkreises nach Abbildung \ref{fig:ParallelSkBeschriftet}
+hergeleitet.
+\\
+
+\textbf{Gegeben:} $R,L,C, u_c(0), i_l(0)$\\
+
+\textbf{Gesucht:} (primär) $u(t)$ \\
+
+\begin{align}
+ i_L + i_R + i_C = 0 
+ && \text{Knotengleichung} \\
+ \frac{1}{L}\int{u(t)}dt + \frac{u(t)}{R} + C \frac{du(t)}{dt} = 0 
+ && \text{Grundformeln eingesezt}\\
+ \frac{u}{L} + \frac{\dot{u}}{R} + C \ddot{u} = 0
+ && \text{abgeleitet} \\
+ \boxed{\ddot{u} + \frac{1}{RC}\dot{u} + \frac{1}{LC}u = 0}
+ && \text{Lineare DGL} \label{eqn:ParallelLinDGL}
+\end{align}
+
+Die lineare DGL (\ref{eqn:ParallelLinDGL}) beschreibt das verhalten des
+Schwingkreises. Diese Gleichung wird in den nächsten Schritten gelöst, erst
+werden aber einige Kenngrössen angesehen.
+
+\subsubsection{Kenngrössen}
+\index{Kenngrössen!Parallelschwingkreis}
+\begin{description}
+[style=multiline,topsep=0pt,leftmargin=4.5cm,rightmargin=2cm]
+\item[Resonanzfrequenz]
+	\index{Resonanzfrequenz!Parallelschwingkreis}
+	$\omega_r = \frac{1}{\sqrt{LC}} $\\
+	denn es gilt:
+	$\quad \underline{Y_C} + \underline{Y_L} = 0  \quad \rightarrow \quad j
+	\omega C + \frac{1}{j \omega L} = 0$ \\
+	folglich: $j\underbrace{(\omega C + \frac{1}{\sqrt{LC}})}_{=0} = 0$
+\item[Güte Q] 
+	\index{Güte!Parallelschwingkreis}
+	$Q = R \cdot \sqrt{\frac{C}{L}} \quad$ gilt nur für den
+	Parallelschwingkreis!
+\item[Dämpfungsgrad $\xi$]
+	\index{Dämpfungsgrad!Parallelschwingkreis}
+	$\xi = \frac{1}{2Q}$
+\end{description}
+
+
+\subsubsection{Lösen der DGL}
+Als erstes werden die Kenngrössen in die DGL eingestzt:
+\begin{align}
+\boxed{\ddot{u} + \frac{\omega_r}{Q}\dot{u} + \omega_r^2 \cdot u = 0}
+\end{align}
+Da es sich um eine lineare Differentialgleichung mit konstanten Koeffizienten
+handelt, wird folgender Ansatz gewählt: $u = U \cdot e^{\alpha t}$ \\
+Daraus folgt: 
+
+\begin{align}
+\alpha^2 U e^{\alpha t} + \frac{\omega_r}{Q}\alpha U e^{\alpha t} + \omega_r^2 U
+e^{\alpha t} = 0 \\
+\underbrace{U e^{\alpha t}}_{\neq 0} \cdot (\underbrace{\alpha^2 +
+\frac{\omega_r}{Q} \alpha + \omega_r^2}_{\overset{!}{=} 0}) = 0
+\label{eqn:ParallelLinDGLUmgeformt}
+\end{align}
+
+Da der Ausdruck in der Klammer der Gleichung \ref{eqn:ParallelLinDGLUmgeformt}
+null ergeben muss, kann diese Gleichung mit Hilfe der "`Mitternachtsformel"'
+gelöst werden (nebenbei: wenn der Ausdruck vor der Klammer null wäre, wäre die
+Lösung trivial):
+
+\begin{align}
+\alpha_{1,2} &= \frac{-\frac{\omega_r}{Q} \pm \sqrt{\frac{\omega_r^2}{Q^2} -
+4\omega_r^2}}{2} = - \frac{\omega_r}{2Q} \pm \sqrt{\frac{\omega_r^2}{4Q^2} -
+\omega_r^2} \\
+ &= -\frac{\omega_r}{2Q} \pm \omega_r \sqrt{\frac{1}{4Q^2} -1}
+\end{align}
+
+\textbf{Fallunterscheidung:} 
+$\frac{1}{4Q^2} -1 \begin{cases}
+ > 0 & (1)\\
+ = 0 & (2) \\
+ < 0 & (3)
+\end{cases}$
+
+\begin{description}
+[style=multiline,topsep=0pt,leftmargin=1.5cm]
+\item[(1)]
+$\Longrightarrow Q < \frac{1}{2} \quad (\xi > 1)$ \newline
+$\Longrightarrow \alpha_1, \alpha_2$ reell
+\begin{align}
+\boxed{u(t) = U_1 e^{\alpha_1 t} + U_2 e^{\alpha_2 t}}
+\end{align}
+mit $\alpha_{1,2} = -\frac{\omega_r}{Q} \pm \sqrt{\frac{1}{4Q^2}-1} < 0$ \\
+$\longrightarrow$ 2 abklingende Eponentialfunktionen, $U_{1,2}$ aus
+Anfangsbedingungen.
+
+\item[(2)]
+$\Longrightarrow Q = \frac{1}{2} \quad (\xi = 1)$ \newline
+$\Longrightarrow \alpha_{1,2} = -\frac{\omega_r}{2Q} \pm 0 = -\omega_r$
+\begin{align}
+\boxed{u(t) = U_1 e^{-\omega_r t} + \beta_u t e^{-\omega_r t}}
+\end{align} 
+mit $U_1, \beta$ aus den Anfangsbediungungen, $[\beta] = \frac{V}{s}$
+
+\item[(3)]
+$\Longrightarrow Q > \frac{1}{2} \quad (\xi < 1)$ \newline
+$\Longrightarrow \alpha_{1,2} = \frac{\omega_r}{Q} \pm
+j\underbrace{\omega_r\sqrt{1-\frac{1}{4Q^2}}}_{=w_0} = -\frac{\omega_r}{2Q} \pm
+j \omega_0 \quad $ Eigenfrequenz $\omega_0 < \omega_r$
+\begin{align}
+\boxed{u(t) = \underline{U_1} e^{\alpha_1 t} + \underline{U_2} e^{\alpha_2 t}}
+\end{align}
+mit $\underline{U_2} = \underline{U_1}^\ast$ \newline
+reeller Lösungsansatz:
+\begin{equation}
+\addtolength{\fboxsep}{10pt}
+\boxed{
+	\begin{split}
+		u(t) &= e^{-\frac{\omega_r}{2Q}t} \cdot (U_a \cos(\omega_0 t) + 
+				U_b \sin(\omega_0 t))\\
+ 		&= U_0 \cdot e^{-\frac{\omega_r}{2Q}t} \cdot \cos(\omega_0 t + \varphi)
+	\end{split}\label{eqn:ParallelSKreellerAnsatz}
+	}
+\end{equation}
+mit $U_0 = \sqrt{U_a^2 + U_b^2}, \quad \varphi = -\arctan(\frac{U_b}{U_a}) (+
+\pi, \text{falls } U_a < 0)$ \newline
+Oft ist es einfacher die erste Gleichung von \ref{eqn:ParallelSKreellerAnsatz}
+zu verwenden, da sich damit die Anfangsbedingungen einfacher einsetzten lassen.
+\end{description}
+
+
+\subsubsection{Beispiel}
+\begin{wrapfigure}{l}{0.5\textwidth}
+	\centering
+	\input{tikzPictures/ParallelSKbeispiel}
+	\caption{Beispiel Parallelschwingkreis}
+	\label{fig:ParallelSkBsp}
+\end{wrapfigure}
+In diesem Beispiel betrachten wir die Schaltung der nebenstehenden Schaltung.
+Dabei wird davon ausgegangen dass der Schalter S vor dem Zeitpunkt $t = 0$ sehr
+lange geschlossen war und somit der Kondensator aufgeladen ist. Zum Zeitpunkt
+$t=0$ wird dann der Schalter umgelegt. \textbf{Gesucht} wird $u(t)$ für $t \geq
+0$, \textbf{bekannt} ist die Spannung $u(0) = U_q$ und der Strom $i_L(0) = 0$
+(folgt direkt aus den Tatsachen: keine Spannungssprünge an C und keine
+Stromsprünge an L). \\
+
+Ansatz:
+\begin{align*}
+i_l + i_R + i_C &= 0
+\end{align*}
+Für $t=0$ folgt daraus:
+\begin{align}
+0 + \frac{u(0)}{R} + C \cdot \dot{u}(0) &= 0 \nonumber \\
+\frac{U_q}{R} + C \cdot \dot{u}(0) &= 0 \nonumber \\
+\boxed{\dot{u}(0) = -\frac{U_q}{RC}}
+\end{align}
+Unter der Annahme dass $Q > 0.5$ ist, folgt daraus:
+\begin{align}
+u(t) &= e^{-\frac{\omega_r}{2Q}\cdot t} \cdot \left(U_a \cos(\omega_0 t) + U_b
+\sin(\omega_0 t) \right) \nonumber \\
+u(0) &= 1 \cdot \left(U_a \cdot 1 + U_b \cdot 0 \right) \nonumber \\
+&\boxed{= U_a = U_q} \\
+\dot{u}(t) &= -\frac{\omega_r}{2Q} e^{-\frac{\omega_r}{2Q}t} \cdot \left(
+U_q \cos(\omega_0 t) + U_b \sin(\omega_0 t)\right) \nonumber \\
+&\quad + e^{-\frac{\omega_r}{2Q}t} \cdot \left( -\omega_0 U_q
+\sin(\omega_0 t) + \omega_0 U_b \cos(\omega_0 t)\right) \nonumber \\
+\dot{u}(0) &= -\frac{\omega_r}{2Q} \cdot 1 \cdot U_q + 1 \cdot \omega_0 \cdot
+U_b \overset{!}{=} -\frac{U_q}{RC}\nonumber
+\end{align}
+Löst man nun die letzte Gleichung nach $U_b$ auf, so erhält man
+\begin{align}
+\boxed{U_b = -U_q \frac{1}{\sqrt{4Q^2-1}}}
+\end{align}

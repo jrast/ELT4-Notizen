@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Fri Feb 24 21:10:45 CET 2012
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=ELT4Notizen.tex
+outputFile=ELT4Notizen.pdf
+langSpell=de
+markDer=true
+srcDir=

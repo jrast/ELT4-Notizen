@@ -1,0 +1,31 @@
+\begin{tikzpicture}[circuit ee IEC, x=1.8cm, y=3cm, semithick]
+	\node (topR) [contact] at (0,1) {};
+	\node (bottomR) [contact] at (0,0) {};
+	\node (contactleft) [contact] at (0.85,1) {};
+	\node (contactright)[contact] at (1.15,1) {};
+	\node (contactin) [contact] at (1,0.87) {};
+	\node (bottomContact) [contact] at (1,0) {};
+	
+	\draw (topR) to [current direction={very near start, info=$i_R$},
+					 resistor={info=R}] (bottomR);
+	\draw (topR) -- ++(left:1) 
+		to [current direction={very near start, info=$i_L$},
+		    inductor={info=L}] ++(down:1)
+		-- +(right:1);	
+			
+	\draw (topR) -- (contactleft);
+	\draw (bottomR) -- (bottomContact);	
+	
+	\draw[shorten >= -0.2cm] (contactin) -- 
+		node[right=0.2cm, below] {S} (contactright);
+	
+	\draw (contactin) to[current direction={near start, info=$i_C$},
+						 capacitor={near end, info=C}] (bottomContact);
+	% Spannungsquelle
+	\draw (contactright) -- ++(right:1)
+		to [voltage source={info={$U_q$}}] ++(down:1)
+		-- (bottomContact);
+	% Spannungspfeil u(t)
+	\draw[-to, shorten <= 0.2cm,shorten >=0.2cm] (-1.2,1) 
+		to node[anchor=east] {$u(t)$} (-1.2,0);
+\end{tikzpicture}

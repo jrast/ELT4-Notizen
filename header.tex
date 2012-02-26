@@ -1,0 +1,51 @@
+\documentclass[11pt,twoside,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=2cm,includeheadfoot]{geometry}
+\usepackage[ngerman]{babel,varioref}
+
+\usepackage{amssymb,fancybox,graphicx,color,lastpage,wrapfig,fancyhdr,hyperref,verbatim,floatflt,makeidx}
+
+\usepackage[lofdepth,lotdepth]{subfig}
+
+\usepackage{amsmath}
+\numberwithin{equation}{subsection}
+
+
+\usepackage{enumitem}
+%\setlist{
+%	style=multiline,
+%	topsep=0pt,
+%	leftmargin=4.5cm,
+%	rightmargin=2cm
+%}
+
+
+\usepackage{tikz}
+\usetikzlibrary{circuits.ee.IEC}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Allgemeine Einstellungen %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%PDF Info
+\hypersetup{pdfauthor={\authorinfo},pdftitle={\titleinfo},colorlinks=false}
+\author{\authorinfo}
+\title{\titleinfo}
+
+%Kopf- und Fusszeile
+\pagestyle{fancy}
+\fancyhf{}
+%Linien oben und unten
+\renewcommand{\headrulewidth}{0.5pt} 
+\renewcommand{\footrulewidth}{0.5pt}
+
+\fancyhead[L]{\titleinfo{ }\tiny{(\versioninfo)}}
+%Kopfzeile rechts bzw. aussen
+\fancyhead[R]{Seite \thepage { }von \pageref{LastPage}}
+%Fusszeile links bzw. innen
+\fancyfoot[L]{\footnotesize{\authorinfo}}
+%Fusszeile rechts bzw. ausen
+\fancyfoot[R]{\footnotesize{\today}}
+
+% Einrücken verhindern versuchen
+\setlength{\parindent}{0pt}
