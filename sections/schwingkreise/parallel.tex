@@ -11,17 +11,17 @@ Parallelschwingkreises nach Abbildung \ref{fig:ParallelSkBeschriftet}
 hergeleitet.
 \\
 
-\textbf{Gegeben:} $R,L,C, u_c(0), i_l(0)$\\
+\textbf{Gegeben:} $R,L,C, u_C(0), i_L(0)$\\
 
 \textbf{Gesucht:} (primär) $u(t)$ \\
 
 \begin{align}
  i_L + i_R + i_C = 0 
- && \text{Knotengleichung} \\
+ && \text{Knotengleichung} \nonumber\\
  \frac{1}{L}\int{u(t)}dt + \frac{u(t)}{R} + C \frac{du(t)}{dt} = 0 
- && \text{Grundformeln eingesezt}\\
+ && \text{Grundformeln eingesezt} \nonumber\\
  \frac{u}{L} + \frac{\dot{u}}{R} + C \ddot{u} = 0
- && \text{abgeleitet} \\
+ && \text{abgeleitet} \nonumber \\
  \boxed{\ddot{u} + \frac{1}{RC}\dot{u} + \frac{1}{LC}u = 0}
  && \text{Lineare DGL} \label{eqn:ParallelLinDGL}
 \end{align}
@@ -62,7 +62,7 @@ Daraus folgt:
 
 \begin{align}
 \alpha^2 U e^{\alpha t} + \frac{\omega_r}{Q}\alpha U e^{\alpha t} + \omega_r^2 U
-e^{\alpha t} = 0 \\
+e^{\alpha t} = 0 \nonumber \\
 \underbrace{U e^{\alpha t}}_{\neq 0} \cdot (\underbrace{\alpha^2 +
 \frac{\omega_r}{Q} \alpha + \omega_r^2}_{\overset{!}{=} 0}) = 0
 \label{eqn:ParallelLinDGLUmgeformt}
@@ -76,7 +76,7 @@ Lösung trivial):
 \begin{align}
 \alpha_{1,2} &= \frac{-\frac{\omega_r}{Q} \pm \sqrt{\frac{\omega_r^2}{Q^2} -
 4\omega_r^2}}{2} = - \frac{\omega_r}{2Q} \pm \sqrt{\frac{\omega_r^2}{4Q^2} -
-\omega_r^2} \\
+\omega_r^2} \nonumber \\
  &= -\frac{\omega_r}{2Q} \pm \omega_r \sqrt{\frac{1}{4Q^2} -1}
 \end{align}
 
@@ -170,9 +170,10 @@ U_q \cos(\omega_0 t) + U_b \sin(\omega_0 t)\right) \nonumber \\
 &\quad + e^{-\frac{\omega_r}{2Q}t} \cdot \left( -\omega_0 U_q
 \sin(\omega_0 t) + \omega_0 U_b \cos(\omega_0 t)\right) \nonumber \\
 \dot{u}(0) &= -\frac{\omega_r}{2Q} \cdot 1 \cdot U_q + 1 \cdot \omega_0 \cdot
-U_b \overset{!}{=} -\frac{U_q}{RC}\nonumber
+U_b \overset{!}{=} -\frac{U_q}{RC} \label{eqn:ParallelSKuPunktGleichung}
 \end{align}
-Löst man nun die letzte Gleichung nach $U_b$ auf, so erhält man
+Löst man nun die letzte Gleichung (\ref{eqn:ParallelSKuPunktGleichung}) nach
+$U_b$ auf, so erhält man
 \begin{align}
 \boxed{U_b = -U_q \frac{1}{\sqrt{4Q^2-1}}}
 \end{align}
