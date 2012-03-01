@@ -170,10 +170,42 @@ U_q \cos(\omega_0 t) + U_b \sin(\omega_0 t)\right) \nonumber \\
 &\quad + e^{-\frac{\omega_r}{2Q}t} \cdot \left( -\omega_0 U_q
 \sin(\omega_0 t) + \omega_0 U_b \cos(\omega_0 t)\right) \nonumber \\
 \dot{u}(0) &= -\frac{\omega_r}{2Q} \cdot 1 \cdot U_q + 1 \cdot \omega_0 \cdot
-U_b \overset{!}{=} -\frac{U_q}{RC} \label{eqn:ParallelSKuPunktGleichung}
+U_b \overset{!}{=} -\frac{U_q}{RC} =
+-\frac{U_q \cdot \omega_r}{Q}\label{eqn:ParallelSKuPunktGleichung}
 \end{align}
 Löst man nun die letzte Gleichung (\ref{eqn:ParallelSKuPunktGleichung}) nach
 $U_b$ auf, so erhält man
 \begin{align}
 \boxed{U_b = -U_q \frac{1}{\sqrt{4Q^2-1}}}
+\end{align}\\
+somit:
+\begin{align}
+u(t)=U_q e^{-\frac{\omega_r}{2Q}\cdot
+t}(\cos{\omega_0t}-\frac{1}{\sqrt{4Q^2-1}}\cdot \sin{\omega_0t})
+\end{align} \\
+oder umgeformt:
+\begin{align}
+u(t)=\frac{U_q}{\sqrt{1-\frac{1}{4Q^2}}}\cdot
+\cos{\omega_0t+\varphi},\ mit\ \varphi=\arctan{\frac{1}{\sqrt{4Q^2-1}}}\\
+\end{align}\\
+Oft mit $Q\gg 1$:
+\begin{align}
+	\omega_0 = \omega_r\sqrt{1-\frac{1}{4Q^2}}\approx\omega_r, \varphi\approx 0
+	u(t)\approx U_q e^{-\frac{\omega_r}{2Q}t}\cdot\cos{\omega_0t}
+\end{align}\\
+Grafik Skript Seite 11\\
+Langsames Abklingen, wenn $Q$ gross ist.\\
+Nach $Q$ Perioden:
+\begin{align}
+t=QT,\ T=\frac{2\pi}{\omega_0}\approx\frac{2\pi}{\omega_r}\nonumber\\
+e^{-\frac{\omega_r\cdot Q \cdot 2\pi}{2Q\cdot \omega_r}}=e^{-\pi} = 0.043
+\nonumber
 \end{align}
+Freie Schwingung ist nach Q Perioden etwa abgeklungen.\\
+Ströme:\\
+\begin{align}
+	i_C&=C\cdot\frac{du}{dt}\\
+	i_R&=\frac{U}{R}\\
+	i_L&=\frac{1}{L}\int\limits_0^t{u(\tau)d\tau+i_L(0)}\\
+	&=-i_R(t)-i_C(t)
+\end{align}\\

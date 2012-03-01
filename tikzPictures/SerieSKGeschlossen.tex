@@ -1,0 +1,15 @@
+\begin{tikzpicture}[circuit ee IEC, x=2cm, y=2cm, semithick]
+	
+	
+	\node (start) [contact] at (0,0) {};
+	\node (end) [contact] at (0,-3) {};
+	
+	\draw (start) to [inductor={info=L, name=L}] (0,-1)
+					to [resistor={info=R, name=R}] (0,-2)
+					to [capacitor={info=C, name=C}] (0,-3)
+					-- (end);
+	\draw (start) -- (1,0);
+	\draw (end) -- (1,-3);
+	\draw (1,0) -- (1,-3);
+	
+\end{tikzpicture}
