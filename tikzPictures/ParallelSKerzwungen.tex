@@ -1,0 +1,15 @@
+\begin{circuitikz}[scale=2, european, american inductors, american currents]
+\ctikzset{voltage/european label distance=2}
+	\draw
+	(0,0)
+		to[short](1,0)
+		to[short, *-](2,0)
+		to[short, *-](3,0)
+	(0,0) to[isourcesin, i=$I$] (0,-1)
+	(1,0) to[L=L, i>^=$i_L$](1,-1)
+	(2,0) to[R=R, i>^=$i_R$](2,-1)
+	(3,0) to[C=C, i>^=$i_C$](3,-1)
+		to[short, -*](2,-1)
+		to[short, -*](1,-1)
+		to[short](0,-1);
+\end{circuitikz}

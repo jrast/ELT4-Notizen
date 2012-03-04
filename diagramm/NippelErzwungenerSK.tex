@@ -1,0 +1,36 @@
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+
+\makebox{\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\begin{axis}[
+  no markers,
+  domain=0:6,
+  samples=500,
+  hide x axis=true,
+	hide y axis=true,
+  %height=5cm, width=12cm,
+  %xtick={4,6.5}, ytick=\empty,
+  enlargelimits=false,
+  clip=false,
+  axis on top,
+  grid = major
+  ]
+  \addplot {gauss(3,1)};
+\end{axis}
+
+	\draw[->, thick] (-0.2,0) -- +(right:7.5) node[right] {$t$};
+	\draw (3.43,0) node[anchor=north] {$\Delta t$};
+
+	\draw[->, thick] (0,-0.2) -- +(north:6.5) node[above] {$\underline{Z}$};
+	\draw (0.05,3.85) -- (-0.05,3.85) node[anchor=east] {$\frac{R}{\sqrt{2}}$};
+	\draw (0.05,5.7) -- (-0.05,5.7) node[anchor=east] {$R$};
+
+	\draw[dashed] (0,3.85) -- (4.5,3.85);
+	\draw[dashed] (0,5.7) -- (3.55,5.7);
+	\draw[dashed, shorten <= -3pt,] (2.43,4) -- (2.43,0);
+	%\draw[dashed, shorten <= -3pt] (3.43,5.75) -- (3.43,0);
+	\draw[dashed, shorten <= -3pt] (4.43,4) -- (4.43,0);
+
+
+\end{tikzpicture}}

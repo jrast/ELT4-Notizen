@@ -1,49 +1,87 @@
 \subsection{Erzwungene Schwingung}
 \index{schwingung!erzwungen}
-Vorab:\\ %Grafik einfügen Iq-l-r-c parallel, il,ir,ic angeschrieben
-Resonanz $\omega=\omega_r$\\
-$\underline{Y}_C +\underline{Y}_L = 0$\\
-$j\omega C+\frac{1}{j\omega L} = 0$\\
-$\omega=\omega_r=\frac{1}{\sqrt{LC}}$\\
-%Diagramm einfügen
-%leider wird das nicht möglich sein da Damian ein elender fussmaler ist!
-$I_C=U\cdot\omega_rC=I\cdot R \cdot \omega_rC=I\cdot R \frac{C}{\sqrt{LC}}$\\
-$=I\cdot R \sqrt{\frac{C}{L}} = I \cdot Q$\\
-$I_L=\frac{U}{\omega_rL}=I \cdot Q$\\
 
-%Uq-L-R-C seriell, ul uc i
-$$\omega_r=\frac{1}{\sqrt{LC}}$$\\
-%nippelgraph 1
-$$\frac{f_r}{\delta f}=\frac{\omega_r}{\delta \omega} = Q$$
+\begin{tabular}{ll}
+	\input{tikzPictures/ParallelSKerzwungen}&
+	\input{diagramm/SinusErzwungenerSK}
+\end{tabular}
+
+Resonanz:\\
+\begin{wrapfigure}{l}{0.5\textwidth}
+	\centering
+	\input{diagramm/NippelErzwungenerSK}
+	\caption{t-Z-Diagramm}
+	\label{fig:tZDiagramm}
+\end{wrapfigure}
+
+\begin{align}
+	\omega&=\omega_r\nonumber\\
+	\underline{Y}_C +\underline{Y}_L &= 0\nonumber\\
+	j\omega C+\frac{1}{j\omega L} &= 0\nonumber\\
+	\omega=\omega_r&=\frac{1}{\sqrt{LC}}\nonumber
+	\end{align}\\
+	\begin{align}
+	I_C&=U\cdot\omega_rC=I\cdot R \cdot \omega_rC=I\cdot R
+	\frac{C}{\sqrt{LC}}\nonumber\\
+	&=I\cdot R \sqrt{\frac{C}{L}} = I \cdot Q\nonumber\\
+	I_L&=\frac{U}{\omega_rL}=I \cdot Q\nonumber\\
+	\omega_r&=\frac{1}{\sqrt{LC}}\nonumber\\
+	\frac{f_r}{\Delta f}=\frac{\omega_r}{\Delta \omega} &= Q\nonumber
+\end{align}\\
+\\
 
 \subsubsection{Parallelschwingkreis}
-$\underline{Z} = \frac{1}{\frac{1}{j\omega L}+\frac{1}{R} + j \omega C}
+$$\underline{Z} = \frac{1}{\frac{1}{j\omega L}+\frac{1}{R} + j \omega C}
 = \frac{j\omega L}{1+j\omega \frac{L}{R}+(j\omega)^2LC}
-= \frac{R}{1+(\frac{1}{j\omega L}+j\omega C)R}$\\
+= \frac{R}{1+(\frac{1}{j\omega L}+j\omega C)R}$$\\
 normiert:\\
-$\frac{\underline{Z}}{R}=\frac{1}{1+j(\omega C-\frac{1}{\omega L})\cdot R}
-=\frac{j\omega \frac{L}{R}}{1+j\omega\frac{L}{R}+(j\omega)^2LC}
-=\frac{1}{\sqrt{1+(\omega C - \frac{1}{\omega
-L})^2R^2}} \angle \arctan{((\frac{1}{\omega L}-\omega C)\cdot R)} $\\
+\begin{align}
+\frac{\underline{Z}}{R}&=\frac{1}{1+j(\omega C-\frac{1}{\omega L})\cdot R}
+=\frac{j\omega \frac{L}{R}}{1+j\omega\frac{L}{R}+(j\omega)^2LC}\nonumber\\
+&=\frac{1}{\sqrt{1+(\omega C - \frac{1}{\omega
+L})^2R^2}} \angle \arctan{((\frac{1}{\omega L}-\omega C)\cdot R)} \nonumber
+\end{align}\\
 
-Frequenzgang von $\underline Z$
-Spez. Pt. $\Im{\{Z\}} = 0 \rightarrow \omega = \omega_r=\frac{1}{\sqrt{LC}}$\\
-$Z = Z_{max} = R$
-Tiefe Frequenzen $\omega \ll \omega_r: \frac{\underline Z}{R} \approx
-j\omega\frac{L}{R}=\omega\frac{L}{R} \angle +90^\circ induktiv$\\
-$\omega \gg \omega_r: \frac{\underline Z}{R} \approx \frac{1}{j\omega RC}
-\angle -90^\circ kapazitiv$\\
-3dB-Pt\\
-%nippelgraph 2
-$\frac{Z}{R}=\frac{1}{\sqrt{2}}$\\
-$\frac{1}{1+(\omega C-\frac{1}{\omega L})^2R^2}=\frac{1}{2}$\\
-$(\omega C-\frac{1}{\omega L})^2R^2 = 1$\\
-$(\omega C - \frac{1}{\omega L})R = \pm 1$
-$\omega C - \frac{1}{\omega L} = \pm \frac{1}{R}$\\
-$\omega^2 \pm \omega \frac{1}{RC}-\frac{1}{LC} = 0$\\
-$\omega^2 + \frac{\omega_r}{Q}\cdot \omega - \omega_r^2=0 bzw \omega^2 -
-\frac{\omega_r}{Q}\cdot \omega - \omega_r^2=0$\\
-$\omega_{1,1,2} = -\frac{\omega_r}{2Q} \pm \omega_r\sqrt{\frac{1}{4Q^2}+1} bzw
-+\frac{\omega_r}{2Q} \pm \omega_r\sqrt{\frac{1}{4Q^2}+1}$
+Frequenzgang von $\underline Z$\\
+
+\newcommand{\arraystretchOriginal}{1.5}
+\begin{tabular}{ll}
+	Spez. Pt. &
+	$\operatorname{Im}{\{Z\}} = 0 \rightarrow \omega = \omega_r=\frac{1}{\sqrt{LC}}$\\
+	& $Z = Z_{max} = R$\\
+	Tiefe Frequenzen &
+	$\omega \ll \omega_r: \frac{\underline Z}{R} \approx
+	j\omega\frac{L}{R}=\omega\frac{L}{R} \angle +90^\circ induktiv$\\
+	& $\omega \gg \omega_r: \frac{\underline Z}{R} \approx \frac{1}{j\omega RC}
+	\angle -90^\circ kapazitiv$\\
+	3dB-Pt &
+	$\frac{Z}{R}=\frac{1}{\sqrt{2}}$\\
+	& $\frac{1}{1+(\omega C-\frac{1}{\omega L})^2R^2}=\frac{1}{2}$\\
+\end{tabular}\\
+
+\begin{figure}
+	\centering
+	\input{diagramm/dBNippel}
+	\caption{3dB-Punkt}
+	\label{fig:3dBPunkt}
+\end{figure}
+\begin{align}
+	(\omega C-\frac{1}{\omega L})^2R^2 &= 1\nonumber\\
+	(\omega C - \frac{1}{\omega L})R &= \pm 1\nonumber\\
+	\omega C - \frac{1}{\omega L} &= \pm \frac{1}{R}\nonumber\\
+	\omega^2 \pm \omega \frac{1}{RC}-\frac{1}{LC} &= 0\nonumber\\
+	\omega^2 + \frac{\omega_r}{Q}\cdot \omega - \omega_r^2&=0\ bzw\ \omega^2 -
+	\frac{\omega_r}{Q}\cdot \omega - \omega_r^2=0\nonumber
+	\end{align}
+	$\omega_{1,1,2} = -\frac{\omega_r}{2Q} \pm 
+	\underbrace{\omega_r\sqrt{\frac{1}{4Q^2}+1}}_{>\frac{\omega_r}{2Q}}
+	\	bzw\ \omega_{2,1,2}=\frac{\omega_r}{2Q} \pm
+	\underbrace{\omega_r\sqrt{\frac{1}{4Q^2}+1}}_{>\frac{\omega_r}{2Q}} $\\
+
 %geschwoffene klammern unten dran mechen //TODO
-3dB Frequenzgrenzen: $\omega_{1,2}=\omega_r(\sqrt{\frac{1}{4Q^2}+1}\mp\frac{1}{2Q})$
+
+
+3dB Frequenzgrenzen:\\
+\begin{align}
+\boxed{\omega_{1,2}=\omega_r(\sqrt{\frac{1}{4Q^2}+1}\mp\frac{1}{2Q})}
+\end{align}
