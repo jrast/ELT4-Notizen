@@ -1,15 +1,8 @@
-\begin{tikzpicture}[circuit ee IEC, x=2cm, y=2cm, semithick]
-	\node (start) [contact] at (0,0) {};
-	\node (end) [contact] at (3,0) {};
-	\draw (start) to [inductor={info=L}] (1,0)
-				  to [resistor={info=R}] (2,0) 
-				  to [capacitor={info=C}](3,0)
-				  -- (end);
-	
-	\node (placeholder1) at (0,0.5) {};
-	\node (placeholder2) at (0,-0.5) {};	
-\end{tikzpicture}
+\begin{circuitikz}[scale=2, european resistors, american inductors]
+	\draw
+	(0,0)
+		to[L=L, o-](1,0)
+	(1,0) to[R=R](2,0)
+	(2,0) to[C=C, -o](3,0);
+\end{circuitikz}
 
-% Die Nodes placeholder1 und placeholder2 sind nur dazu da, damit die ganze
-% Abbildung wieder gleich hoch ist wie der Parallel-Schwingkreis (siehe
-% ParallelSK.tex)

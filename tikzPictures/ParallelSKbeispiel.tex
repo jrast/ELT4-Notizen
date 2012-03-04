@@ -1,31 +1,25 @@
-\begin{tikzpicture}[circuit ee IEC, x=1.8cm, y=3cm, semithick]
-	\node (topR) [contact] at (0,1) {};
-	\node (bottomR) [contact] at (0,0) {};
-	\node (contactleft) [contact] at (0.85,1) {};
-	\node (contactright)[contact] at (1.15,1) {};
-	\node (contactin) [contact] at (1,0.87) {};
-	\node (bottomContact) [contact] at (1,0) {};
-	
-	\draw (topR) to [current direction={very near start, info=$i_R$},
-					 resistor={info=R}] (bottomR);
-	\draw (topR) -- ++(left:1) 
-		to [current direction={very near start, info=$i_L$},
-		    inductor={info=L}] ++(down:1)
-		-- +(right:1);	
-			
-	\draw (topR) -- (contactleft);
-	\draw (bottomR) -- (bottomContact);	
-	
-	\draw[shorten >= -0.2cm] (contactin) -- 
-		node[right=0.2cm, below] {S} (contactright);
-	
-	\draw (contactin) to[current direction={near start, info=$i_C$},
-						 capacitor={near end, info=C}] (bottomContact);
-	% Spannungsquelle
-	\draw (contactright) -- ++(right:1)
-		to [voltage source={info={$U_q$}}] ++(down:1)
-		-- (bottomContact);
-	% Spannungspfeil u(t)
-	\draw[-to, shorten <= 0.2cm,shorten >=0.2cm] (-1.2,1) 
-		to node[anchor=east] {$u(t)$} (-1.2,0);
-\end{tikzpicture}
+\begin{circuitikz}[scale=2, european, american inductors]
+\ctikzset{voltage/european label distance=8}
+	\draw
+	(2,-0.3) node[spdt, rotate=90] (switch) {}
+	(0,0)
+		to[short] (1,0)
+		to[short, *-] (switch.out 1)
+	%(1,0) to[cspst] (2,-1)
+	%(1,0) to[spdt] (2,-1)
+	(0,0) to[L=L, v>=$u(t)$, i>^=$i_L$](0,-2)
+	(1,0) to[R=R, i>^=$i_R$](1,-2)
+	%(1,0) --(switch.in)
+	%(3,0) to[spdt] (2,-1)
+	(switch.in) to[C=C, i>^=$i_C$](2,-2)
+		to[short, *-*](1,-2)
+		to[short](0,-2)
+	(switch.out 2) to (3,0);
+	\ctikzset{voltage/european label distance=1.3}
+	\draw
+	(3,0)
+		to[european voltage source =$U_q$] (3,-2)
+		to[short] (2,-2)
+		;
+\end{circuitikz}
+
