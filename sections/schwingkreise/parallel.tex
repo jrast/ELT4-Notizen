@@ -192,22 +192,22 @@ u(t)=\frac{U_q}{\sqrt{1-\frac{1}{4Q^2}}}\cdot
 \end{align}\\
 Oft mit $Q\gg 1$:
 \begin{align}
-	\omega_0 = \omega_r\sqrt{1-\frac{1}{4Q^2}}\approx\omega_r, \varphi\approx 0
-	u(t)\approx U_q e^{-\frac{\omega_r}{2Q}t}\cdot\cos{\omega_0t}\nonumber
+	\omega_0 = \omega_r \cdot \sqrt{1-\frac{1}{4Q^2}} &\approx\omega_r \nonumber \\
+	\varphi &\approx 0 \nonumber \\
+	u(t) &\approx U_q \cdot e^{-\frac{\omega_r}{2Q}t}\cdot\cos{\omega_0t}\nonumber
 \end{align}\\
 Grafik Skript Seite 11\\
-Langsames Abklingen, wenn $Q$ gross ist.\\
-Nach $Q$ Perioden:
+Ist $Q$ gross, so klingt die Schwinung nur sehr langsam ab. Nach Q Perioden ist
+die freie Schwingung schon fast komplett abgeklungen: 
 \begin{align}
 t=QT,\ T=\frac{2\pi}{\omega_0}\approx\frac{2\pi}{\omega_r}\nonumber\\
 e^{-\frac{\omega_r\cdot Q \cdot 2\pi}{2Q\cdot \omega_r}}=e^{-\pi} = 0.043
 \nonumber
 \end{align}
-Freie Schwingung ist nach Q Perioden etwa abgeklungen.\\
 Die Ströme bei der freien Schwingung sind:\\
 \begin{align}
 	i_C&=C\cdot\frac{du}{dt}\\
 	i_R&=\frac{U}{R}\\
 	i_L&=\frac{1}{L}\int\limits_0^t{u(\tau)d\tau+i_L(0)}\\
 	&=-i_R(t)-i_C(t)
-\end{align}\\
+\end{align}
