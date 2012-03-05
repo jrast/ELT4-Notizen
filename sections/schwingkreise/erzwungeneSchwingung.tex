@@ -37,8 +37,8 @@ gegenseitig aufheben:
 \begin{figure}[!h]
 	\centering
 	\input{diagramm/dBNippel}
-	\caption{t-Z-Diagramm mit 3dB Punkten}
-	\label{fig:tZDiagramm}
+	\caption{Frequenz-Impedanz-Diagramm mit 3dB Punkten}
+	\label{fig:fZDiagramm}
 \end{figure}
 
 Wird der Schwingkreis mit seiner Resonanzfrequenz angeregt, steigen die Ströme
@@ -49,9 +49,16 @@ begrenzt. Die Ströme werden also mit der Güte $Q$ multipliziert:
 	I_C&=U\cdot\omega_rC = I\cdot R \cdot \omega_rC = I\cdot R
 	\frac{C}{\sqrt{LC}} \nonumber\\
 	&=I\cdot R \sqrt{\frac{C}{L}} = I \cdot Q\nonumber\\
-	I_L&=\frac{U}{\omega_rL}=I \cdot Q\nonumber\\
+	I_L&=\frac{U}{\omega_rL}=I \cdot Q\nonumber
+\end{align}
+Die Punkte $\omega_{1,2}$ in der obigen Abbildung zeigen die Punkte, an welchen
+die Verstärkung 3dB unter dem Maximum liegt. Anhand dieser Werte und den
+zugehörignen Z-Werten kann man auch daraus die Güte des Schwingkreises
+berechnen:
+\begin{align}
 	\frac{f_r}{\Delta f}=\frac{\omega_r}{\Delta \omega} &= Q\nonumber
 \end{align}
+wobei folgendes gilt: $\Delta \omega = \omega_2-\omega_1 $
 
   
 \subsubsection{Parallelschwingkreis}
