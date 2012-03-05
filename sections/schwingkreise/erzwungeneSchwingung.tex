@@ -1,12 +1,37 @@
+\newpage
 \subsection{Erzwungene Schwingung}
 \index{schwingung!erzwungen}
 
-\begin{tabular}{ll}
-	\input{tikzPictures/ParallelSKerzwungen}&
+\begin{figure}[!h]
+\centering
+\subfloat[Erzwungener Parallel-Schwingkreis]{
+	\input{tikzPictures/ParallelSKerzwungen}
+	\label{fig:schwingkreise:erzwungener:parallel}
+}
+\qquad
+\subfloat[I und U im Schwingkreis]{
 	\input{diagramm/SinusErzwungenerSK}
-\end{tabular}
+	\label{fig:schwingkreise:erzwungener:sinus} 
+}
+\caption{Erzwungener Schwingkreis}
+\label{fig:schwingkreise:erzwungene}
+\end{figure}
 
-Resonanz:\\
+% \begin{multicols}{2}
+% \begin{wrapfigure}{l}{0.5\textwidth}
+% 	\centering
+% 	\input{tikzPictures/ParallelSKerzwungen}
+% 	\caption{Erzwungener Parallel-SK}
+% 	\label{fig:Schwingkreise:parallel:erzwungen}
+% 	\end{wrapfigure}
+% \begin{wrapfigure}{r}{0.5\textwidth}
+% 	\centering
+% 	\input{diagramm/SinusErzwungenerSK}
+% 	\caption{I und R im Erzwungenen SK}
+% 	\label{fig:I-RErzwungen}
+% 	\end{wrapfigure}
+% \end{multicols}
+
 \begin{wrapfigure}{l}{0.5\textwidth}
 	\centering
 	\input{diagramm/NippelErzwungenerSK}
@@ -14,13 +39,13 @@ Resonanz:\\
 	\label{fig:tZDiagramm}
 \end{wrapfigure}
 
+
+
+Resonanz: $\omega = \omega_r$\\
 \begin{align}
-	\omega&=\omega_r\nonumber\\
 	\underline{Y}_C +\underline{Y}_L &= 0\nonumber\\
 	j\omega C+\frac{1}{j\omega L} &= 0\nonumber\\
-	\omega=\omega_r&=\frac{1}{\sqrt{LC}}\nonumber
-	\end{align}\\
-	\begin{align}
+	\omega=\omega_r&=\frac{1}{\sqrt{LC}}\nonumber\\
 	I_C&=U\cdot\omega_rC=I\cdot R \cdot \omega_rC=I\cdot R
 	\frac{C}{\sqrt{LC}}\nonumber\\
 	&=I\cdot R \sqrt{\frac{C}{L}} = I \cdot Q\nonumber\\
@@ -28,8 +53,9 @@ Resonanz:\\
 	\omega_r&=\frac{1}{\sqrt{LC}}\nonumber\\
 	\frac{f_r}{\Delta f}=\frac{\omega_r}{\Delta \omega} &= Q\nonumber
 \end{align}\\
-\\
 
+
+  
 \subsubsection{Parallelschwingkreis}
 $$\underline{Z} = \frac{1}{\frac{1}{j\omega L}+\frac{1}{R} + j \omega C}
 = \frac{j\omega L}{1+j\omega \frac{L}{R}+(j\omega)^2LC}
@@ -42,29 +68,26 @@ normiert:\\
 L})^2R^2}} \angle \arctan{((\frac{1}{\omega L}-\omega C)\cdot R)} \nonumber
 \end{align}\\
 
-Frequenzgang von $\underline Z$\\
+Frequenzgang von $\underline Z$:\\
+\begin{align}
+	\text{Spez. Pt.}&&
+	\operatorname{Im}{\{Z\}} = 0 \rightarrow \omega =
+	\omega_r=\frac{1}{\sqrt{LC}}\nonumber\\ && Z = Z_{max} = R\nonumber\\
+	\text{Tiefe Frequenzen} &&
+	\omega \ll \omega_r: \frac{\underline Z}{R} \approx
+	j\omega\frac{L}{R}=\omega\frac{L}{R} \angle +90^\circ induktiv\nonumber\\ && \omega \gg \omega_r: \frac{\underline Z}{R} \approx \frac{1}{j\omega RC}
+	\angle -90^\circ kapazitiv\nonumber\\
+	\text{3dB-Pt} &&
+	\frac{Z}{R}=\frac{1}{\sqrt{2}}\nonumber\\
+	&& \frac{1}{1+(\omega C-\frac{1}{\omega L})^2R^2}=\frac{1}{2}\nonumber
+\end{align}\\
 
-\newcommand{\arraystretchOriginal}{1.5}
-\begin{tabular}{ll}
-	Spez. Pt. &
-	$\operatorname{Im}{\{Z\}} = 0 \rightarrow \omega = \omega_r=\frac{1}{\sqrt{LC}}$\\
-	& $Z = Z_{max} = R$\\
-	Tiefe Frequenzen &
-	$\omega \ll \omega_r: \frac{\underline Z}{R} \approx
-	j\omega\frac{L}{R}=\omega\frac{L}{R} \angle +90^\circ induktiv$\\
-	& $\omega \gg \omega_r: \frac{\underline Z}{R} \approx \frac{1}{j\omega RC}
-	\angle -90^\circ kapazitiv$\\
-	3dB-Pt &
-	$\frac{Z}{R}=\frac{1}{\sqrt{2}}$\\
-	& $\frac{1}{1+(\omega C-\frac{1}{\omega L})^2R^2}=\frac{1}{2}$\\
-\end{tabular}\\
-
-\begin{figure}
+\begin{wrapfigure}{l}{0.5\textwidth}
 	\centering
 	\input{diagramm/dBNippel}
 	\caption{3dB-Punkt}
 	\label{fig:3dBPunkt}
-\end{figure}
+\end{wrapfigure}
 \begin{align}
 	(\omega C-\frac{1}{\omega L})^2R^2 &= 1\nonumber\\
 	(\omega C - \frac{1}{\omega L})R &= \pm 1\nonumber\\
@@ -72,12 +95,11 @@ Frequenzgang von $\underline Z$\\
 	\omega^2 \pm \omega \frac{1}{RC}-\frac{1}{LC} &= 0\nonumber\\
 	\omega^2 + \frac{\omega_r}{Q}\cdot \omega - \omega_r^2&=0\ bzw\ \omega^2 -
 	\frac{\omega_r}{Q}\cdot \omega - \omega_r^2=0\nonumber
-	\end{align}
-	$\omega_{1,1,2} = -\frac{\omega_r}{2Q} \pm 
+	\omega_{1,1,2} = -\frac{\omega_r}{2Q} \pm 
 	\underbrace{\omega_r\sqrt{\frac{1}{4Q^2}+1}}_{>\frac{\omega_r}{2Q}}
 	\	bzw\ \omega_{2,1,2}=\frac{\omega_r}{2Q} \pm
-	\underbrace{\omega_r\sqrt{\frac{1}{4Q^2}+1}}_{>\frac{\omega_r}{2Q}} $\\
-
+	\underbrace{\omega_r\sqrt{\frac{1}{4Q^2}+1}}_{>\frac{\omega_r}{2Q}} \nonumber\\
+\end{align}
 %geschwoffene klammern unten dran mechen //TODO
 
 
