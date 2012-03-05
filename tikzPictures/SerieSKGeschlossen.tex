@@ -1,18 +1,14 @@
-\begin{circuitikz}[scale=1.5, european resistors, american inductors]
-\ctikzset{current/distance = -3}
-\ctikzset{voltage/distance from node=.7}% .5 = default
-\ctikzset{voltage/distance from line=.1}% pos. between 0 and 1 // .08 = default
-	\draw
-	(0,0) -- (0,-1);
-	\ctikzset{voltage/european label distance=6}
-	\draw(0,-1)
-		to[L=L, v>=$U_L$, i>^=$i(t)$](0,-2);
-		\ctikzset{voltage/european label distance=3}
-		\draw(0,-2)
-		to[R=R, v>=$U_R$](0,-3);
-		\ctikzset{voltage/european label distance=2}
-		\ctikzset{voltage/distance from line=.25}
-		\draw(0,-3)
-		to[C=C, v>=$U_C$](0,-4)
-		 -- (1,-4) -- (1,0) -- (0,0);
+\begin{circuitikz}[scale=2, european resistors, american inductors]
+\ctikzset{voltage/european label distance=3}
+\ctikzset{bipoles/length=1.2cm}
+	\draw (0,0)
+		to[short, i>^=$i(t)$] (0,-1)
+		to[L=L] (0,-2)
+		to[R=R] (0,-3)
+		to[C=C] (0,-4)
+		-- (1,-4) -- (1,0) -- (0,0)
+		%Pfeile
+		(-0.1,-1) to[open, v>=$U_L$] (-0.1,-2) 
+		(-0.1,-2) to[open, v>=$U_R$] (-0.1,-3)
+		(-0.1,-3) to[open, v>=$U_C$] (-0.1,-4);
 \end{circuitikz}
