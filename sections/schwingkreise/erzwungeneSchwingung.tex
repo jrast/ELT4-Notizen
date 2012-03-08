@@ -178,8 +178,7 @@ Mit:
 	LC&=\frac{1}{\omega_r^2}\nonumber\\
 	\omega_rQ &= \frac{R}{L} \Rightarrow \frac{L}{R}=\frac{1}{\omega_rQ}\nonumber\\
 	\frac{\underline{Z}}{R} &=
-	\frac{j\omega\frac{1}{\omega_rQ}}{1+\frac{\omega}{\omega_r}\frac{1}{Q}+(j\omega)^2\frac{1}{\omega_r^2}}\nonumber\\
-	%TODO Formel überarbeiten
+	\frac{j\frac{\omega}{\omega_r}\frac{1}{Q}}{1+j\frac{\omega}{\omega_r}\frac{1}{Q}+\left(j\frac{\omega}{\omega_r}\right)^2}\nonumber\\
 	&=\frac{1}{1+\frac{1}{j\frac{\omega}{\omega_r}\frac{1}{Q}}+j\frac{\omega}{\omega_r}Q}\nonumber
 	\end{align}
 	\begin{align}
@@ -230,7 +229,7 @@ Gegeben: $f_r, Q$\\
 Gesucht: Wert der Resonanzkurve bei bestimmter Frequenz $f_x$\\
 Vorgehen:\\
 \begin{align}
-	\eta_x=\frac{f_x}{f_r}-\frac{f_r}{f_x}
+	\eta_x=\frac{f_x}{f_r}-\frac{f_r}{f_x}\nonumber\\
 	\left| F_x \right| = \frac{1}{\sqrt{1+(\eta Q)^2}}\nonumber
 \end{align}
 \textbf{Anwendungsbeispiel 2}
@@ -246,7 +245,7 @@ Vorgehen:\\
 %Seite 23 Skript Nüübuur
 
 \subsubsection{Serieschwingkreis}
-%Bildli Serie Uwellig Seriell L-R-C; U,I,L,G=1/R,C
+\input{tikzPictures/SerieSKerzwungen}
 \begin{align}
 	\underline{Y} = \frac{1}{\frac{1}{G}+j\omega L+\frac{1}{j\omega C}} =
 	\frac{G}{1+j(\omega L-\frac{1}{\omega C})G}\nonumber
