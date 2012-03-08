@@ -125,35 +125,43 @@ Frequenzgang von $\underline Z$:\\
 
 \subsubsection{Frequenzgang von Spannung und Strömen}
 \begin{align}
-	\underline{U} &= \underline{Z} \cdot \underline{I}&&\text{, normiert: }
-	\frac{\underline{U}}{\underline{U_{max}}} =
+	\underline{U} &= \underline{Z} \cdot \underline{I},
+	&& \text{normiert: }
+	&& \frac{\underline{U}}{\underline{U_{max}}} =
 	\frac{\underline{Z}}{\underline{Z_{max}}} = \frac{\underline{Z}}{R}\nonumber\\
-	\underline{I_R} &= \frac{\underline{U}}{R}&&\text{, normiert:
-	}\frac{\underline{I_R}}{\underline{I}} = \frac{\underline{Z}}{R}\nonumber\\
+	\underline{I_R} &= \frac{\underline{U}}{R},
+	&& \text{normiert:}
+	&& \frac{\underline{I_R}}{\underline{I}} = \frac{\underline{Z}}{R}\nonumber\\
 	\underline{I_L} &= \frac{\underline{U}}{j\omega L} =
-	\frac{\underline{I}\cdot\underline{Z}}{j\omega L}&&\text{, normiert:
-	}\frac{\underline{I_L}}{\underline{I}}=\frac{\underline{Z}}{j\omega
+	\frac{\underline{I}\cdot\underline{Z}}{j\omega L},
+	&& \text{normiert:	}
+	&& \frac{\underline{I_L}}{\underline{I}}=\frac{\underline{Z}}{j\omega
 	L}\nonumber\\
-	\underline{I_C} &= j\omega C \underline{U}&&\text{, normiert:
-	}\frac{\underline{I_C}}{\underline{I}} = j\omega C\cdot Z\nonumber
-\end{align}
-Frequenzgang von $I_L, I_C$\\
+	\underline{I_C} &= j\omega C \underline{U},
+	&& \text{normiert:}
+	&& \frac{\underline{I_C}}{\underline{I}} = j\omega C\cdot Z\nonumber
+\end{align}\\
+
+\textbf{Frequenzgang von $I_L, I_C$}\\
 Fall $\omega \ll \omega_r (Z \approx \omega L)$:\\
 \begin{align}
-	\frac{I_L}{I} \approx 1, \frac{I_C}{I} \approx \omega^2LC\nonumber
+	\frac{I_L}{I} &\approx 1\nonumber\\
+	\frac{I_C}{I} &\approx \omega^2LC\nonumber
 \end{align}\\
 Fall $\omega \gg \omega_r (Z \approx \frac{1}{\omega C})$:\\
 \begin{align}
-	\frac{I_L}{I} \approx \frac{1}{\omega^2LC}, \frac{I_C}{I}\approx 1\nonumber
+	\frac{I_L}{I} &\approx \frac{1}{\omega^2LC}\nonumber\\
+	\frac{I_C}{I} &\approx 1\nonumber
 \end{align}\\
 Fall $\omega = \omega_r$:\\
 \begin{align}
-	\frac{I_L}{I} = \frac{Z(\omega_R)}{\omega_r L} =
+	\frac{I_L}{I} &= \frac{Z(\omega_R)}{\omega_r L} =
 	\frac{R}{\frac{1}{\sqrt(LC)}\cdot L} = \frac{R\sqrt{L}\sqrt{C}}{L} =
 	R\cdot\sqrt{\frac{C}{L}} = Q\nonumber\\
-	\frac{I_C}{I} = Z(\omega_r)\cdot \omega_r C = R \frac{C}{\sqrt{LC}} = R\cdot
+	\frac{I_C}{I} &= Z(\omega_r)\cdot \omega_r C = R \frac{C}{\sqrt{LC}} = R\cdot
 	\sqrt{\frac{C}{L}} = Q\nonumber
 \end{align}\\
+
 Bei $Q>1$: Stromüberhöhung in $L$ und $C$ bei Resonanz!
 
 %Neubauer Skript Seite 17 einfügen
@@ -162,20 +170,22 @@ Bei $Q>1$: Stromüberhöhung in $L$ und $C$ bei Resonanz!
 \textbf{Normierter Frequenzgang}\\
 1. Normierung: $\omega_r=\frac{1}{\sqrt{LC}}$ als Bezug\\
 \begin{align}
-	\frac{\underline{Z}}{R} =
-	\frac{j\omega\frac{L}{R}}{1+j\omega\frac{L}{R}+(j\omega)^2LC}\nonumber\\
-	\text{Mit: }\nonumber\\
-	LC=\frac{1}{\omega_r^2}\nonumber\\
-	\omega_rQ = \frac{R}{L} \Rightarrow \frac{L}{R}=\frac{1}{\omega_rQ}\nonumber\\
-	\frac{\underline{Z}}{R} =
+	\frac{\underline{Z}}{R} &=
+	\frac{j\omega\frac{L}{R}}{1+j\omega\frac{L}{R}+(j\omega)^2LC}\nonumber
+\end{align}
+Mit:
+\begin{align}
+	LC&=\frac{1}{\omega_r^2}\nonumber\\
+	\omega_rQ &= \frac{R}{L} \Rightarrow \frac{L}{R}=\frac{1}{\omega_rQ}\nonumber\\
+	\frac{\underline{Z}}{R} &=
 	\frac{j\omega\frac{1}{\omega_rQ}}{1+\frac{\omega}{\omega_r}\frac{1}{Q}+(j\omega)^2\frac{1}{\omega_r^2}}\nonumber\\
-	\frac{}{}\nonumber\\
 	%TODO Formel überarbeiten
-	\frac{1}{1+\frac{1}{j\frac{\omega}{\omega_r}\frac{1}{Q}}+j\frac{\omega}{\omega_r}Q}\nonumber\\
-	\boxed{
-	\frac{\underline{Z}}{R} =
+	&=\frac{1}{1+\frac{1}{j\frac{\omega}{\omega_r}\frac{1}{Q}}+j\frac{\omega}{\omega_r}Q}\nonumber
+	\end{align}
+	\begin{align}
+	\boxed{\frac{\underline{Z}}{R} =
 	\frac{1}{1+jQ\left(\frac{\omega}{\omega_r}-\frac{\omega_r}{\omega}\right)} =
-	F(\frac{\omega}{\omega_r})}
+	F\left(\frac{\omega}{\omega_r}\right)}
 \end{align}\\
 2. Normierung: Verstimmung $\eta$ (eigentlich $\nu$)\\
 \begin{align}
@@ -193,6 +203,7 @@ Bei $Q>1$: Stromüberhöhung in $L$ und $C$ bei Resonanz!
 	$\omega_2(3dB)$ &
 	$\approx\omega_r \text{ Abweichung: } \Delta\omega$	
 	\\
+	\hline
 	$\eta =$ &
 	$0$ &
 	positiv &
@@ -206,11 +217,12 @@ Bei $Q>1$: Stromüberhöhung in $L$ und $C$ bei Resonanz!
 
 $\rightarrow$ Amplituden- und Phasengang werden symmetrisch\\
 \begin{align}
- 	\frac{\underline{Z}}{R} = \frac{1}{1+j\eta Q},\ \Omega=\eta Q \text{normierte
- 	Frequenz}\nonumber\\
-%  	\frac{\underline{Z}}{R} = \frac{1}{1+j\Omega} = \frac{1}{\sqrt{1+\Omega^2}}\arc
-%  	\arctan\Omega \text{normierter Frequenzgang}\nonumber
-%TODO irgendwo hier hats ein Problem. Findet Walter!
+ 	\frac{\underline{Z}}{R} &= \frac{1}{1+j\eta Q},\ \Omega=\eta Q
+ 	&&\text{normierte Frequenz}\nonumber\\
+ 	\frac{\underline{Z}}{R} &= \frac{1}{1+j\Omega} =
+ 	\frac{1}{\sqrt{1+\Omega^2}}\angle
+ 	\arctan{\Omega} &&\text{normierter
+ 	Frequenzgang}\nonumber
 \end{align}
 
 \textbf{Anwendungsbeispiel 1}
@@ -219,7 +231,7 @@ Gesucht: Wert der Resonanzkurve bei bestimmter Frequenz $f_x$\\
 Vorgehen:\\
 \begin{align}
 	\eta_x=\frac{f_x}{f_r}-\frac{f_r}{f_x}
-	\left| F_x \right| = \frac{1}{\sqrt{1+(\eta Q)^2}}
+	\left| F_x \right| = \frac{1}{\sqrt{1+(\eta Q)^2}}\nonumber
 \end{align}
 \textbf{Anwendungsbeispiel 2}
 Gegeben: $f_r$, Abfall $\left|F_x\right|$ bei Frequenz $f_x$\\
@@ -250,6 +262,10 @@ R \leftrightarrow G\nonumber\\
 \end{align}\\
 $\rightarrow$ sämtliche hergeleiteten Beziehungen gelten "`dual"' auch für den
 Serieschwingkreis\\
-Beispiel: Parallel-SK $Q_P=R\sqrt{\frac{C}{L}}$\\
-Serie-SK $Q_S=G\sqrt{\frac{L}{C}}=\frac{1}{R}\sqrt{\frac{L}{C}}$\\
+Beispiel: 
+\begin{align}
+\text{Parallel-SK} && Q_P&=R\sqrt{\frac{C}{L}}\nonumber\\
+\text{Serie-SK} &&
+Q_S&=G\sqrt{\frac{L}{C}}=\frac{1}{R}\sqrt{\frac{L}{C}}\nonumber
+\end{align}\\
 %Nüübuur Skript seite 26 wie man von LR Serie zu L'R' Parallel kommt
