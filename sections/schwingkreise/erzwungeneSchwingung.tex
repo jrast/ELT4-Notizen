@@ -101,17 +101,155 @@ Frequenzgang von $\underline Z$:\\
 	\omega C - \frac{1}{\omega L} &= \pm \frac{1}{R}\nonumber\\
 	\omega^2 \pm \omega \frac{1}{RC}-\frac{1}{LC} &= 0\nonumber\\
 	\omega^2 + \frac{\omega_r}{Q}\cdot \omega - \omega_r^2&=0 \\ bzw\\ \omega^2 -
-	\frac{\omega_r}{Q}\cdot \omega - \omega_r^2=0\nonumber
+	\frac{\omega_r}{Q}\cdot \omega - \omega_r^2=0\nonumber\\
 	\omega_{1,1,2} = -\frac{\omega_r}{2Q} \pm 
 	\underbrace{\omega_r\sqrt{\frac{1}{4Q^2}+1}}_{>\frac{\omega_r}{2Q}}
 	\\	bzw \\
 	\omega_{2,1,2}=\frac{\omega_r}{2Q} \pm
 	\underbrace{\omega_r\sqrt{\frac{1}{4Q^2}+1}}_{>\frac{\omega_r}{2Q}} \nonumber\\
 \end{align}
-%geschwoffene klammern unten dran mechen //TODO
 
 
 3dB Frequenzgrenzen:\\
 \begin{align}
-\boxed{\omega_{1,2}=\omega_r(\sqrt{\frac{1}{4Q^2}+1}\mp\frac{1}{2Q})}
+	\boxed{\omega_{1,2}=\omega_r\left(\sqrt{\frac{1}{4Q^2}+1}\mp\frac{1}{2Q}\right)}\\
+	\approx \omega_r\left(1\mp\frac{1}{2Q}\right) \text{ für } Q \gg 1\nonumber\\
+	\Rightarrow \omega_1\cdot\omega_2=\omega_r^2 (\omega_r \text{ geom Mittel von
+		} \omega_1 \text{ und } \omega_2)\nonumber\\
+	\omega_2 - \omega_1 = \frac{\omega_r}{Q} = b_{\omega}\nonumber\\
+	\boxed{\text{Bandbreite } B = f_2 - f_1 = \frac{f_r}{Q}}\\
+	\text{Frequenzabstand der 3dB Punkte}\nonumber
 \end{align}
+
+% Seite 14 aus Skript beide Graphen übernehmen!
+
+\subsubsection{Frequenzgang von Spannung und Strömen}
+\begin{align}
+	\underline{U} &= \underline{Z} \cdot \underline{I}&&\text{, normiert: }
+	\frac{\underline{U}}{\underline{U_{max}}} =
+	\frac{\underline{Z}}{\underline{Z_{max}}} = \frac{\underline{Z}}{R}\nonumber\\
+	\underline{I_R} &= \frac{\underline{U}}{R}&&\text{, normiert:
+	}\frac{\underline{I_R}}{\underline{I}} = \frac{\underline{Z}}{R}\nonumber\\
+	\underline{I_L} &= \frac{\underline{U}}{j\omega L} =
+	\frac{\underline{I}\cdot\underline{Z}}{j\omega L}&&\text{, normiert:
+	}\frac{\underline{I_L}}{\underline{I}}=\frac{\underline{Z}}{j\omega
+	L}\nonumber\\
+	\underline{I_C} &= j\omega C \underline{U}&&\text{, normiert:
+	}\frac{\underline{I_C}}{\underline{I}} = j\omega C\cdot Z\nonumber
+\end{align}
+Frequenzgang von $I_L, I_C$\\
+Fall $\omega \ll \omega_r (Z \approx \omega L)$:\\
+\begin{align}
+	\frac{I_L}{I} \approx 1, \frac{I_C}{I} \approx \omega^2LC\nonumber
+\end{align}\\
+Fall $\omega \gg \omega_r (Z \approx \frac{1}{\omega C})$:\\
+\begin{align}
+	\frac{I_L}{I} \approx \frac{1}{\omega^2LC}, \frac{I_C}{I}\approx 1\nonumber
+\end{align}\\
+Fall $\omega = \omega_r$:\\
+\begin{align}
+	\frac{I_L}{I} = \frac{Z(\omega_R)}{\omega_r L} =
+	\frac{R}{\frac{1}{\sqrt(LC)}\cdot L} = \frac{R\sqrt{L}\sqrt{C}}{L} =
+	R\cdot\sqrt{\frac{C}{L}} = Q\nonumber\\
+	\frac{I_C}{I} = Z(\omega_r)\cdot \omega_r C = R \frac{C}{\sqrt{LC}} = R\cdot
+	\sqrt{\frac{C}{L}} = Q\nonumber
+\end{align}\\
+Bei $Q>1$: Stromüberhöhung in $L$ und $C$ bei Resonanz!
+
+%Neubauer Skript Seite 17 einfügen
+%Für Formäln Böööörni fragen
+
+\textbf{Normierter Frequenzgang}\\
+1. Normierung: $\omega_r=\frac{1}{\sqrt{LC}}$ als Bezug\\
+\begin{align}
+	\frac{\underline{Z}}{R} =
+	\frac{j\omega\frac{L}{R}}{1+j\omega\frac{L}{R}+(j\omega)^2LC}\nonumber\\
+	\text{Mit: }\nonumber\\
+	LC=\frac{1}{\omega_r^2}\nonumber\\
+	\omega_rQ = \frac{R}{L} \Rightarrow \frac{L}{R}=\frac{1}{\omega_rQ}\nonumber\\
+	\frac{\underline{Z}}{R} =
+	\frac{j\omega\frac{1}{\omega_rQ}}{1+\frac{\omega}{\omega_r}\frac{1}{Q}+(j\omega)^2\frac{1}{\omega_r^2}}\nonumber\\
+	\frac{}{}\nonumber\\
+	%TODO Formel überarbeiten
+	\frac{1}{1+\frac{1}{j\frac{\omega}{\omega_r}\frac{1}{Q}}+j\frac{\omega}{\omega_r}Q}\nonumber\\
+	\boxed{
+	\frac{\underline{Z}}{R} =
+	\frac{1}{1+jQ\left(\frac{\omega}{\omega_r}-\frac{\omega_r}{\omega}\right)} =
+	F(\frac{\omega}{\omega_r})}
+\end{align}\\
+2. Normierung: Verstimmung $\eta$ (eigentlich $\nu$)\\
+\begin{align}
+	\boxed{\eta=\frac{\omega}{\omega_r}-\frac{\omega_r}{\omega}} = \frac{f}{f_r} -
+	\frac{f_r}{f}
+\end{align}\\
+\begin{tabular}{l|l|l|l|l|l|l|l|l|}
+	$\omega =$ &
+	$\omega_r$ &
+	$>\omega_r$ &
+	$<\omega_r$ &
+	$0$ &
+	$\inf$ &
+	$\omega_1(3dB)$ &
+	$\omega_2(3dB)$ &
+	$\approx\omega_r \text{ Abweichung: } \Delta\omega$	
+	\\
+	$\eta =$ &
+	$0$ &
+	positiv &
+	negativ &
+	$-\inf$ &
+	$+\inf$ &
+	$-1$ &
+	$+1$ &
+	$\approx\frac{2\cdot\Delta\omega}{\omega_r}$\\	
+\end{tabular}
+
+$\rightarrow$ Amplituden- und Phasengang werden symmetrisch\\
+\begin{align}
+ 	\frac{\underline{Z}}{R} = \frac{1}{1+j\eta Q},\ \Omega=\eta Q \text{normierte
+ 	Frequenz}\nonumber\\
+%  	\frac{\underline{Z}}{R} = \frac{1}{1+j\Omega} = \frac{1}{\sqrt{1+\Omega^2}}\arc
+%  	\arctan\Omega \text{normierter Frequenzgang}\nonumber
+%TODO irgendwo hier hats ein Problem. Findet Walter!
+\end{align}
+
+\textbf{Anwendungsbeispiel 1}
+Gegeben: $f_r, Q$\\
+Gesucht: Wert der Resonanzkurve bei bestimmter Frequenz $f_x$\\
+Vorgehen:\\
+\begin{align}
+	\eta_x=\frac{f_x}{f_r}-\frac{f_r}{f_x}
+	\left| F_x \right| = \frac{1}{\sqrt{1+(\eta Q)^2}}
+\end{align}
+\textbf{Anwendungsbeispiel 2}
+Gegeben: $f_r$, Abfall $\left|F_x\right|$ bei Frequenz $f_x$\\
+Gesucht: $\eta$ und $Q$\\
+Vorgehen:\\
+\begin{align}
+	\eta Q \text{ berechnen aus } \frac{1}{\sqrt{1+(\eta Q)^2}} = \left| F_x
+	\right|\nonumber\\
+	\eta = \frac{f_x}{f_r}-\frac{f_r}{f_x}\nonumber\\
+	Q = \frac{\eta Q}{\eta}\nonumber
+\end{align}
+%Seite 23 Skript Nüübuur
+
+\subsubsection{Serieschwingkreis}
+%Bildli Serie Uwellig Seriell L-R-C; U,I,L,G=1/R,C
+\begin{align}
+	\underline{Y} = \frac{1}{\frac{1}{G}+j\omega L+\frac{1}{j\omega C}} =
+	\frac{G}{1+j(\omega L-\frac{1}{\omega C})G}\nonumber
+\end{align}\\
+Folgende Grössen sind dual (vgl. Parallelschwingkreis)\\
+\begin{align}
+\underline{Z} \leftrightarrow \underline{Y}\nonumber\\
+L \leftrightarrow C\nonumber\\
+R \leftrightarrow G\nonumber\\
+\underline{U} \leftrightarrow \underline{I}\nonumber\\
+\underline{I_R} \leftrightarrow \underline{U_R}\nonumber\\
+\underline{I_L} \leftrightarrow \underline{I_C}\nonumber
+\end{align}\\
+$\rightarrow$ sämtliche hergeleiteten Beziehungen gelten "`dual"' auch für den
+Serieschwingkreis\\
+Beispiel: Parallel-SK $Q_P=R\sqrt{\frac{C}{L}}$\\
+Serie-SK $Q_S=G\sqrt{\frac{L}{C}}=\frac{1}{R}\sqrt{\frac{L}{C}}$\\
+%Nüübuur Skript seite 26 wie man von LR Serie zu L'R' Parallel kommt
