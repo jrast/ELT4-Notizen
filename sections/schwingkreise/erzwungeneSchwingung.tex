@@ -122,6 +122,12 @@ Frequenzgang von $\underline Z$:\\
 \end{align}
 
 % Seite 14 aus Skript beide Graphen übernehmen!
+\begin{figure}[!h]
+	\centering
+	\input{diagramm/ParallelImpedanzBetrag}
+	\caption{asdfasdf}
+	\label{fig:asdfasdf}
+\end{figure}
 
 \subsubsection{Frequenzgang von Spannung und Strömen}
 \begin{align}
@@ -245,20 +251,29 @@ Vorgehen:\\
 %Seite 23 Skript Nüübuur
 
 \subsubsection{Serieschwingkreis}
-\input{tikzPictures/SerieSKerzwungen}
-\begin{align}
-	\underline{Y} = \frac{1}{\frac{1}{G}+j\omega L+\frac{1}{j\omega C}} =
-	\frac{G}{1+j(\omega L-\frac{1}{\omega C})G}\nonumber
-\end{align}\\
+\begin{wrapfigure}{l}{0.55\textwidth}
+\centering
+	\input{tikzPictures/SerieSKerzwungen}
+	\vspace{-0.15cm}
+	\caption{Erzwungener Serieschwingkreis}
+	\label{fig:SerieSKErzwungen}
+\end{wrapfigure}
+
+
+$$\underline{Y} = \frac{1}{\frac{1}{G}+j\omega L+\frac{1}{j\omega C}} =
+	\frac{G}{1+j(\omega L-\frac{1}{\omega C})G}$$\\
+
 Folgende Grössen sind dual (vgl. Parallelschwingkreis)\\
 \begin{align}
-\underline{Z} \leftrightarrow \underline{Y}\nonumber\\
-L \leftrightarrow C\nonumber\\
-R \leftrightarrow G\nonumber\\
-\underline{U} \leftrightarrow \underline{I}\nonumber\\
-\underline{I_R} \leftrightarrow \underline{U_R}\nonumber\\
-\underline{I_L} \leftrightarrow \underline{I_C}\nonumber
+\underline{Z} &\leftrightarrow \underline{Y}\nonumber\\
+L &\leftrightarrow C\nonumber\\
+R &\leftrightarrow G\nonumber\\
+\underline{U} &\leftrightarrow \underline{I}\nonumber\\
+\underline{I_R} &\leftrightarrow \underline{U_R}\nonumber\\
+\underline{I_L} &\leftrightarrow \underline{I_C}\nonumber
 \end{align}\\
+
+
 $\rightarrow$ sämtliche hergeleiteten Beziehungen gelten "`dual"' auch für den
 Serieschwingkreis\\
 Beispiel: 
@@ -267,4 +282,6 @@ Beispiel:
 \text{Serie-SK} &&
 Q_S&=G\sqrt{\frac{L}{C}}=\frac{1}{R}\sqrt{\frac{L}{C}}\nonumber
 \end{align}\\
-%Nüübuur Skript seite 26 wie man von LR Serie zu L'R' Parallel kommt
+
+\subsubsection{Serieschaltung $\leftrightarrow$ Parallelschaltung}
+Skript von Herr Neubauer
