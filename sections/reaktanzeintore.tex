@@ -1,0 +1,35 @@
+\section{Reaktanz Eintore}
+Ein Reaktanz Eintor ist eine Schaltung aus lauter $L$ und $C$ mit genau zwei
+Anschlüssen.
+
+Skript von Herrn Neubauer, Seiten 27ff
+
+Bei $\omega = 0$ und $\omega \rightarrow \infty$ hat $X(\omega)$ entweder einen
+Pol oder eine Nullstelle.
+
+\textbf{Es gibt folgende 4 RET-Typen:}
+
+\begin{tabular}{llll}
+Typ & $\omega=0$ & $\omega \rightarrow \infty$&\\
+L & 0 & X & L-Symbol\\
+C & X & 0 & C-Symbol\\
+S & X & X & LC-Seriell\\
+P & 0 & 0 & LC-Parallel\\
+\end{tabular}
+
+0 = Nullstelle\\
+X = Polstelle\\
+
+$$\underline{Z}(p)=\frac{a_np^n+a_{n-2}p^{n-2}+\ldots}{b_mp^m+b_{m-2}p^{m-2}}$$\\
+$p\rightarrow \infty$ höchsten Potenzen entscheidend\\
+\hspace*{5pt}$n>m$ (Zählergrad $>$ Nennergrad): Pol\\
+\hspace*{10pt}$\frac{a_n}{b_m}=L_{\infty}$\\
+\hspace*{5pt}$n<m$ (Zählergrad $<$ Nennergrad): Nullstelle\\
+\hspace*{10pt}$\frac{a_n}{b_m}=\frac{1}{C_{\infty}}$\\
+$p\rightarrow 0$ tiefste Potenzen massgebend\\
+\hspace*{5pt}n ungerade
+$\frac{\ldots+a_3p^3+a_1p}{\ldots+b_2p^2+b_0}\rightarrow$ Nullstelle für $p\rightarrow 0$\\
+\hspace*{10pt}$\frac{a_1}{b} = L_0$ ersetzung bei ganz tiefen Frequenzen.\\
+\hspace*{5pt}n gerade $\frac{\ldots+a_2p^2+a_0}{\ldots+b_3p^3+b_1p}$\\
+\hspace*{10pt}$\frac{a_0}{b_1}=\frac{1}{C_0}$ ersetzung bei ganz tiefen
+Frequenzen.\\
