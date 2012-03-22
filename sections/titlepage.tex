@@ -3,6 +3,22 @@
 \begin{center}
   \Huge
   ELT4 - Vorlesungsnotizen
+
+\vspace{1cm}
+\normalsize
+\begin{tikzpicture}[transform shape, scale=1.5, domain=0:6.2]	
+	\draw[->, thick] (-0.2,0) -- (6.4,0) node[right] {};
+	\draw[->, thick] (0,-1.2) -- (0,1.2) node[above] {};
+	\draw[color=blue, samples=150, thick]   plot (\x,{0.5*sin(\x r)});
+	\draw[color=blue, samples=150, thick]   plot (\x,{0.75*sin(\x r)});
+	\draw[color=green, samples=150, thick]   plot (\x,{cos(\x r)});
+	\draw[color=red, samples=150, thick]   plot (\x,{-1*cos(\x r)});
+\end{tikzpicture}
+
+\vfill
+
+Jürg Rast \& Gian Claudio Köppel, \today
+
 \end{center}
 
 \end{titlepage}
