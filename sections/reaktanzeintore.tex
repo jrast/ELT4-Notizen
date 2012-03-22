@@ -58,10 +58,20 @@ Beispiel: $\underline{Z}(p) = \frac{p^4+4p^2+3}{2p^5+12p^3+16p}$\\
 	& $p \rightarrow \infty$ & Nullstelle \\
 	& 5 Elemente & wegen $p^5$ \\
 \end{tabular}
-\input{tikzPictures/RET/RetSyntheseBsp1}\\
+\begin{figure}[!h]
+	\centering
+	\input{tikzPictures/RET/RetSyntheseBsp1}
+	\caption{Pol Nullstellen Diagramm}
+	\label{fig:RetPolNullstelle}
+\end{figure}\\
 In der Grafik sieht man dass es sich bei $\omega \rightarrow 0$ und $\omega
 \rightarrow \infty$ wie ein C verhält. Draus folgt dass es ein C-Typ ist.\\
-\input{tikzPictures/RET/RetSyntheseBsp1S}\\
+\begin{figure}[!h]
+	\centering
+	\input{tikzPictures/RET/RetSyntheseBsp1S}
+	\caption{Reaktanzeintor Beispiel 1}
+	\label{fig:RetSyntheseBsp1S}
+\end{figure}\\
 \begin{align}
 \underline{Z}_K&=\frac{1}{pC_k+\frac{1}{pL_k}} =
 \frac{pL_k}{p^2L_KC_K+1}\nonumber\\
@@ -86,9 +96,20 @@ p^2&=-2:\ ... &\Rightarrow C=\frac{1}{8}\nonumber\\
 &=\frac{1}{\frac{16}{3}p}+\frac{1}{\frac{16}{3}p+\frac{4\cdot\frac{16}{3}}{p}}+\frac{1}{8p+\frac{2\cdot8}{p}}\nonumber\\
 &=\frac{1}{\frac{16}{3}p}+\frac{1}{\frac{16}{3}p+\frac{1}{\frac{3}{64}p}}+\frac{1}{8p+\frac{1}{\frac{1}{16}p}}\nonumber
 \end{align}
-\input{tikzPictures/RET/RetSyntheseBsp1SL}\\
+\begin{figure}[!h]
+	\centering
+	\input{tikzPictures/RET/RetSyntheseBsp1SL}
+	\caption{Lösung Reaktanzeintor Beispiel 1}
+	\label{fig:RetSyntheseBsp1SL}
+\end{figure}\\
 \textbf{b) Zerlegung nach Polen der Admittanz}\\
-\input{tikzPictures/RET/RetSyntheseBsp2S}\\
+\begin{figure}[!h]
+	\centering
+	\input{tikzPictures/RET/RetSyntheseBsp2S}
+	\caption{Reaktanzeintor Beispiel 2}
+	\label{fig:RetSyntheseBsp2}
+\end{figure}\\
+
 Pole der Admittanz $\rightarrow \infty$ grosse Leitfähigkeit (bei
 Resonanzfrequenz)\\
 $$\underline{Y}(p)=\frac{1}{\underline{Z}(p)}=\frac{2p^5+12p^3+16p}{p^4+4p^2+3}$$\\
@@ -107,7 +128,13 @@ p^2&=-3:\ \underbrace{-12+10}_{-2}=A(-2) &\Rightarrow A=1\nonumber\\
 p^2&=-1:\ \underbrace{-4+10}_{6}=B(2) &\Rightarrow B=3\nonumber\\
 \underline{Y}(p)&=2p+\frac{p}{p^2+3}+\frac{3p}{p^2+1}=2p+\frac{1}{p+\frac{1}{\frac{1}{3}p}}+\frac{1}{\frac{1}{3}p+\frac{1}{3p}}\nonumber
 \end{align}
-\input{tikzPictures/RET/RetSyntheseBsp2SL}
+\begin{figure}[!h]
+	\centering
+	\input{tikzPictures/RET/RetSyntheseBsp2SL}
+	\caption{Lösung Reaktanzeintor Beispiel 2}
+	\label{fig:RetSyntheseBsp2L}
+\end{figure}\\
+
 
 \subsubsection{Synthese mittels Kettenbruchzerlegung}
 \textbf{a) 1. Art} Man geht aus von unecht gebrochen rationaler Funktion und
