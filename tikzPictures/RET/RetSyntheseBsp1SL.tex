@@ -1,0 +1,16 @@
+\begin{circuitikz}[scale=2, european, american inductors, yscale=0.8]
+\ctikzset{bipoles/length=1.2cm}
+\draw (0,0)
+	to[short, *-] (0,0)
+	to[C=$\frac{16}{3}F$] (1,0)
+	(1,0.5) to [short] (1,-0.5)
+	(1,0.5) to [L=$\frac{3}{64}H$] (2,0.5)
+	(1,-0.5) to [C=$\frac{16}{3}F$] (2,-0.5)
+	(2,0.5) to [short] (2,-0.5)
+	(2,0) to [short] (2.5,0)
+	(2.5,0.5) to [short] (2.5,-0.5)
+	(2.5,0.5) to [L=$\frac{1}{16}H$] (3.5,0.5)
+	(2.5,-0.5) to [C=$8F$] (3.5,-0.5)
+	(3.5,0.5) to [short] (3.5,-0.5)
+	(3.5,0) to [short, -*] (4,0);	
+\end{circuitikz}

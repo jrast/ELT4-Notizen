@@ -1,0 +1,19 @@
+\begin{circuitikz}[scale=2, european, american inductors, yscale=0.8]
+\ctikzset{bipoles/length=1.2cm}
+\draw (0,0)
+	to[short, *-] (0,0)
+	to[C] (1,0)
+	(1,0.5) to [short] (1,-0.5)
+	(1,0.5) to [L] (2,0.5)
+	(1,-0.5) to [C] (2,-0.5)
+	(2,0.5) to [short] (2,-0.5)
+	(2,0) to [short] (2.5,0)
+	(2.5,0.5) to [short] (2.5,-0.5)
+	(2.5,0.5) to [L=$L_K$] (3.5,0.5)
+	(2.5,-0.5) to [C,l_=$C_K$] (3.5,-0.5)
+	(3.5,0.5) to [short] (3.5,-0.5)
+	(3.5,0) to [short, -*] (4,0)
+	(1.5,0) node{$\omega_{r1}$}
+	(3,0) node{$\omega_{r2}$}
+	;	
+\end{circuitikz}
