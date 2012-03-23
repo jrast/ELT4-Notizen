@@ -7,18 +7,32 @@ Skript von Herrn Neubauer, Seiten 27ff
 Bei $\omega = 0$ und $\omega \rightarrow \infty$ hat $X(\omega)$ entweder einen
 Pol oder eine Nullstelle.
 
-\textbf{Es gibt folgende 4 RET-Typen:}
 
-\begin{tabular}{llll}
-Typ & $\omega=0$ & $\omega \rightarrow \infty$&\\
-L & 0 & X & L-Symbol\\
-C & X & 0 & C-Symbol\\
-S & X & X & LC-Seriell\\
-P & 0 & 0 & LC-Parallel\\
+\subsection{RET-Typen}
+Man unterscheidet die Reaktanzeintore in vier Typen. Dazu betrachtet man das
+Verhalten für $\omega \rightarrow 0$ und $\omega \rightarrow \infty$. Mit diesen
+beiden Angaben kann der Typ mit der nachfolgenden Tabelle bestimmt werden.
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|l|l|c|l|}
+  \hline
+  $\bf \boldsymbol\omega = 0$ & $\bf \boldsymbol\omega \rightarrow
+  \boldsymbol\infty$ & \textbf{Typ} & \textbf{Symbol} \\
+  \hline
+  Nullstelle & Polstelle  & L & L-Symbol \\
+  \hline
+  Polstelle  & Nullstelle & C & C-Symbol \\
+  \hline
+  Polstelle  & Polstelle  & S & LC-Serie \\
+  \hline
+  Nullstelle & Nullstelle & P & LC-Parallel \\
+  \hline
 \end{tabular}
-
-0 = Nullstelle\\
-X = Polstelle\\
+\caption{Bestimmung des RET-Typ}
+\label{tab:RETTypBestimmung}
+\end{center}
+\end{table}
 
 $$\underline{Z}(p)=\frac{a_np^n+a_{n-2}p^{n-2}+\ldots}{b_mp^m+b_{m-2}p^{m-2}}$$\\
 $p\rightarrow \infty$ höchsten Potenzen entscheidend\\
@@ -47,7 +61,10 @@ LC-Parallel & P-Typ & C-Klemmenkreis & L-Klemmenkreis\\
 \end{tabular}
 
 \subsection{RET-Synthese}
+Für die Reaktanzeintor-Synthese gibt es vier systematische Verfahren:
+
 \input{tikzPictures/RET/RetSyntheseTree}
+
 \textbf{geg:} RET-Funktion\\
 \textbf{ges:} zugehörige Schaltung\\
 \subsubsection{Synthese mittels Partialbruchzerlegung}
@@ -61,7 +78,7 @@ Beispiel: $\underline{Z}(p) = \frac{p^4+4p^2+3}{2p^5+12p^3+16p}$\\
 \begin{figure}[!h]
 	\centering
 	\input{tikzPictures/RET/RetSyntheseBsp1}
-	\caption{Pol Nullstellen Diagramm}
+	\caption{Pol-/Nullstellen Diagramm}
 	\label{fig:RetPolNullstelle}
 \end{figure}\\
 In der Grafik sieht man dass es sich bei $\omega \rightarrow 0$ und $\omega
@@ -71,7 +88,7 @@ In der Grafik sieht man dass es sich bei $\omega \rightarrow 0$ und $\omega
 	\input{tikzPictures/RET/RetSyntheseBsp1S}
 	\caption{Reaktanzeintor Beispiel 1}
 	\label{fig:RetSyntheseBsp1S}
-\end{figure}\\
+\end{figure}
 \begin{align}
 \underline{Z}_K&=\frac{1}{pC_k+\frac{1}{pL_k}} =
 \frac{pL_k}{p^2L_KC_K+1}\nonumber\\
