@@ -246,23 +246,23 @@ $\rightarrow$ Amplituden- und Phasengang werden symmetrisch\\
  	Frequenzgang}\nonumber
 \end{align}
 
-\textbf{Anwendungsbeispiel 1}
-Gegeben: $f_r, Q$\\
-Gesucht: Wert der Resonanzkurve bei bestimmter Frequenz $f_x$\\
-Vorgehen:\\
+\paragraph{Anwendungsbeispiel 1}
+\textbf{Gegeben:} $f_r, Q$\\
+\textbf{Gesucht:} Wert der Resonanzkurve bei bestimmter Frequenz $f_x$\\
+\textbf{Vorgehen:}
 \begin{align}
-	\eta_x=\frac{f_x}{f_r}-\frac{f_r}{f_x}\nonumber\\
-	\left| F_x \right| = \frac{1}{\sqrt{1+(\eta Q)^2}}\nonumber
+	\eta_x &= \frac{f_x}{f_r}-\frac{f_r}{f_x}\nonumber\\
+	\left| F_x \right| &= \frac{1}{\sqrt{1+(\eta Q)^2}}\nonumber
 \end{align}
-\textbf{Anwendungsbeispiel 2}
-Gegeben: $f_r$, Abfall $\left|F_x\right|$ bei Frequenz $f_x$\\
-Gesucht: $\eta$ und $Q$\\
-Vorgehen:\\
+\paragraph{Anwendungsbeispiel 2}
+\textbf{Gegeben:} $f_r$, Abfall $\left|F_x\right|$ bei Frequenz $f_x$\\
+\textbf{Gesucht:} $\eta$ und $Q$\\
+\textbf{Vorgehen:} \\
+Mit dem folgenden Ansatz kommt man durch umformen auf die gesuchte Lösung. 
 \begin{align}
-	\eta Q \text{ berechnen aus } \frac{1}{\sqrt{1+(\eta Q)^2}} = \left| F_x
-	\right|\nonumber\\
-	\eta = \frac{f_x}{f_r}-\frac{f_r}{f_x}\nonumber\\
-	Q = \frac{\eta Q}{\eta}\nonumber
+	\frac{1}{\sqrt{1+(\eta Q)^2}} &= \left| F_x \right|\nonumber\\
+	\eta &= \frac{f_x}{f_r}-\frac{f_r}{f_x}\nonumber\\
+	Q &= \frac{\eta Q}{\eta}\nonumber
 \end{align}
 %Seite 23 Skript Nüübuur
 
@@ -272,33 +272,34 @@ Vorgehen:\\
 	\input{tikzPictures/SerieSKerzwungen}
 	\vspace{-0.15cm}
 	\caption{Erzwungener Serieschwingkreis}
+	\vspace{-1.0cm}
 	\label{fig:SerieSKErzwungen}
 \end{wrapfigure}
 
-
-$$\underline{Y} = \frac{1}{\frac{1}{G}+j\omega L+\frac{1}{j\omega C}} =
-	\frac{G}{1+j(\omega L-\frac{1}{\omega C})G}$$\\
-
-Folgende Grössen sind dual (vgl. Parallelschwingkreis)\\
+Der Serienschwingkreis lässt sich gut mit dem Parallelschwingkreis vergleichen.
+Alle Grössen sind "`dual"', lassen sich also über eine einfache Umformung mit
+den Grössen des Parallelschwingkreises vergleichen.
 \begin{align}
-\underline{Z} &\leftrightarrow \underline{Y}\nonumber\\
-L &\leftrightarrow C\nonumber\\
-R &\leftrightarrow G\nonumber\\
-\underline{U} &\leftrightarrow \underline{I}\nonumber\\
-\underline{I_R} &\leftrightarrow \underline{U_R}\nonumber\\
-\underline{I_L} &\leftrightarrow \underline{U_C}\nonumber\\
-\underline{I_C} &\leftrightarrow \underline{U_L}\nonumber\\
-\end{align}\\
+  \underline{Y} &= \frac{1}{\frac{1}{G}+j\omega L+\frac{1}{j\omega C}} \nonumber
+  \\
+  &= \frac{G}{1+j(\omega L-\frac{1}{\omega C})G} \nonumber
+\end{align}
 
+Dabei gelten folgende Beziehungen zum Parallelschwingkreis:
+\begin{align}
+\underline{Z} &\leftrightarrow \underline{Y} && L \leftrightarrow C\nonumber\\
+R &\leftrightarrow G && \underline{U} \leftrightarrow \underline{I}\nonumber\\
+\underline{I_R} &\leftrightarrow \underline{U_R} && \underline{I_L}
+\leftrightarrow \underline{U_C}\nonumber\\
+\underline{I_C} &\leftrightarrow \underline{U_L}\nonumber
+\end{align}
 
-$\rightarrow$ sämtliche hergeleiteten Beziehungen gelten "`dual"' auch für den
-Serieschwingkreis\\
-Beispiel: 
+Im folgenden noch ein Beispiel, welches den Zusammenhang verdeutlicht:
 \begin{align}
 \text{Parallel-SK} && Q_P&=R\sqrt{\frac{C}{L}}\nonumber\\
 \text{Serie-SK} &&
 Q_S&=G\sqrt{\frac{L}{C}}=\frac{1}{R}\sqrt{\frac{L}{C}}\nonumber
-\end{align}\\
+\end{align}
 
 \subsubsection{Serieschaltung $\leftrightarrow$ Parallelschaltung}
 Skript von Herr Neubauer
