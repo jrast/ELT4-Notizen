@@ -67,8 +67,10 @@ Für die Reaktanzeintor-Synthese gibt es vier systematische Verfahren:
 
 \textbf{geg:} RET-Funktion\\
 \textbf{ges:} zugehörige Schaltung\\
+
+
 \subsubsection{Synthese mittels Partialbruchzerlegung}
-\textbf{a) Zerlegung nach Polen der Impedanz}\\
+\paragraph{a) Zerlegung nach Polen der Impedanz}
 Beispiel: $\underline{Z}(p) = \frac{p^4+4p^2+3}{2p^5+12p^3+16p}$\\
 \begin{tabular}{lll}
 	Vorabklärung & $p=0$ & Pol \\
@@ -119,13 +121,15 @@ p^2&=-2:\ ... &\Rightarrow C=\frac{1}{8}\nonumber\\
 	\caption{Lösung Reaktanzeintor Beispiel 1}
 	\label{fig:RetSyntheseBsp1SL}
 \end{figure}\\
-\textbf{b) Zerlegung nach Polen der Admittanz}\\
+
+
+\paragraph{b) Zerlegung nach Polen der Admittanz}
 \begin{figure}[!h]
 	\centering
 	\input{tikzPictures/RET/RetSyntheseBsp2S}
 	\caption{Reaktanzeintor Beispiel 2}
 	\label{fig:RetSyntheseBsp2}
-\end{figure}\\
+\end{figure}
 
 Pole der Admittanz $\rightarrow \infty$ grosse Leitfähigkeit (bei
 Resonanzfrequenz)\\
@@ -152,9 +156,11 @@ p^2&=-1:\ \underbrace{-4+10}_{6}=B(2) &\Rightarrow B=3\nonumber\\
 	\label{fig:RetSyntheseBsp2L}
 \end{figure}\\
 
+
 \subsubsection{Synthese mittels Kettenbruchzerlegung}
-\textbf{a) 1. Art} Man geht aus von unecht gebrochen rationaler Funktion und
-spaltet Pol bei $\infty$ ab. Dann invertiert man, etc.\\
+\paragraph{1. Art}
+Man geht aus von unecht gebrochen rationaler Funktion und
+spaltet Pol bei $\infty$ ab. Dann invertiert man, etc.
 \begin{align}
 	\underline{Y}(p)&=(2p^5+12p^3+16p):(p^4+4p^2+3)=2p+\frac{4p^3+10p}{p^4+4p^2+3},
 	&\underline{Y}_1=\frac{4p^3+10p}{p^4+4p^2+3}\nonumber\\
