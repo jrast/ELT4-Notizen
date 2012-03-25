@@ -51,14 +51,34 @@ Frequenzen.\\
 
 \subsection{Bestimmung des RET-Typs anhand der Schaltung}
 \begin{tabular}{llll}
-L-Symbol & L-Typ & L-Klemmenkreis & L-Klemmen Trennbündel\\
+\input{tikzPictures/RET/L.tex} & L-Typ & L-Klemmenkreis & L-Klemmentrennbündel\\
 & & Nullstelle bei $\omega = 0$ & Pol bei $\omega \rightarrow \infty$ \\
-C-Symbol & C-Typ & C-Klemmenkreis & C-Klemmen Trennbündel\\
+\input{tikzPictures/RET/C.tex} & C-Typ & C-Klemmenkreis & C-Klemmentrennbündel\\
 & & Nullstelle bei $\omega \rightarrow \infty$ & Pol bei $\omega \rightarrow
 0$\\
-LC-Symbol & S-Typ & C-Klemmentrennbündel & L-Klemmen Trennbündel\\
-LC-Parallel & P-Typ & C-Klemmenkreis & L-Klemmenkreis\\
+\input{tikzPictures/RET/LCSer.tex} & S-Typ & C-Klemmentrennbündel &
+L-Klemmentrennbündel\\
+\input{tikzPictures/RET/LCPar.tex} & P-Typ & C-Klemmenkreis & L-Klemmenkreis\\
 \end{tabular}
+
+\begin{figure}[!h]
+\centering
+\subfloat[C-Klemmentrennbündel]{
+	\input{tikzPictures/RET/Trennbuendel.tex}
+	\label{fig:ret:klemmenbuendel}
+}
+\qquad
+\subfloat[C-Klemmenkreis]{
+	\input{tikzPictures/RET/Klemmenkreis.tex}
+	\label{fig:ret:klemmenkreis} 
+}
+\caption{C-Klemmentrennbündel und Klemmenkreis}
+\label{fig:ret}
+\end{figure}
+
+
+
+
 
 \subsection{RET-Synthese}
 Für die Reaktanzeintor-Synthese gibt es vier systematische Verfahren:

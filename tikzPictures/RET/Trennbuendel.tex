@@ -1,0 +1,16 @@
+\begin{circuitikz}[scale=2, european, american inductors]
+\ctikzset{bipoles/length=1.2cm}
+\draw
+	(0,0) to [L, *-] (1,0)
+	to [C, color=red] (2,0)
+	to [C] (3,0)
+	to [C] (3,-1)
+	to [L] (2,-1)
+	to [L] (1,-1)
+	to [L, -*] (0,-1)
+	(1,0) to [C, color=red] (1,-1)
+	(2,-1) to [C] (2,0)
+	to [L] (3,-1)
+	(0,0) to [C, color=red] (0,-1)
+	;
+\end{circuitikz}
