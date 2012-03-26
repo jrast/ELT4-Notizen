@@ -62,10 +62,11 @@ wobei folgendes gilt: $\Delta \omega = \omega_2-\omega_1 $
 
   
 \subsubsection{Parallelschwingkreis}
+\index{Schwingung!erzwungene}
 $$\underline{Z} = \frac{1}{\frac{1}{j\omega L}+\frac{1}{R} + j \omega C}
 = \frac{j\omega L}{1+j\omega \frac{L}{R}+(j\omega)^2LC}
 = \frac{R}{1+(\frac{1}{j\omega L}+j\omega C)R}$$\\
-normiert:\\
+normiert:
 \begin{align}
 \frac{\underline{Z}}{R}&=\frac{1}{1+j(\omega C-\frac{1}{\omega L})\cdot R}
 =\frac{j\omega \frac{L}{R}}{1+j\omega\frac{L}{R}+(j\omega)^2LC}\nonumber\\
@@ -77,6 +78,7 @@ R\right)}
 
 
 \paragraph{Frequenzgang von $\underline Z$}
+\index{Frequenzgang!Parallelschwingkreis}
 \begin{description}
 [style=multiline,topsep=0pt,leftmargin=4.5cm,rightmargin=2cm]
   \item[Spezieller Punkt]
@@ -142,6 +144,8 @@ R\right)}
 \end{figure}
 
 \subsubsection{Frequenzgang von Spannung und Strömen}
+\index{Frequenzgang!Spannung}
+\index{Frequenzgang!Strom}
 \begin{align}
 	\underline{U} &= \underline{Z} \cdot \underline{I},
 	&& \text{normiert: }
@@ -160,25 +164,26 @@ R\right)}
 	&& \frac{\underline{I_C}}{\underline{I}} = j\omega C\cdot Z\nonumber
 \end{align}\\
 
-\textbf{Frequenzgang von $I_L, I_C$}\\
-Fall $\omega \ll \omega_r (Z \approx \omega L)$:\\
+\paragraph{Frequenzgang von $I_L, I_C$}
+\index{Frequenzgang!Strom}
+Fall $\omega \ll \omega_r (Z \approx \omega L)$:
 \begin{align}
 	\frac{I_L}{I} &\approx 1\nonumber\\
 	\frac{I_C}{I} &\approx \omega^2LC\nonumber
-\end{align}\\
-Fall $\omega \gg \omega_r (Z \approx \frac{1}{\omega C})$:\\
+\end{align}
+Fall $\omega \gg \omega_r (Z \approx \frac{1}{\omega C})$:
 \begin{align}
 	\frac{I_L}{I} &\approx \frac{1}{\omega^2LC}\nonumber\\
 	\frac{I_C}{I} &\approx 1\nonumber
-\end{align}\\
-Fall $\omega = \omega_r$:\\
+\end{align}
+Fall $\omega = \omega_r$:
 \begin{align}
 	\frac{I_L}{I} &= \frac{Z(\omega_R)}{\omega_r L} =
 	\frac{R}{\frac{1}{\sqrt(LC)}\cdot L} = \frac{R\sqrt{L}\sqrt{C}}{L} =
 	R\cdot\sqrt{\frac{C}{L}} = Q\nonumber\\
 	\frac{I_C}{I} &= Z(\omega_r)\cdot \omega_r C = R \frac{C}{\sqrt{LC}} = R\cdot
 	\sqrt{\frac{C}{L}} = Q\nonumber
-\end{align}\\
+\end{align}
 
 Bei $Q>1$: Stromüberhöhung in $L$ und $C$ bei Resonanz!
 
@@ -191,8 +196,9 @@ Bei $Q>1$: Stromüberhöhung in $L$ und $C$ bei Resonanz!
 % 	\label{fig:ParallelStromBetrag}
 % \end{figure}
 
-\textbf{Normierter Frequenzgang}\\
-1. Normierung: $\omega_r=\frac{1}{\sqrt{LC}}$ als Bezug\\
+\paragraph{Normierter Frequenzgang}
+\index{Frequenzgang!normierter}
+1. Normierung: $\omega_r=\frac{1}{\sqrt{LC}}$ als Bezug
 \begin{align}
 	\frac{\underline{Z}}{R} &=
 	\frac{j\omega\frac{L}{R}}{1+j\omega\frac{L}{R}+(j\omega)^2LC}\nonumber
@@ -209,8 +215,8 @@ Mit:
 	\boxed{\frac{\underline{Z}}{R} =
 	\frac{1}{1+jQ\left(\frac{\omega}{\omega_r}-\frac{\omega_r}{\omega}\right)} =
 	F\left(\frac{\omega}{\omega_r}\right)}
-\end{align}\\
-2. Normierung: Verstimmung $\eta$ (eigentlich $\nu$)\\
+\end{align}
+2. Normierung: Verstimmung $\eta$ (eigentlich $\nu$)
 \begin{align}
 	\boxed{\eta=\frac{\omega}{\omega_r}-\frac{\omega_r}{\omega}} = \frac{f}{f_r} -
 	\frac{f_r}{f}
@@ -238,7 +244,7 @@ Mit:
 	$\approx\frac{2\cdot\Delta\omega}{\omega_r}$\\	
 \end{tabular}
 
-$\rightarrow$ Amplituden- und Phasengang werden symmetrisch\\
+$\rightarrow$ Amplituden- und Phasengang werden symmetrisch
 \begin{align}
  	\frac{\underline{Z}}{R} &= \frac{1}{1+j\eta Q},\ \Omega=\eta Q
  	&&\text{normierte Frequenz}\nonumber\\
@@ -269,6 +275,7 @@ Mit dem folgenden Ansatz kommt man durch umformen auf die gesuchte Lösung.
 %Seite 23 Skript Nüübuur
 
 \subsubsection{Serieschwingkreis}
+\index{Schwingung!erzwungene}
 \begin{wrapfigure}{l}{0.55\textwidth}
 \centering
 	\input{tikzPictures/SerieSKerzwungen}
@@ -304,4 +311,6 @@ Q_S&=G\sqrt{\frac{L}{C}}=\frac{1}{R}\sqrt{\frac{L}{C}}\nonumber
 \end{align}
 
 \subsubsection{Serieschaltung $\leftrightarrow$ Parallelschaltung}
+\index{Schaltung!Serie}
+\index{Schaltung!Parallel}
 Skript von Herr Neubauer
