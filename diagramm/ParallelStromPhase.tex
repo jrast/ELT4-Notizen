@@ -1,11 +1,13 @@
-\pgfmathdeclarefunction{StromBetragC}{3}{%
-  \pgfmathparse{(#1/sqrt(1+(x*#2-1/(x*#3))^2*#1^2))*x*#2}%
+%TODO das hier
+
+\pgfmathdeclarefunction{StromPhaseC}{3}{%
+  \pgfmathparse{atan((1/(x*#3)-x*#2)*#1)+90}%
 }
-\pgfmathdeclarefunction{StromBetragR}{3}{%
-  \pgfmathparse{1/sqrt(1+(x*#2-1/(x*#3))^2*#1^2)}%
+\pgfmathdeclarefunction{StromPhaseR}{3}{%
+	\pgfmathparse{atan((1/(x*#3)-x*#2)*#1)}%
 }
-\pgfmathdeclarefunction{StromBetragL}{3}{%
-  \pgfmathparse{(#1/sqrt(1+(x*#2-1/(x*#3))^2*#1^2))/(x*#3)}%
+\pgfmathdeclarefunction{StromPhaseL}{3}{%
+	\pgfmathparse{atan((1/(x*#3)-x*#2)*#1)-90}%
 }
 	%\pgfmathparse{R/sqrt(1+(xC-1/xL)^2*R^2)}
 	%R=1000
@@ -23,9 +25,9 @@
   axis x line*=bottom,
   axis y line*=left,
   xtick={4000,5000,...,15000,16000},
-  ytick={0,1,2,...,10},
-  ymin=0,
-  ymax=10,
+  ytick={-180,-135,...,180},
+  ymin=-180,
+  ymax=180,
   xmin=4000,
   xmax=16000,
   enlargelimits=false,
@@ -35,11 +37,11 @@
   xlabel={Kreisfrequenz $\omega[s^{-1}]$},
   ylabel={Impedanz Betrag $Z[\Omega]$}
   ]
-  \addplot{StromBetragR(1000, 0.000001, 0.01)};
+  \addplot{StromPhaseR(1000, 0.000001, 0.01)};
   \addlegendentry{$I_R$}
-  \addplot{StromBetragC(1000, 0.000001, 0.01)};
+  \addplot{StromPhaseC(1000, 0.000001, 0.01)};
   \addlegendentry{$I_C$}
-  \addplot[green]{StromBetragL(1000, 0.000001, 0.01)};
+  \addplot[green]{StromPhaseL(1000, 0.000001, 0.01)};
   \addlegendentry{$I_L$}
 \end{axis}
 \end{tikzpicture}}

@@ -1,10 +1,6 @@
 \pgfmathdeclarefunction{ImpedanzPhase}{3}{%
   \pgfmathparse{atan((1/(x*#3)-x*#2)*#1)}%
 }
-	%\pgfmathparse{R/sqrt(1+(xC-1/xL)^2*R^2)}
-	%R=1000
-	%C=1*10^(-6)=0.000001
-	%L=10*10^-(3)=0.01
 
 \makebox{\begin{tikzpicture}[scale=2, every node/.style={scale=0.6}]
 \begin{axis}[
