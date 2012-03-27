@@ -53,18 +53,30 @@ Frequenzen.\\
 
 
 \subsection{Bestimmung des RET-Typs anhand der Schaltung}
-\begin{tabular}{llll}
-\input{tikzPictures/RET/L.tex} & L-Typ & L-Klemmenkreis & L-Klemmentrennbündel\\
+\begin{table}[H]
+\begin{tabular}{|l|l|l|l|}
+\hline
+\parbox[c][1.5cm]{4.5cm}{\input{tikzPictures/RET/L.tex}} & L-Typ &
+L-Klemmenkreis & L-Klemmentrennbündel\\
 & & Nullstelle bei $\omega = 0$ & Pol bei $\omega \rightarrow \infty$ \\
-\input{tikzPictures/RET/C.tex} & C-Typ & C-Klemmenkreis & C-Klemmentrennbündel\\
+\hline
+\parbox[c][1.5cm]{4.5cm}{\input{tikzPictures/RET/C.tex}} & C-Typ &
+C-Klemmenkreis & C-Klemmentrennbündel\\
 & & Nullstelle bei $\omega \rightarrow \infty$ & Pol bei $\omega \rightarrow
 0$\\
-\input{tikzPictures/RET/LCSer.tex} & S-Typ & C-Klemmentrennbündel &
-L-Klemmentrennbündel\\
-\input{tikzPictures/RET/LCPar.tex} & P-Typ & C-Klemmenkreis & L-Klemmenkreis\\
+\hline
+\parbox[c][1.5cm]{4.5cm}{\input{tikzPictures/RET/LCSer.tex}} & S-Typ &
+C-Klemmentrennbündel & L-Klemmentrennbündel\\
+\hline
+\parbox[c][1.5cm]{4.5cm}{\input{tikzPictures/RET/LCPar.tex}} & P-Typ &
+C-Klemmenkreis & L-Klemmenkreis\\
+\hline
 \end{tabular}
+\caption{Bestimmung des RET-Typ}
+\label{tab:RETTyp}
+\end{table}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \subfloat[C-Klemmentrennbündel]{
 	\input{tikzPictures/RET/Trennbuendel.tex}
@@ -87,7 +99,11 @@ L-Klemmentrennbündel\\
 \index{RET!Synthese}
 Für die Reaktanzeintor-Synthese gibt es vier systematische Verfahren:
 
-\input{tikzPictures/RET/RetSyntheseTree}
+\begin{figure}[H]
+\begin{center}
+  \input{tikzPictures/RET/RetSyntheseTree}
+\end{center}
+\end{figure}
 
 \textbf{geg:} RET-Funktion\\
 \textbf{ges:} zugehörige Schaltung\\
