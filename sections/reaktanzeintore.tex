@@ -238,7 +238,7 @@ p^2&=-1:\ \underbrace{-4+10}_{6}=B(2) &\Rightarrow B=3\nonumber\\
 \index{RET!Synthese!Kettenbruchzerlegung}
 \paragraph{1. Art}
 Man geht aus von unecht gebrochen rationaler Funktion und
-spaltet Pol bei $\infty$ ab. Dann invertiert man, etc.
+spaltet einen Pol bei $\infty$ ab. Dann invertiert man, etc.
 \begin{align}
 	\underline{Y}(p)&=\left(2p^5+12p^3+16p\right):\left(p^4+4p^2+3\right)=2p+\frac{4p^3+10p}{p^4+4p^2+3},
 	&\underline{Y}_1=\frac{4p^3+10p}{p^4+4p^2+3}\nonumber\\
@@ -247,5 +247,26 @@ spaltet Pol bei $\infty$ ab. Dann invertiert man, etc.
 	\underline{Y}_2&=\left(4p^3+10p\right):\left(\frac{3}{2}p^2+3\right)=\frac{8}{3}p+\frac{2p}{\frac{3}{2}p^2+3},
 	&\underline{Z}_3=\frac{\frac{3}{2}p^2+3}{4p^3+10p}\nonumber\\
 	\underline{Z}_3&=\left(\frac{3}{2}p^2+3\right):\left(2p\right)=\frac{3}{4}p+\frac{3}{2p}=\frac{3}{4}p+\frac{1}{\frac{2}{3}p}\nonumber\\
-	\frac{3}{4}&=L\nonumber\\ \frac{2}{3}&=C\nonumber
+	\frac{3}{4}&=L\nonumber\\
+	\frac{2}{3}&=C\nonumber\\
+	\underline{Y}(p)&=2p+\frac{1}{\frac{1}{4}p+\frac{1}{\frac{8}{3}p+\frac{1}{\frac{3}{4}p+\frac{1}{\frac{2}{3}p}}}}\nonumber
 \end{align}
+%TODO: Bildli einfügen. Uäääää.
+\paragraph{2. Art}
+Es werden Pole bei $p=0$ abgespalten.\\
+(Ähnlich wie Kettenbruchzerlegung 1. Art,
+aber man beginnt bei tiefsten Potenzen)
+\begin{align}
+	\underline{Y}(p)&=\frac{16p+12p^3+2p^5}{3+4p^2+p^4}\rightarrow\text{Kein
+	Pol bei }p=0\text{ daher zuerst invertieren}\nonumber\\
+	\underline{Z}(p)&=\frac{3+4p^2+p^4}{16p+12p^3+2p^5}\nonumber\\
+	\underline{Z}(p)&=\left(3+4p^2+p^4\right):\left(16p+12p^3+2p^5\right)=\frac{3}{16p}+\frac{\frac{7}{4}p^2+\frac{5}{8}p^4}{16p+12p^3+2p5}\nonumber\\
+	\underline{Y}_1(p)&=\left(16p+12p^3+2p^5\right):\left(\frac{7}{4}p^2+\frac{5}{8}p^4\right)=\frac{65}{7p}+\frac{\frac{44}{7}p^3+2p^5}{\frac{7}{4}p^2+\frac{5}{8}p^4}\nonumber\\
+	\underline{Z}_2(p)&=\left(\frac{7}{4}p^2+\frac{5}{8}p^4\right):\left(\frac{44}{7}p^3+2p^5\right)=\frac{49}{176p}+\frac{\frac{3}{44}p^4}{\frac{44}{7}p^3+2p^5}\nonumber\\
+	\underline{Y}_3(p)&=\left(\frac{44}{7}p^3+2p^5\right):\left(\frac{3}{44}p^4\right)=\frac{44^2}{21p}+\frac{2p^5}{\frac{3}{44}p^4}\nonumber\\
+	\underline{Z}_4(p)&=\frac{3}{44}p^4:2p^5=\frac{3}{88p}\nonumber\\
+	\underline{Z}(p)&=\frac{3}{16p}+\frac{1}{\frac{64}{7p}+\frac{1}{\frac{49}{176p}+\frac{1}{\frac{44^2}{21p}+\frac{1}{\frac{3}{88p}}}}}\nonumber
+\end{align}
+%TODO: Bildli einfügen. He is the motherfucking pterodactyl!
+Alle 4 Zerlegungen ergeben äquivalente ($\neq$ duale!) Schaltungen!\\
+Man kann auch während der Zerlegung die Art wechseln.\\
