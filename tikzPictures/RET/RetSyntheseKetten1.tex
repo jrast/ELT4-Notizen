@@ -1,0 +1,25 @@
+\begin{circuitikz}[scale=4, european, american inductors, yscale=0.8]
+\ctikzset{bipoles/length=1.2cm}
+\draw (0,0)
+	to[short, *-] (1,0)
+	to[L=$\frac{1}{4}H$] (2,0)
+	to[L=$\frac{3}{4}H$] (3,0)
+	to[C=$\frac{2}{3}F$] (3,-1)
+	to[short, -*] (0,-1)
+	(1,0) to [C=$2F$] (1,-1)
+	(2,0) to [C=$\frac{8}{3}F$] (2,-1)
+	;
+\draw[dashed, very thick, color=green]
+	(0.5,-1.2) to[short] (0.5,-0.5)
+	to[short] (0.8,-0.5)
+	(1.3,-1.2) to[short] (1.3,-0.5)
+	to[short] (1.5,-0.5)
+	(2.3,-1.2) to[short] (2.3,-0.5)
+	to[short] (2.5,-0.5)
+	;
+\draw
+	(0.5,-1.3) node[draw=none, fill=none, color=green] {$\underline{Y}(p)$}
+	(1.3,-1.3) node[draw=none, fill=none, color=green] {$\underline{Z}_1(p)$}
+	(2.3,-1.3) node[draw=none, fill=none, color=green] {$\underline{Z}_3(p)$}
+;
+\end{circuitikz}

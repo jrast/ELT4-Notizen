@@ -1,0 +1,32 @@
+%TODO: He is the motherfucking pterodactyl!
+\begin{circuitikz}[scale=4, european, american inductors, yscale=0.8]
+\ctikzset{bipoles/length=1.2cm}
+\draw (0,0)
+	to[C=$\frac{16}{3}F$, *-] (1,0)
+	to[C=$\frac{176}{49}F$] (2,0)
+	to[C=$\frac{88}{9}F$] (3,0)
+	to[short] (3,-1)
+	to[short, -*] (0,-1)
+	(1,0) to [L=$\frac{7}{64}H$] (1,-1)
+	(2,0) to [L=$\frac{21}{1936}$] (2,-1)
+	;
+\draw[dashed, very thick, color=green]
+	(0.2,-1.2) to[short] (0.2,-0.5)
+	to[short] (0.4,-0.5)
+	(0.7,-1.2) to[short] (0.7,-0.5)
+	to[short] (0.9,-0.5)
+	(1.3,-1.2) to[short] (1.3,-0.5)
+	to[short] (1.5,-0.5)
+	(1.7,-1.2) to[short] (1.7,-0.5)
+	to[short] (1.9,-0.5)
+	(2.3,-1.2) to[short] (2.3,-0.5)
+	to[short] (2.5,-0.5)
+	;
+\draw
+	(0.2,-1.3) node[draw=none, fill=none, color=green] {$\underline{Z}(p)$}
+	(0.7,-1.3) node[draw=none, fill=none, color=green] {$\underline{Y}_1(p)$}
+	(1.3,-1.3) node[draw=none, fill=none, color=green] {$\underline{Z}_3(p)$}
+	(1.7,-1.3) node[draw=none, fill=none, color=green] {$\underline{Y}_3(p)$}
+	(2.3,-1.3) node[draw=none, fill=none, color=green] {$\underline{Z}_4(p)$}
+;
+\end{circuitikz}
