@@ -1,0 +1,12 @@
+\begin{circuitikz}[scale=2, european, american inductors]
+\ctikzset{voltage/european label distance=3}
+%\ctikzset{bipoles/length=1.2cm}
+	\draw (0,0)	to[american current source, label=\mbox{$I_q'=0.2V$}] (2,0)
+	-- (2,-2)
+	to [R, l_=\mbox{$G_2'=200S$}] (1,-2) 
+	to [short, i_=\mbox{$I_2'=40A$}] (0,-2)
+	-- (0,0);
+	\draw (2,-1) to [R, label=\mbox{$G_1'=100S$}] (1,-1)
+	to [short, i_=\mbox{$I_1'=20A$}] (0,-1);
+	\draw (0,-0.12) to [open, v_<=\mbox{$U'=0.2V$}] (2,-0.12);
+\end{circuitikz}

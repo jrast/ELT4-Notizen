@@ -56,18 +56,27 @@ Aus $\Sigma I=0$ wird $\Sigma U=0$ und umgekehrt\\
 Aus Serieschaltungen werden Parallelschaltungen und umgekehrt\\
 Aus Knoten werden Maschen und umgekehrt\\
 \paragraph{Beispiel}
-%TODO Bilder
-Links:
-\begin{align}
-U_1+U_2=U_q\nonumber\\
-U2=Uq\frac{R_2}{R_1+R_2}\nonumber
-\end{align}
+\begin{figure}[!ht]
+\centering
+\subfloat[Serieschaltung]{
+	\input{tikzPictures/elektrischeNetzwerke/Bsp1Serieschaltung}
+	\label{fig:elNetzwerke:Serieschaltung}
+}
+\qquad
+\qquad
+\subfloat[Parallelschaltung]{
+	\input{tikzPictures/elektrischeNetzwerke/Bsp1Parallelschaltung}
+	\label{fig:elNetzwerke:Parallelschaltung} 
+}
+\caption[Serie- und Parallelschaltung]{Serie- und Parallelschaltung}
+\label{fig:elNetzwerke}
+\end{figure}
 
-Rechts:
-\begin{align}
-I_1'+I_2'=I_q'\nonumber\\
-I_2'=I_q'\frac{G_2'}{G_1'+G_2'}\nonumber
-\end{align}
+\begin{tabular}{ll}
+Serieschaltung & Parallelschaltung \\
+$U_1+U_2=U_q$
+& $I_1'+I_2'=I_q'$\\ $U2=Uq\frac{R_2}{R_1+R_2}$ & $I_2'=I_q'\frac{G_2'}{G_1'+G_2'}$\\
+\end{tabular}
 
 \subsubsection{Dualfaktor D}
 Anpassung des Impedanzlevels, z.B.\\
