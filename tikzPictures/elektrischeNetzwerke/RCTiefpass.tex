@@ -1,0 +1,8 @@
+\begin{circuitikz}[scale=2, european, american inductors]
+\draw (0,0) to [R, l=$R$, *-*] (1,0)
+	to [short, -*] (2,0);
+\draw (1,0) to [C, l=$C$, *-*] (1,-1);
+\draw (0,-1) to [short, *-*] (2,-1);
+\draw (0,0) to[open, v>=$U_1$] (0,-1);
+\draw (2,0) to[open, v^>=$U_2$] (2,-1);
+\end{circuitikz}
