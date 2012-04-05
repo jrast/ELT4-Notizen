@@ -102,15 +102,30 @@ Skript Seite 37\\
 Skript Seite 39: Finden der dualen Schaltung\\
 
 \subsection{Netzwerkfunktionen}
-\begin{tabular}{ll}
+
+\begin{tabular}{p{0.08\textwidth}p{0.85\textwidth}}
 	\textbf{bisher:} & $j\omega$, gelegentlich abgekürzt mit $p=j\omega$ \\
-	\textbf{neu:} & komplexe Frequenz $p=\sigma + j \omega$ (Erweiterung) \\
+	\textbf{neu:} & komplexe Frequenz $p=\sigma + j \omega$ (Erweiterung). Statt p
+	wird oft auch s verwendet ($\rightarrow$ Laplace Transformationen)	\\
 \end{tabular}
-$\rightarrow$ komplexe Frequenzebene: Bild xy-Koordinatensystem, x=sigma, y=jw\\
-%TODO: Bild
-NB: statt p oft auch s ($\rightarrow$ Laplace Transformationen)\\
+
+%\usepackage{graphics} is needed for \includegraphics
+\begin{figure}[htp]
+\centering
+  \subfloat[p-Ebene]{
+  	\label{fig:ElNetzw:pEbene}
+  	\input{tikzPictures/elektrischeNetzwerke/pEbene.tex}
+  }
+  \qquad
+  \subfloat[Zeiger]{
+    \label{fig:ElNetzw:ZeigerDiag}
+    \input{tikzPictures/elektrischeNetzwerke/ZeigerDiagramm.tex}
+  }
+  \caption[p-Ebene und Zweigerdiagramm]{p-Ebene und Zweigerdiagramm}
+  \label{fig:ElNetzw:pEbeneZeigerDiag}
+\end{figure}
+
 \textbf{Bedeutung:}\\
-%TODO: Bild. x=re, y=im, Adach im winkel phi mit gegenuhrzeigersinnpfeil
 \begin{tabular}{ll}
 	\textbf{bisher:} & $a(t)=Re\{\underline{a}(t)\}=Re\{\hat{A}\cdot e^{j\phi}\cdot
 	e^{j\omega t}\}$ \\
@@ -139,13 +154,24 @@ Nullstellen: & keine\\
 Pole: & $pRC+1=0$ \\
 & $p=-\frac{1}{RC}=p_1$\\
 \end{tabular}\\
-%TODO Pol-Nullstellen Diagramm y=jw, x=sigma, polx bei -1/rc
+\begin{figure}[htp]
+\begin{center}
+  \input{tikzPictures/elektrischeNetzwerke/PolNullstellenDiagrammBsp1.tex}
+  \caption[Pol-Nullstellen Diagramm]{Pol-Nullstellen Diagramm Bsp.1}
+  \label{fig:ElNetzw:PolNullstellenDiag}
+\end{center}
+\end{figure}
 $F(p)=|\underline{F}(p)|=\frac{F_0}{|p-p_1|}$\\
 
 \subsubsection{Zusammenhang Übertragungsfunktion und freier Schwingung}
+\begin{figure}[htp]
+\begin{center}
+  \input{tikzPictures/elektrischeNetzwerke/LinearesNetzwerk.tex}
+  \caption[Lineares Netzwerk]{Lineares Netzwerk}
+  \label{fig:ElNetzw:LinNetzwerk}
+\end{center}
+\end{figure}
 Homogene Lösung der DGL\\
-%TODO Bild Rechteck "`lineares Netzwerk"', U1 x(t) am eingang, U2 y(t) am
-% ausgang
 \begin{align}
 	\underline{F}(p)&=\frac{\underline{P}_n(p)}{\underline{Q}_m(p)}\nonumber\\
 	\underline{F}(j\omega)&=\frac{P_n(j\omega)}{Q_m(j\omega)}\nonumber\\
