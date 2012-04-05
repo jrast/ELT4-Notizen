@@ -146,31 +146,41 @@ $F(p)=|\underline{F}(p)|=\frac{F_0}{|p-p_1|}$\\
 Homogene Lösung der DGL\\
 %TODO Bild Rechteck "`lineares Netzwerk"', U1 x(t) am eingang, U2 y(t) am
 % ausgang
-$\underline{F}(p)=\frac{\underline{P}_n(p)}{\underline{Q}_m(p)},\ 
-\underline{F}(j\omega)=\frac{P_n(j\omega)}{Q_m(j\omega)}$ \\
-$\underline{F}(j\omega)=\frac{a_0+a_1j\omega+a_2(j\omega)^2+\ldots+a_n(j\omega)^n}{b_0+b_1j\omega+\ldots+b_m(j\omega)^m}=\frac{\underline{U}_2}{\underline{U}_1}$\\
-$\rightarrow
-\underline{U}_2(b_0+b_1j\omega+b_2(j\omega)^2+\ldots+b_m(j\omega)^m)=\underline{U}_1(a_0+a_1j\omega+a_2(j\omega)^2+\ldots+a_n(j\omega)^n)$\\
+\begin{align}
+	\underline{F}(p)&=\frac{\underline{P}_n(p)}{\underline{Q}_m(p)}\nonumber\\
+	\underline{F}(j\omega)&=\frac{P_n(j\omega)}{Q_m(j\omega)}\nonumber\\
+	\underline{F}(j\omega)&=\frac{a_0+a_1j\omega+a_2(j\omega)^2+\ldots+a_n(j\omega)^n}{b_0+b_1j\omega+\ldots+b_m(j\omega)^m}=\frac{\underline{U}_2}{\underline{U}_1}\nonumber\\
+	\rightarrow
+\underline{U}_2(b_0+b_1j\omega+b_2(j\omega)^2+\ldots+b_m(j\omega)^m)&=\underline{U}_1(a_0+a_1j\omega+a_2(j\omega)^2+\ldots+a_n(j\omega)^n)\nonumber
+\end{align}
 Wir erinnern uns: Komplexe Amplitude mit $j\omega$ multiplizieren
 $\widehat{=}$ ableiten.\\
-$\Rightarrow U_2(t)\cdot b_0 + \dot{U}_2b_1 +
-\ddot{U}_2b_2+\ldots+U_2^{(m)}\cdot
-b_m=a_0U_1(t)+a_1\dot{U}_1+a_2\ddot{U}_1+\ldots+a_nU_1^(n)$\\
-$\Rightarrow b_0U_2+b_1\dot{U}_2+b_2\ddot{U}_2+\ldots+b_mU_2^{(m)}=0$\\
+\begin{align}
+	&\Rightarrow U_2(t)\cdot b_0 + \dot{U}_2b_1 +
+	\ddot{U}_2b_2+\ldots+U_2^{(m)}\cdot
+	b_m=a_0U_1(t)+a_1\dot{U}_1+a_2\ddot{U}_1+\ldots+a_nU_1^{(n)}\nonumber\\
+	&\Rightarrow b_0U_2+b_1\dot{U}_2+b_2\ddot{U}_2+\ldots+b_mU_2^{(m)}=0\nonumber
+\end{align}
 Ansatz $U_2=\hat{U}_2\cdot e^{\alpha t}$\\
-$\Rightarrow \hat{U}_2e^{\alpha t}(b_0+\alpha
-b_1+\alpha^2b_2+\ldots+\alpha^mb_m)=0$\\
+\begin{align}
+	&\Rightarrow \underbrace{\hat{U}_2e^{\alpha t}}_{\neq 0}\underbrace{(b_0+\alpha
+b_1+\alpha^2b_2+\ldots+\alpha^mb_m)}_{\text{charakteristische
+Lösung: }\alpha_1, \alpha_2, \ldots \alpha_m}=0\nonumber\\
 %TODO 2 underbrace: udachehoch \neq 0, rest = charakteristische Lösung: Lösungen
 % alpha1, alpha2, \ldots alpham
+	U_{2h}&=c_1e^{\alpha_1t}+c_2e^{\alpha_2t}+\ldots+c_me^{\alpha_mt}\nonumber
+\end{align}
 %TODO alles in align
-$U_{2h}=c_1e^{\alpha_1t}+c_2e^{\alpha_2t}+\ldots+c_me^{\alpha_mt}$\\
 $\Rightarrow$ Die Lösungen $\alpha_1\ldots\alpha_m$ der charakteristischen
 Gleichung entsprechen den Nullstellen von $Q_m(p)$ bzgl den Polen von
 $\underline{F}(p)$\\
-$\alpha_i=p_i$\\
-$\rightarrow
-U_h(t)=\hat{U}_{h1}e^{p_1t}+\hat{U}_{h2}e^{p_2t}+\ldots+U_{hm}e^{p_mt}$\\
-$Re\{p_i\} \Rightarrow $ Dämpfungskonst $=\sigma_i\ (p<0)$: $Im\{p_i\}=$
+\begin{align}
+\alpha_i&=p_i\nonumber\\
+\rightarrow
+U_h(t)&=\hat{U}_{h1}e^{p_1t}+\hat{U}_{h2}e^{p_2t}+\ldots+U_{hm}e^{p_mt}\nonumber
+\end{align}
+$Re\{p_i\} \Rightarrow $ Dämpfungskonst $=\sigma_i\ (p<0)$\\
+$Im\{p_i\}=$
 Eigenfrequenz\\
 Skript, Seite 49\\
 
