@@ -97,4 +97,34 @@ $1000 \Omega =$ Dualfaktor D, kann beliebig gewählt werden\\
 	& $j\omega C'=\frac{j \omega L}{D^2} \Rightarrow C'=\frac{L}{D^2}$\\
 	& $L'=C\cdot D^2$
 \end{tabular}\\
-Skript Seite 37
+Skript Seite 37\\
+
+Skript Seite 39: Finden der dualen Schaltung\\
+
+\subsection{Netzwerkfunktionen}
+\begin{tabular}{ll}
+	\textbf{bisher:} & $j\omega$, gelegentlich abgekürzt mit $p=j\omega$ \\
+	\textbf{neu:} & komplexe Frequenz $p=\sigma + j \omega$ (Erweiterung) \\
+\end{tabular}
+$\rightarrow$ komplexe Frequenzebene: Bild xy-Koordinatensystem, x=sigma, y=jw\\
+%TODO: Bild
+NB: statt p oft auch s ($\rightarrow$ Laplace Transformationen)\\
+\textbf{Bedeutung:}\\
+%TODO: Bild. x=re, y=im, Adach im winkel phi mit gegenuhrzeigersinnpfeil
+\begin{tabular}{ll}
+	\textbf{bisher:} & $a(t)=Re\{\underline{a}(t)\}=Re\{\hat{A}\cdot e^{j\phi}\cdot
+	e^{j\omega t}\}$ \\
+	& $\rightarrow \text{Sinussignal: } a(t)=\hat{A}\cdot\cos{\left(\omega t +
+	\phi\right)}$\\ mit $p=\sigma+j\omega$ & $a(t)=Re\{\hat{A}\cdot e^{j\phi}\cdot
+	e^{\sigma t}\cdot e^{j\omega t}\}$\\
+	& $a(t)=\hat{A}\cdot e^{\sigma t} \cdot \cos{\left(\omega t + \phi\right)}$\\
+\end{tabular}\\
+Sinussignal, das exponentiell abklingt $(\sigma < 0)$ oder exponentiell
+anschwillt $(\sigma > 0)$. Für $\sigma = 0$ verhält es sich wie "`früher"'.\\
+\begin{itemize}
+  \item Komplexe Rechnung gilt auch für $p=\sigma+j\omega$\\
+  \item Wird ein lineares Netzwerk mit $a_q=\hat{A}\cdot e^{\sigma t}
+  \cos\left(\omega t + \phi\right)$ angeregt, sind alle Ströme und Spannungen
+  auch exponentiell abklingend oder anschwillend.
+\end{itemize}
+Skript Seiten 39ff, Netzwerkfunktionen
