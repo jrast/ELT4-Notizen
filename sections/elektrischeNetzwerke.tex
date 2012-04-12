@@ -238,6 +238,14 @@ Skript, Seite 49\\
 $\sigma_i > 0$ exponentiell Ansteigend $\rightarrow$ instabil\\
 $\sigma_i < 0$ exponentiell Abklingend $\rightarrow$ Pol in linker Halbebene\\
 
+\begin{figure}[!ht]
+\begin{center}
+  \input{./tikzPictures/elektrischeNetzwerke/ZeigerDiagrammFallunterscheidung}
+  \caption{Veranschaulichung zur Fallunterscheidung}
+  \label{fig:elNetzw:Fallunterscheidung}
+\end{center}
+\end{figure}
+
 \subsection{Parallel-SK}
 \input{tikzPictures/elektrischeNetzwerke/LCRParallel}
 $\underline{Z}(p)=\frac{1}{\frac{1}{R}+pC+\frac{1}{pL}}=\frac{pL}{1+p\frac{L}{R}+p^2LC}$\\
@@ -259,9 +267,25 @@ $p_{1,2}=\frac{-\frac{\omega_r}{Q}\pm\sqrt{\frac{\omega_r^2}{Q^2}-4\omega_r^2}}{
   |\underline{p}_{1,2}|=\sqrt{\frac{\omega_r^2}{4Q^2}+\omega_r^2-\frac{\omega_r^2}{4Q^2}}=\omega_r$
 \end{itemize}
 
+\begin{figure}[!ht]
+\begin{center}
+  \input{./tikzPictures/elektrischeNetzwerke/PolstellenZusammenhang}
+  \caption{Zusammenhang Güte - Frequenz}
+  \label{fig:elNetzw:GueteFrequenz}
+\end{center}
+\end{figure}
+
 \subsection{Zusammenhang P-N-Verteilung $\leftrightarrow$ Frequenzgang}
 $\underline{F}(p)=K\frac{(p-\underline{z}_1)(p-\underline{z}_2)\ldots}{(p-p_1)(p-p_2)\ldots}$\\
-%Diagramm p-nullstellen
+
+\begin{figure}[!ht]
+\begin{center}
+  \input{./tikzPictures/elektrischeNetzwerke/ZusammenhangPNFrequenz}
+  \caption{Zusammenhang Pol/Nullstellen - Frequenz}
+  \label{fig:elNetzw:PNFrequenz}
+\end{center}
+\end{figure}
+
 \begin{align}
 	\text{Frequenzgang} p&=j\omega\nonumber\\
 	\underline{F}(j\omega)&=K\frac{(j\omega-\underline{z}_1)(j\omega-\underline{z}_2)\ldots}{(j\omega-p_1)(j\omega-p_2)\ldots}\nonumber\\
