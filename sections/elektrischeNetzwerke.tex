@@ -220,4 +220,45 @@ $Im\{p_i\}=$
 Eigenfrequenz\\
 Skript, Seite 49\\
 
+\subsubsection{Fallunterscheidung}
+\begin{itemize}
+  \item reeller Pol $p_i=\sigma_i \rightarrow$ ergibt Lösungsanteil
+  $c_ie^{\sigma_it}$
+  \item zweifacher reeller Pol $\rightarrow
+  c_ie^{\sigma_it}+c_{i+1}te^{\sigma_it}$
+  \item konjugiert komplexes Polpaar $p_{ij}=\sigma_i\pm j\omega i$
+\end{itemize}
+\begin{align}
+  &\rightarrow \underline{c}_{i1}e^{(\sigma_i+j\omega
+  i)t}+\underline{c}_{i2}e^{(\sigma_i-j\omega i)t}\nonumber\\
+  &=e^{\sigma_it}\left(\underline{c}_{i1}e^{j\omega_it}+\underline{c}_{i2}e^{-j\omega_it}\right)\nonumber\\
+  \underline{c}_{i1}=c_ie^{j\varphi},
+  \underline{c}_{i2}=c_ie^{-j\varphi}\nonumber\\
+  &=e^{\sigma_it}\left(c_ie^{j\left(\omega_it+\varphi\right)}+c_ie^{-j\left(\omega_it+\varphi\right)}\right)\nonumber\\
+  &=e^{\sigma_it}\cdot
+  %TODO Unterklammer ci*2 ist gleich A
+  c_i\cdot2cos(\omega_it+\varphi)=Ae^{\sigma_it}cos(\omega_it+\varphi)\nonumber
+\end{align}
+$\sigma_i > 0$ exponentiell Ansteigend $\rightarrow$ instabil\\
+$\sigma_i < 0$ exponentiell Abklingend $\rightarrow$ Pol in linker Halbebene\\
 
+\subsection{Parallel-SK}
+%LCR Parallel vertikal
+$\underline{Z}(p)=\frac{1}{\frac{1}{R}+pC+\frac{1}{pL}}=\frac{pL}{1+p\frac{L}{R}+p^2LC}$\\
+mit $\omega_r=\frac{1}{\sqrt{LC}}, Q=R\cdot\sqrt{\frac{C}{L}}$\\
+%TODO nextline unterklammer Lomegar =K 
+$\underline{Z}(p)=\omega_r^2\frac{pL}{p^2+\frac{\omega_r}{Q}p+\omega_r^2}=L\omega_r^2
+\frac{p}{(p-\underline{p}_1)(p-\underline{p}_2)}$\\
+Nullstelle: $\underline{z}_1=0$\\
+Pole:
+$p_{1,2}=\frac{-\frac{\omega_r}{Q}\pm\sqrt{\frac{\omega_r^2}{Q^2}-4\omega_r^2}}{2}=-\frac{\omega_r}{2Q}\pm\sqrt{\frac{\omega_r^2}{4Q^2}-\omega_r^2}$\\
+\begin{itemize}
+  \item $Q<<\frac{1}{2}:\
+  p_{1,2}\approx-\frac{\omega_r}{2Q}\pm\frac{\omega_r}{2Q}\rightarrow 0,
+  -\frac{\omega_r}{Q}$
+  \item $Q=\frac{1}{2}:\ p_1=p_2=-\frac{\omega_r}{2Q}=-\omega_r$
+  \item $Q>\frac{1}{2}:\ p_{1,2}=-\frac{\omega_r}{2Q}\pm
+  j\omega_r\sqrt{1-\frac{1}{4Q^2}}$
+  \item $Q>\frac{1}{2}
+  |\underline{p}_{1,2}|=\sqrt{\frac{\omega_r^2}{4Q^2}+\omega_r^2-\frac{\omega_r^2}{4Q^2}}=\omega_r$
+\end{itemize}
