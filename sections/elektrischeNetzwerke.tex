@@ -202,11 +202,8 @@ Ansatz $U_2=\hat{U}_2\cdot e^{\alpha t}$\\
 	&\Rightarrow \underbrace{\hat{U}_2e^{\alpha t}}_{\neq 0}\underbrace{(b_0+\alpha
 b_1+\alpha^2b_2+\ldots+\alpha^mb_m)}_{\text{charakteristische
 Lösung: }\alpha_1, \alpha_2, \ldots \alpha_m}=0\nonumber\\
-%TODO 2 underbrace: udachehoch \neq 0, rest = charakteristische Lösung: Lösungen
-% alpha1, alpha2, \ldots alpham
 	U_{2h}&=c_1e^{\alpha_1t}+c_2e^{\alpha_2t}+\ldots+c_me^{\alpha_mt}\nonumber
 \end{align}
-%TODO alles in align
 $\Rightarrow$ Die Lösungen $\alpha_1\ldots\alpha_m$ der charakteristischen
 Gleichung entsprechen den Nullstellen von $Q_m(p)$ bzgl den Polen von
 $\underline{F}(p)$\\
@@ -253,12 +250,45 @@ Nullstelle: $\underline{z}_1=0$\\
 Pole:
 $p_{1,2}=\frac{-\frac{\omega_r}{Q}\pm\sqrt{\frac{\omega_r^2}{Q^2}-4\omega_r^2}}{2}=-\frac{\omega_r}{2Q}\pm\sqrt{\frac{\omega_r^2}{4Q^2}-\omega_r^2}$\\
 \begin{itemize}
-  \item $Q<<\frac{1}{2}:\
+  \item $Q\ll\frac{1}{2}:\
   p_{1,2}\approx-\frac{\omega_r}{2Q}\pm\frac{\omega_r}{2Q}\rightarrow 0,
   -\frac{\omega_r}{Q}$
   \item $Q=\frac{1}{2}:\ p_1=p_2=-\frac{\omega_r}{2Q}=-\omega_r$
+  %TODO Nextline: underbrace omegarwurzel =omega0 eigenfrequenz
   \item $Q>\frac{1}{2}:\ p_{1,2}=-\frac{\omega_r}{2Q}\pm
   j\omega_r\sqrt{1-\frac{1}{4Q^2}}$
-  \item $Q>\frac{1}{2}
+  \item $Q>\frac{1}{2}:\ 
   |\underline{p}_{1,2}|=\sqrt{\frac{\omega_r^2}{4Q^2}+\omega_r^2-\frac{\omega_r^2}{4Q^2}}=\omega_r$
 \end{itemize}
+
+\subsection{Zusammenhang P-N-Verteilung $\leftrightarrow$ Frequenzgang}
+$\underline{F}(p)=K\frac{(p-\underline{z}_1)(p-\underline{z}_2)\ldots}{(p-p_1)(p-p_2)\ldots}$\\
+%Diagramm p-nullstellen
+Frequenzgang $p=j\omega$\\
+$\underline{F}(j\omega)=K\frac{(j\omega-\underline{z}_1)(j\omega-\underline{z}_2)\ldots}{(j\omega-p_1)(j\omega-p_2)\ldots}$\\
+% TODO nextline überklammer oben linker betrag = c_z1, rechter betrag = c_z2
+% TODO nextline unterklammer unten linker betrag = c_p1, rechter betrag = c_p2
+$|\underline{F}(j\omega)|=|K|\frac{|j\omega-\underline{z}_1||j\omega-\underline{z}_2|\ldots}{|j\omega-p_1||j\omega-p_2|\ldots}$\\
+% TODO nextline limits vom pi oben und unten ran machen
+$F(j\omega)=|K|\frac{\Pi_{i=1}^{n}|c_{zi}|}{\Pi_{i=1}^{m}|c_{pi}|}$
+Amplitudengang\\
+Phasengang $\varphi =
+arg\left(\underline{F}(j\omega)\right)=\left(\varphi_{z1}+\varphi_{z2}+\ldots-\varphi_{p1}-\varphi_{p2}-\ldots\right)$\\
+% TODO Align?
+$\varphi = \Sigma_{i=1}^n\varphi_{zi}-\Sigma_{i=1}^m\varphi_{pi}+k\pi$\\
+Eine Nullstelle auf der $j\omega$-Achse bewirkt einen Phasensprung von $\pi$.\\
+$\tau_{Gr}=-\frac{d}{d\omega}arg\underline{F}(j\omega)$ Gruppenlaufzeit\\
+\subsection{Übersicht Netzwerke/Systeme, Lernziele}
+\begin{itemize}
+  \item Dualität
+  \item Komplexe Frequenz
+  \item Netzwerkfunktionen
+  \begin{itemize}
+    \item Summenform
+    \item Produkform $\rightarrow$ P-N-Diagramm
+    \item in Partialbrüche zerlegt
+	\end{itemize}
+	\item Zusammenhänge
+	%TODO kraafick von dem?
+	F(p), DGL, P-N-Plan, Frequenzgang, freie Schwingung <-- alle sind verknüpft
+\end{itemize}	
