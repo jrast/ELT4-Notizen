@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\begin{scope}[->, very thick]
+  \draw (-0.1, 0) -- (2,0) node[right] {re};
+  \draw (0,-1.4) -- (0,1.4) node[above] {im};
+  \draw[blue] (0,0) -- (1.5,1) node[right] {$\underline{c}_{i1}$};
+  \draw[blue] (0,0) -- (1.5, -1) node[right] {$\underline{c}_{i1}^+$};
+\end{scope}
+
+\draw[->] (2.3776,0.7725) arc (18:45:2.5) node at(30:3) {$e^{j\omega_1t}$};
+\draw[->] (2.3776,-0.7725) arc (-18:-45:2.4) node at(-30:3) {$e^{-j\omega_1t}$};
+\end{tikzpicture}
