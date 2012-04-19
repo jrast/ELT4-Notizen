@@ -1,2 +1,79 @@
 \section{Zweitore}
-Skript Seite 50-
+Skript\\
+\subsection{Umrechnung von Zweitorparametern}
+Bild1\\
+\textbf{Bsp/Aufgabe:} Man berechne $[\underline{A}]$ aus $[\underline{Z}]$\\
+
+\begin{align}
+	\underline{U}_1=\underline{Z}_{11}\underline{I}_1+\underline{Z}_{12}\underline{I}_2
+	&
+	\underline{U}_1=\underline{A}_{11}\underline{U}_2+\underline{A}_{12}(\underline{-I}_2)\nonumber\\
+	\underline{U}_2=\underline{Z}_{21}\underline{I}_1+\underline{Z}_{22}\underline{I}_2
+	&
+	\underline{U}_1=\underline{A}_{21}\underline{U}_2+\underline{A}_{22}(\underline{-I}_2)\nonumber\\
+	\underline{I}_1=\frac{1}{\underline{Z}_{21}}\left(\underline{U}_2-\underline{Z}_{22}\underline{I}_2\right)=\frac{1}{\underline{Z{21}}}\underline{U}_2+\frac{\underline{Z}_{22}}{\underline{Z}_{11}}\left(-\underline{I}_2\right)\nonumber\\
+	\underline{U}_1=\frac{\underline{Z}_{11}}{\underline{Z}_{21}}\underline{U}_2+\underline{Z}_{11}\frac{\underline{Z}_{12}}{\underline{Z}_{21}}\left(-\underline{I}_2\right)-\underline{Z}_{12}\left(-\underline{I}_2\right)\nonumber\\
+	\underline{U}_1=\frac{\underline{Z}_{11}}{\underline{Z}_{21}}\underline{U}_2+\left(\underline{Z}_{11}\frac{\underline{Z}_{22}}{\underline{Z}_{21}}-\underline{Z}_{12}\right)\cdot\left(-\underline{I}_2\right)\nonumber\\
+	%Underbrace unter die zweitletzte klammer in letzter zeile
+	\frac{\underline{Z}_{11}\underline{Z}_{22}-\underline{Z}_{12}\underline{Z}_{21}}{\underline{Z}_{21}}=\frac{det[Z]}{\underline{Z}_{21}}\nonumber\\
+	[\underline{A}]=\frac{1}{\underline{Z}_{21}}
+	\begin{bmatrix}
+		\underline{Z}_{11} & det[\underline{Z}]\\
+		1 & \underline{Z}_{22}
+	\end{bmatrix}\nonumber
+\end{align}
+\subsection{Parameter-Bestimmung}
+\textbf{Bsp} Bild 2\\
+\textbf{Ges:} $\underline{Z}$-Matrix\\
+%TODO Z-Matrix formel
+\begin{align}
+	\underline{U}_1=\underline{Z}_{11}\underline{I}_1+\underline{Z}_{12}\underline{I}_2\nonumber\\
+	\underline{U}_2=\underline{Z}_{21}\underline{I}_1+\underline{Z}_{22}\underline{I}_2\nonumber
+	\end{align}\\
+Zuerst allgemein als T-Glied\\
+Bild 3\\
+$\underline{Z}_{11}=?$
+Falls $I_2=0$ (Ausg. offen)\\
+\begin{align}
+	%Vor Rightarrow einen strich runter, unden ma strich \underline{I}_2=0
+	\underline{U}_1=\underline{Z}_11\underline{I}_1 \Rightarrow
+	\underline{Z}_{11}=\frac{\underline{U}_1}{\underline{I}_1}=\underline{Z}_1+\underline{Z}_2\nonumber\\
+	=\text{(primäre) Leerlaufimpedanz }\underline{Z}_{1l}\nonumber\\
+	\underline{Z}_{12}=?\nonumber\\
+	\underline{U}_1=\underline{Z}_{11}\underline{I}_1+\underline{Z}_{12}\underline{I}_2\nonumber\\
+	%Nach frac strich runter \underline{I}_1=0
+	\text{Falls} I_1=0 \text{Eingang offen}:
+	\underline{Z}_{12}=\frac{\underline{U}_1}{\underline{I}_2s}\nonumber
+\end{align}
+Bild 4\\
+\begin{align}
+	\underline{U}_1=\underline{Z}_2\underline{I}_2 \Rightarrow
+	\frac{\underline{U}_1}{\underline{I}_2}=\underline{Z}_3=\underline{Z}_{12}\nonumber\\
+	\underline{Z}_{22}=?
+	\underline{U}_2=\underline{Z}_{21}\underline{I}_1+\underline{Z}_{22}\underline{I}_2\nonumber\\
+	%TODO Nach 1. frac strich nach unten I_1=0
+	\underline{Z}_{22}=\frac{\underline{U}_2}{\underline{I}_2}=\underline{Z}_2+\underline{Z}_3\nonumber\\
+	\underline{Z}_{21}=?\nonumber\\
+	%TODO Nach 1. frac strich nach unten I_2=0
+	\underline{Z}_{21}=\frac{\underline{U}_2}{\underline{I}_1}=\underline{Z}_3\nonumber\\
+	[\underline{Z}]=
+	\begin{bmatrix}
+		\underline{Z}_1+\underline{Z}_3 & \underline{Z}_3\\
+		\underline{Z}_3 & \underline{Z}_2+\underline{Z}_3
+	\end{bmatrix}\nonumber\\
+	[\underline{Z}]=
+	\begin{bmatrix}
+		R+j\omega L & R\\
+		R & R+\frac{1}{j\omega C}
+	\end{bmatrix}\nonumber
+\end{align}
+Titel?\\
+Bild5\\
+\begin{align}
+	\underline{I}_1=\underline{Y}_11\underline{U}_1+\underline{Y}_12\underline{U}_2\nonumber\\
+	\underline{I}_2=\underline{Y}_21\underline{U}_1+\underline{Y}_22\underline{U}_2\nonumber\\
+	\underline{Y}_{11}=?\nonumber\\
+	%strich nach frac U_2=0
+	\underline{Y}_{11}=\frac{\underline{I}_1}{\underline{U}_1}\nonumber\\
+	U_2=0: \text{ Kurzschluss am Ausgang}\nonumber\\
+\end{align}
