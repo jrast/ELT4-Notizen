@@ -76,4 +76,93 @@ Bild5\\
 	%strich nach frac U_2=0
 	\underline{Y}_{11}=\frac{\underline{I}_1}{\underline{U}_1}\nonumber\\
 	U_2=0: \text{ Kurzschluss am Ausgang}\nonumber\\
+	\frac{\underline{I}_1}{\underline{U}_1}=\underline{Y}_1+\underline{Y}_3=\underline{Y}_{11}\nonumber\\
+	%strich nach frac U_1=0
+	\underline{Y}_{11}=\frac{\underline{I}_1}{\underline{U}_2}=-\underline{Y}_3\nonumber\\
+\end{align}
+Bild 6\\
+Analog dazu:\\
+\begin{align}
+	\underline{Y}_{22}=\underline{Y}_2+\underline{Y}_3\nonumber\\
+	\underline{Y}_{21}=\underline{Y}_3\nonumber\\
+\end{align}
+Daraus folgt:
+\begin{align}
+	[\underline{Y}]=
+	\begin{bmatrix}
+		\underline{Y}_1+\underline{Y}_3 & -\underline{Y}_3\\
+		-\underline{Y}_3 & \underline{Y}_2+\underline{Y}_3
+	\end{bmatrix}\nonumber
+\end{align}
+\textbf{Bsp}
+Bild 7\\
+\textbf{Ges:} $[\underline{A}=?]$\\
+\begin{align}
+	\underline{U}_1=\underline{A}_{11}\underline{U}_2+\underline{A}_{12}\left(-\underline{I}_2\right)\nonumber\\
+	\underline{I}_1=\underline{A}_{21}\underline{U}_2+\underline{A}_{22}\left(-\underline{I}_2\right)\nonumber\\
+	\underline{A}_{11}=?\nonumber\\
+	%Nach frac strich runter \underline{I}_2=0 (Ausgang offen)
+	\underline{A}_{11}=\frac{\underline{U}_1}{\underline{U}_2} \rightarrow\text{
+	Quelle } \underline{U}_1 \text{anschliessen.}\nonumber\\
+	%Vor = strich runter \underline{I}_2=0
+	\frac{\underline{U}_2}{\underline{U}_1}=\frac{\frac{1}{j\omega
+	C}}{R+\frac{1}{j\omega C}}=\frac{1}{1+j\omega RC}\nonumber\\
+	\rightarrow \underline{A}_{11}=1+j\omega RC\nonumber\\
+	\underline{A}_{12}=?\nonumber\\
+	%nach = strich runter \underline{U}_2=0 (Kurzschluss beim Ausgang)
+	\underline{A}_{12}=\frac{\underline{U}_1}{-\underline{{I}_2}}\nonumber
+\end{align}
+Bild 8\\
+\begin{align}
+	\underline{A}_{21}=?\nonumber\\
+	%strich runter nach = \underline{I}_2=0
+	\underline{A}_{21}=\frac{\underline{I}_1}{\underline{U}_2}\nonumber
+\end{align}
+Bild 9
+\begin{align}
+	\underline{U}_2=\frac{\underline{I}_1}{j\omega C}\nonumber\\
+	\frac{\underline{I}_1}{\underline{U}_2}=j\omega C =
+	\underline{A}_{21}\nonumber\\
+	\underline{A}_{22}=?\nonumber\\
+	%strich nach unten nach frac \underline{U}_2=0
+	\underline{A}_{22}=\frac{\underline{I}_1}{-\underline{I}_2}=1\nonumber\\
+	[A]=
+	\begin{bmatrix}
+		1+j\omega RC & R\\
+		j\omega C & 1
+	\end{bmatrix}\nonumber
+\end{align}
+Beispiel Seite 55\\
+\subsection{Leerlauf und Kurzschlussimpedanzen}
+\textbf{Def}Bild 10\\
+$\underline{Z}_{1l}=$ Primäre Leerlaufimpedanz\\
+$\underline{Z}_{1k}=$ Primäre Kurzschlussimpedanz\\
+$\underline{Z}_{2l}=$ Sekundäre Leerlaufimpedanz\\
+$\underline{Z}_{2k}=$ Sekundäre Kurzschlussimpedanz\\
+\subsubsection{Zusammenhang mit Zweitorparametern}
+\begin{align}
+	\underline{Z}_{1l}:
+	\underline{U}_1=\underline{Z}_11\underline{I}_1+\underline{Z}_{12}\underline{I}_2\nonumber\\
+	\underline{Z}_{1l}=\frac{\underline{U_1}}{\underline{I}_1}=\underline{Z}_{11}\nonumber\\
+	\underline{Z}_{1k}:
+	\underline{I}_1=\underline{Y}_{11}\underline{U}_1+\underline{Y}_{12}\underline{U}_2\nonumber\\
+	\underline{Z}_{1k}=\frac{\underline{U}_1}{\underline{I}_1}=\frac{1}{\underline{Y}_{11}},
+	\underline{Y}_{1k}=\underline{Y}_{11}\nonumber
+\end{align}
+\subsection{Leerlauf und Kurzschluss-Übertragungsgrössen}
+\textbf{Bsp} (Leerlauf-)Spannungsübersetzung vorwärts\\
+Vorwärts bedeutet speisung am Eingang\\
+Bild 11\\
+\begin{align}
+	%Nach frac strich runter \underline{I}_2=0
+	\underline{V}_{U21}=\frac{\underline{U}_2}{\underline{U}_1}=?\nonumber\\
+	\underline{U}_1=\underline{A}_{11}\underline{U}_{2}+\underline{A}_{12}\left(-\underline{I}_2\right)\nonumber\\
+	%Nach 2. frac strich runter \underline{I}_2=0
+	\frac{\underline{U}_2}{\underline{U}_1}=\frac{1}{\underline{A}_11}\nonumber\\
+\end{align}
+(Kurzschluss-)Übertragungsadmittanz vorwärts
+$\frac{\underline{I}_2}{\underline{U}_1}$\\
+Bild 12\\
+\begin{align}
+	
 \end{align}
