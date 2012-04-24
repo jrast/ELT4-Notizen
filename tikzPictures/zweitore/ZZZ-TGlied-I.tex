@@ -1,0 +1,10 @@
+\begin{circuitikz}[scale=2, european]
+\ctikzset{bipoles/length=1.2cm}
+	\draw (0,1) to [L=$Z_1$, i>^=$\underline{I}_1$] (1,1) to [L=$Z_2$,
+	i<=$\underline{I}_2$] (2,1);
+	\draw (1,1) to [L=$Z_3$] (1,0);
+	\draw (0,0) -- (2,0);
+	
+	\draw (0,1) to[open, v>=$\underline{U}_1$] (0,0);
+	\draw (2,1) to[sinusoidal current source=$\underline{I}_2$, i<_=$ $] (2,0);
+\end{circuitikz}
