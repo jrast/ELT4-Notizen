@@ -134,14 +134,30 @@ $\underline{A}_{22}=?$\\
 Beispiel Seite 55\\
 \subsection{Leerlauf und Kurzschlussimpedanzen}
 \textbf{Def}Bild 10\\
-\input{tikzPictures/zweitore/primLeerlauf.tex}\\
-$\underline{Z}_{1l}=$ Primäre Leerlaufimpedanz\\
-\input{tikzPictures/zweitore/primKurz.tex}\\
-$\underline{Z}_{1k}=$ Primäre Kurzschlussimpedanz\\
-\input{tikzPictures/zweitore/sekLeerlauf.tex}\\
-$\underline{Z}_{2l}=$ Sekundäre Leerlaufimpedanz\\
-\input{tikzPictures/zweitore/sekKurz.tex}\\
-$\underline{Z}_{2k}=$ Sekundäre Kurzschlussimpedanz\\
+\begin{figure}[!h]
+\centering
+\subfloat[primäre Leerlaufimpedanz]{
+	\input{tikzPictures/zweitore/primLeerlauf.tex}
+	\label{fig:zweitor:prim:leer}
+}
+\qquad
+\subfloat[primäre Kurzschlussimpedanz]{
+	\input{tikzPictures/zweitore/primKurz.tex}
+	\label{fig:zweitor:prim:kurz} 
+}\\
+\subfloat[sekundäre Leerlaufimpedanz]{
+	\input{tikzPictures/zweitore/sekLeerlauf.tex}
+	\label{fig:zweitor:sek:leer}
+}
+\qquad
+\subfloat[sekundäre Kurzschlussimpedanz]{
+	\input{tikzPictures/zweitore/sekKurz.tex}
+	\label{fig:zweitor:sek:kurz} 
+}
+\caption{Definition Kurzschluss- und Leerlaufimpedanzen}
+\label{fig:zweitor:impedanzen}
+\end{figure}
+
 \subsubsection{Zusammenhang mit Zweitorparametern}
 \begin{align}
 	\underline{Z}_{1l}:
