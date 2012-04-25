@@ -1,0 +1,9 @@
+\begin{circuitikz}[scale=2, european, american inductors]
+\ctikzset{bipoles/length=1.2cm}
+	\draw (0,1) to [R=R, i>^=$\underline{I}_1$] (1,1) to [short,
+	i<=$\underline{I}_2$] (2,1);
+	\draw (1,1) to [C=C] (1,0);
+	\draw (0,0) -- (2,0);
+	\draw (2,1) -- (2,0);
+	\draw (0,1) to[open, v>=$\underline{U}_1$] (0,0);
+\end{circuitikz}

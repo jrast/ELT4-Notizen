@@ -93,7 +93,7 @@ Daraus folgt:
 	\end{bmatrix}\nonumber
 \end{align}
 \textbf{Bsp}
-Bild 7\\
+\input{tikzPictures/zweitore/RC-TGlied.tex}\\
 \textbf{Ges:} $[\underline{A}=?]$\\
 \begin{align}
 	\underline{U}_1=\underline{A}_{11}\underline{U}_2+\underline{A}_{12}\left(-\underline{I}_2\right)\nonumber\\
@@ -111,12 +111,12 @@ $\underline{A}_{12}=?$\\
 \begin{align}
 	\left.\underline{A}_{12}=\right|_{\underline{U}_2=0}\frac{\underline{U}_1}{-\underline{{I}_2}}\nonumber
 \end{align}
-Bild 8\\
+\input{tikzPictures/zweitore/RC-TGlied-0.tex}\\
 $\underline{A}_{21}=?$\\
 \begin{align}
 	\underline{A}_{21}\left.=\right|_{\underline{I}_2=0}\frac{\underline{I}_1}{\underline{U}_2}\nonumber
 \end{align}
-Bild 9
+\input{tikzPictures/zweitore/RC-TGlied.tex}\\
 \begin{align}
 	\underline{U}_2&=\frac{\underline{I}_1}{j\omega C}\nonumber\\
 	\frac{\underline{I}_1}{\underline{U}_2}&=j\omega C =
@@ -134,14 +134,18 @@ $\underline{A}_{22}=?$\\
 Beispiel Seite 55\\
 \subsection{Leerlauf und Kurzschlussimpedanzen}
 \textbf{Def}Bild 10\\
+\input{tikzPictures/zweitore/primLeerlauf.tex}\\
 $\underline{Z}_{1l}=$ Primäre Leerlaufimpedanz\\
+\input{tikzPictures/zweitore/primKurz.tex}\\
 $\underline{Z}_{1k}=$ Primäre Kurzschlussimpedanz\\
+\input{tikzPictures/zweitore/sekLeerlauf.tex}\\
 $\underline{Z}_{2l}=$ Sekundäre Leerlaufimpedanz\\
+\input{tikzPictures/zweitore/sekKurz.tex}\\
 $\underline{Z}_{2k}=$ Sekundäre Kurzschlussimpedanz\\
 \subsubsection{Zusammenhang mit Zweitorparametern}
 \begin{align}
 	\underline{Z}_{1l}:
-	\underline{U}_1&=\underline{Z}_11\underline{I}_1+\underline{Z}_{12}\underline{I}_2\nonumber\\
+	\underline{U}_1&=\underline{Z}_{11}\underline{I}_1+\underline{Z}_{12}\underline{I}_2\nonumber\\
 	\underline{Z}_{1l}&=\frac{\underline{U_1}}{\underline{I}_1}=\underline{Z}_{11}\nonumber\\
 	\underline{Z}_{1k}:
 	\underline{I}_1&=\underline{Y}_{11}\underline{U}_1+\underline{Y}_{12}\underline{U}_2\nonumber\\
@@ -151,13 +155,12 @@ $\underline{Z}_{2k}=$ Sekundäre Kurzschlussimpedanz\\
 \subsection{Leerlauf und Kurzschluss-Übertragungsgrössen}
 \textbf{Bsp} (Leerlauf-)Spannungsübersetzung vorwärts\\
 Vorwärts bedeutet speisung am Eingang\\
-Bild 11\\
+\input{tikzPictures/zweitore/zweitorLeerlauf.tex}\\
 \begin{align}
 	\underline{V}_{U21}&=\left.\frac{\underline{U}_2}{\underline{U}_1}\right|_{\underline{I}_2=0}=?\nonumber\\
 	\underline{U}_1&=\underline{A}_{11}\underline{U}_{2}+\underline{A}_{12}\left(-\underline{I}_2\right)\nonumber\\
-	%Nach 2. frac strich runter \underline{I}_2=0
 	\frac{\underline{U}_2}{\underline{U}_1}&=\left.\frac{1}{\underline{A}_11}\right|_{\underline{I}_2=0}\nonumber
 \end{align}
 (Kurzschluss-)Übertragungsadmittanz vorwärts
 $\frac{\underline{I}_2}{\underline{U}_1}$\\
-Bild 12\\
+\input{tikzPictures/zweitore/zweitorKurz.tex}\\
