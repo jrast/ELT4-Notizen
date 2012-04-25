@@ -4,6 +4,10 @@
 
 \include{header}
 
+\usetikzlibrary{external} % Achtung, pdftex jetzt nur noch mit der option -enable-write18 aufrufen!
+\tikzexternalize[shell escape=-enable-write18] 
+\tikzsetexternalprefix{compiledFigures/} 
+
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}
 % \SetWatermarkScale{8}
@@ -25,7 +29,7 @@
 \include{sections/elektrischeNetzwerke}
 \include{sections/zweitore}
 \newpage
-\listoffigures
+\listoffigures 
  
 \listoftables
  

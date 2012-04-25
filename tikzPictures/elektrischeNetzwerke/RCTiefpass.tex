@@ -1,3 +1,4 @@
+\tikzexternaldisable
 \begin{circuitikz}[scale=2, european, american inductors]
 \draw (0,0) to [R, l=$R$, *-*] (1,0)
 	to [short, -*] (2,0);
@@ -7,3 +8,4 @@
 \draw (2,0) to[open, v^>=$U_2$] (2,-1);
 \node at (0,-1.5) {};
 \end{circuitikz}
+\tikzexternalenable
