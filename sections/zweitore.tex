@@ -202,7 +202,8 @@ Ausgedrückt durch $\underline{Z}$-Parameter
 \begin{align}
 	\underline{Z}_1=\frac{\underline{Z}_{11}\underline{Z}_b+det[Z]}{\underline{Z}_b+\underline{Z}_{22}}\nonumber
 \end{align}
-\subsubsection{Betriebs-Spannungsübersetzung$\underline{V}_{Uba}=\frac{\underline{U}_{2}}{\underline{U}_{1}}$}
+\subsubsection{Betriebs-Spannungsübersetzung}
+$\underline{V}_{Uba}=\frac{\underline{U}_{2}}{\underline{U}_{1}}$\\
 Bild 3\\
 rechts vom bild:
 $\underline{I}_{2}=\frac{-\underline{U}_{2}}{\underline{Z}_{b}}$\\
@@ -219,3 +220,48 @@ Bild 4\\
 \end{align}
 Skript Seite 64 (Kaskaden- oder Kettenschaltung)\\
 Skript Seite 65 (Parallelschaltung)\\
+Parallelschaltung Achtung: Beim Zusammenschalten dürfen keine Zweige
+kurzgeschlossen oder stromlos werden\\
+Bild 5. Zusammenschaltregel von Brun\\
+\subsection{Reziprozität}
+$\Rightarrow$ Ausgangsgrössen sind unabhängig von der Betriebsrichtung, sofern
+$\underline{Z}_{Q}=\underline{Z}_{L} \left(=\underline{Z}_{0}\right)$\\
+Versuchsanordnung:\\
+Bild 7\\
+Für das erweiterte Zweitor gilt:\\
+\begin{align}
+	\begin{bmatrix}
+		U_1'\\
+		U_2'
+	\end{bmatrix}
+	=	
+	\begin{bmatrix}
+		\underline{Z}_{11}+\underline{Z}_{0} & \underline{Z}_{12}\\
+		\underline{Z}_{21} & \underline{Z}_{22}+\underline{Z}_0
+	\end{bmatrix}
+	\begin{bmatrix}
+		\underline{I}_1'\\
+		\underline{I}_2'
+	\end{bmatrix}\nonumber
+\end{align}
+Übertragungsadmittanz vorwärts $\frac{\underline{I}_{2}'}{\underline{U}_{1}'}=\underline{Y}_{21}'
+	(\underline{U}_{2}'=0)$\\
+Übertragungsadmittanz rückwärts
+$\frac{\underline{I}_{1r}'}{\underline{U}_{2r}'}=\underline{Y}_{12}'
+(\underline{U}_{1}'=0)$\\
+Betriebsbedingungen $\underline{U}_{1}'=\underline{U}_{2r}'=\underline{U}_{q}$\\
+Reziprozitätsbedingungen $\underline{I}_{2}'=\underline{I}_{1r}'$\\
+Daraus folgt: $\underline{Y}_{21}'=\underline{Y}_{12}'$\\
+Falls Tabelle 1 digitalisiert wird hier korrekt verweisen!\\
+Aus Tabelle 1 folgt:\\
+\begin{align}
+	\frac{\underline{Z}_{21}'}{det[\underline{Z}']}=\frac{-\underline{Z}_{12}'}{det[\underline{Z}']}\nonumber\\
+	\Rightarrow \underline{Z}_{21}'=\underline{Z}_{12}'\nonumber\\
+	\text{Reziprozitätsbedingungen:}\nonumber\\
+	\boxed{\underline{Z}_{21}=\underline{Z}_{12}}\\
+	\text{bzw }\boxed{\underline{Y}_{21}=\underline{Y}_{12}}\nonumber\\
+	\boxed{det[\underline{A}]=1}\nonumber
+\end{align}
+Beispiel Bild 8\\
+Skript Seite 57\\
+
