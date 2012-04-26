@@ -175,8 +175,47 @@ Vorwärts bedeutet speisung am Eingang\\
 \begin{align}
 	\underline{V}_{U21}&=\left.\frac{\underline{U}_2}{\underline{U}_1}\right|_{\underline{I}_2=0}=?\nonumber\\
 	\underline{U}_1&=\underline{A}_{11}\underline{U}_{2}+\underline{A}_{12}\left(-\underline{I}_2\right)\nonumber\\
-	\frac{\underline{U}_2}{\underline{U}_1}&=\left.\frac{1}{\underline{A}_11}\right|_{\underline{I}_2=0}\nonumber
+	\frac{\underline{U}_2}{\underline{U}_1}&=\left.\frac{1}{\underline{A}_{11}}\right|_{\underline{I}_2=0}=\frac{\underline{Z}_{21}}{\underline{Z}_{11}}=\frac{-\underline{H}_{21}}{det[H]}\nonumber
 \end{align}
 (Kurzschluss-)Übertragungsadmittanz vorwärts
 $\frac{\underline{I}_2}{\underline{U}_1}$\\
 \input{tikzPictures/zweitore/zweitorKurz.tex}\\
+\begin{align}
+	\left.\frac{\underline{I}_2}{\underline{U}_1}\right|_{U_2=0}=?\nonumber\\
+	\underline{I}_2=\underline{Y}_{21}\underline{U}_1\Rightarrow\frac{\underline{I}_2}{\underline{U}_1}=\underline{Y}_{21}\nonumber
+\end{align}
+Spannungsübersetzung rückwärts $\underline{V}_{U12}$\\
+Bild 1\\
+\begin{align}
+	\underline{V}_{U12}=\left.\frac{\underline{U}_1}{\underline{U}_2}\right|_{I_1=0}=\underline{H}_{12}=\frac{\underline{Z}_{12}}{\underline{Z}_{22}}\nonumber
+\end{align}
+Tabellen übernehmen? Umrechnung, herleitung etc\\
+\subsection{Betrieb-Eingangs- und Übertragungsgrössen}
+Last-(bzw Quellen-) Impedanz nicht $0$ oder $\infty$
+\textbf{Bsp} Bild 2\\
+\subsubsection{Eingangsimpedanz}
+\begin{align}
+	\underline{Z}_1&=\frac{\underline{U}_1}{\underline{I}_1}=\frac{\underline{A}_{11}\underline{U}_{2}+\underline{A}_{12}\left(-\underline{I}_2\right)}{\underline{A}_{21}\underline{U}_2+\underline{A}_{22}\left(-\underline{I}_2\right)}\nonumber\\
+	\underline{Z}_1&=\frac{\underline{A}_{11}+\underline{A}_{12}\frac{1}{\underline{Z}_b}}{\underline{A}_{21}+\underline{A}_{22}\frac{1}{\underline{Z}_b}}=\frac{\underline{A}_{11}\underline{Z}_b+\underline{A}_{12}}{\underline{A}_{21}\underline{Z}_b+\underline{A}_{22}}\nonumber
+\end{align}
+Ausgedrückt durch $\underline{Z}$-Parameter
+\begin{align}
+	\underline{Z}_1=\frac{\underline{Z}_{11}\underline{Z}_b+det[Z]}{\underline{Z}_b+\underline{Z}_{22}}\nonumber
+\end{align}
+\subsubsection{Betriebs-Spannungsübersetzung$\underline{V}_{Uba}=\frac{\underline{U}_{2}}{\underline{U}_{1}}$}
+Bild 3\\
+rechts vom bild:
+$\underline{I}_{2}=\frac{-\underline{U}_{2}}{\underline{Z}_{b}}$\\
+\begin{align}
+	\underline{U}_{1}&=\underline{U}_{2}\left(\underline{A}_{11}+\frac{\underline{A}_{12}}{\underline{Z}_{b}}\right)\nonumber\\
+	\frac{\underline{U}_{2}}{\underline{U}_{1}}&=\frac{1}{\underline{A}_{11}+\frac{\underline{A}_{12}}{\underline{Z}_{b}}}=\frac{\underline{Z}_{b}}{\underline{A}_{11}\underline{Z}_{b}+\underline{A}_{12}}=\underline{V}_{Uba}\nonumber
+\end{align}
+Bild 4\\
+\begin{align}
+ 	\frac{\underline{U}_{2}}{\underline{U}_{1}}&=?\nonumber\\
+	\underline{U}_{1}&=\underline{U}_{q}\frac{\underline{Z}_{1}}{\underline{Z}_{a}+\underline{Z}_{1}}\nonumber\\
+	\text{daraus: }
+	\frac{\underline{U}_{2}}{\underline{U}_{q}}&=\frac{\underline{U}_{2}}{\underline{U}_{1}}\frac{\underline{U}_{1}}{\underline{U}_{q}}\nonumber
+\end{align}
+Skript Seite 64 (Kaskaden- oder Kettenschaltung)\\
+Skript Seite 65 (Parallelschaltung)\\
