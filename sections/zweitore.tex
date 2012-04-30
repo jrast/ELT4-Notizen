@@ -68,8 +68,8 @@ $\underline{Z}_{21}=?$\\
 \end{align}
 \input{tikzPictures/zweitore/YYY-PiGlied.tex}\\
 \begin{align}
-	\underline{I}_1=\underline{Y}_11\underline{U}_1+\underline{Y}_12\underline{U}_2\nonumber\\
-	\underline{I}_2=\underline{Y}_21\underline{U}_1+\underline{Y}_22\underline{U}_2\nonumber
+	\underline{I}_1=\underline{Y}_{11}\underline{U}_1+\underline{Y}_12\underline{U}_2\nonumber\\
+	\underline{I}_2=\underline{Y}_{21}\underline{U}_1+\underline{Y}_22\underline{U}_2\nonumber
 \end{align}
 $\underline{Y}_{11}=?$\\
 \begin{align}	
@@ -175,8 +175,93 @@ Vorwärts bedeutet speisung am Eingang\\
 \begin{align}
 	\underline{V}_{U21}&=\left.\frac{\underline{U}_2}{\underline{U}_1}\right|_{\underline{I}_2=0}=?\nonumber\\
 	\underline{U}_1&=\underline{A}_{11}\underline{U}_{2}+\underline{A}_{12}\left(-\underline{I}_2\right)\nonumber\\
-	\frac{\underline{U}_2}{\underline{U}_1}&=\left.\frac{1}{\underline{A}_11}\right|_{\underline{I}_2=0}\nonumber
+	\frac{\underline{U}_2}{\underline{U}_1}&=\left.\frac{1}{\underline{A}_{11}}\right|_{\underline{I}_2=0}=\frac{\underline{Z}_{21}}{\underline{Z}_{11}}=\frac{-\underline{H}_{21}}{det[H]}\nonumber
 \end{align}
 (Kurzschluss-)Übertragungsadmittanz vorwärts
 $\frac{\underline{I}_2}{\underline{U}_1}$\\
 \input{tikzPictures/zweitore/zweitorKurz.tex}\\
+\begin{align}
+	\left.\frac{\underline{I}_2}{\underline{U}_1}\right|_{U_2=0}=?\nonumber\\
+	\underline{I}_2=\underline{Y}_{21}\underline{U}_1\Rightarrow\frac{\underline{I}_2}{\underline{U}_1}=\underline{Y}_{21}\nonumber
+\end{align}
+Spannungsübersetzung rückwärts $\underline{V}_{U12}$\\
+Bild 1\\
+\begin{align}
+	\underline{V}_{U12}=\left.\frac{\underline{U}_1}{\underline{U}_2}\right|_{I_1=0}=\underline{H}_{12}=\frac{\underline{Z}_{12}}{\underline{Z}_{22}}\nonumber
+\end{align}
+Tabellen übernehmen? Umrechnung, herleitung etc\\
+\subsection{Betrieb-Eingangs- und Übertragungsgrössen}
+Last-(bzw Quellen-) Impedanz nicht $0$ oder $\infty$
+\textbf{Bsp} Bild 2\\
+\subsubsection{Eingangsimpedanz}
+\begin{align}
+	\underline{Z}_1&=\frac{\underline{U}_1}{\underline{I}_1}=\frac{\underline{A}_{11}\underline{U}_{2}+\underline{A}_{12}\left(-\underline{I}_2\right)}{\underline{A}_{21}\underline{U}_2+\underline{A}_{22}\left(-\underline{I}_2\right)}\nonumber\\
+	\underline{Z}_1&=\frac{\underline{A}_{11}+\underline{A}_{12}\frac{1}{\underline{Z}_b}}{\underline{A}_{21}+\underline{A}_{22}\frac{1}{\underline{Z}_b}}=\frac{\underline{A}_{11}\underline{Z}_b+\underline{A}_{12}}{\underline{A}_{21}\underline{Z}_b+\underline{A}_{22}}\nonumber
+\end{align}
+Ausgedrückt durch $\underline{Z}$-Parameter
+\begin{align}
+	\underline{Z}_1=\frac{\underline{Z}_{11}\underline{Z}_b+det[Z]}{\underline{Z}_b+\underline{Z}_{22}}\nonumber
+\end{align}
+\subsubsection{Betriebs-Spannungsübersetzung}
+$\underline{V}_{Uba}=\frac{\underline{U}_{2}}{\underline{U}_{1}}$\\
+Bild 3\\
+rechts vom bild:
+$\underline{I}_{2}=\frac{-\underline{U}_{2}}{\underline{Z}_{b}}$\\
+\begin{align}
+	\underline{U}_{1}&=\underline{U}_{2}\left(\underline{A}_{11}+\frac{\underline{A}_{12}}{\underline{Z}_{b}}\right)\nonumber\\
+	\frac{\underline{U}_{2}}{\underline{U}_{1}}&=\frac{1}{\underline{A}_{11}+\frac{\underline{A}_{12}}{\underline{Z}_{b}}}=\frac{\underline{Z}_{b}}{\underline{A}_{11}\underline{Z}_{b}+\underline{A}_{12}}=\underline{V}_{Uba}\nonumber
+\end{align}
+Bild 4\\
+\begin{align}
+ 	\frac{\underline{U}_{2}}{\underline{U}_{1}}&=?\nonumber\\
+	\underline{U}_{1}&=\underline{U}_{q}\frac{\underline{Z}_{1}}{\underline{Z}_{a}+\underline{Z}_{1}}\nonumber\\
+	\text{daraus: }
+	\frac{\underline{U}_{2}}{\underline{U}_{q}}&=\frac{\underline{U}_{2}}{\underline{U}_{1}}\frac{\underline{U}_{1}}{\underline{U}_{q}}\nonumber
+\end{align}
+Skript Seite 64 (Kaskaden- oder Kettenschaltung)\\
+Skript Seite 65 (Parallelschaltung)\\
+Parallelschaltung Achtung: Beim Zusammenschalten dürfen keine Zweige
+kurzgeschlossen oder stromlos werden\\
+Bild 5. Zusammenschaltregel von Brun\\
+\subsection{Reziprozität}
+$\Rightarrow$ Ausgangsgrössen sind unabhängig von der Betriebsrichtung, sofern
+$\underline{Z}_{Q}=\underline{Z}_{L} \left(=\underline{Z}_{0}\right)$\\
+Versuchsanordnung:\\
+Bild 7\\
+Für das erweiterte Zweitor gilt:\\
+\begin{align}
+	\begin{bmatrix}
+		U_1'\\
+		U_2'
+	\end{bmatrix}
+	=	
+	\begin{bmatrix}
+		\underline{Z}_{11}+\underline{Z}_{0} & \underline{Z}_{12}\\
+		\underline{Z}_{21} & \underline{Z}_{22}+\underline{Z}_0
+	\end{bmatrix}
+	\begin{bmatrix}
+		\underline{I}_1'\\
+		\underline{I}_2'
+	\end{bmatrix}\nonumber
+\end{align}
+Übertragungsadmittanz vorwärts $\frac{\underline{I}_{2}'}{\underline{U}_{1}'}=\underline{Y}_{21}'
+	(\underline{U}_{2}'=0)$\\
+Übertragungsadmittanz rückwärts
+$\frac{\underline{I}_{1r}'}{\underline{U}_{2r}'}=\underline{Y}_{12}'
+(\underline{U}_{1}'=0)$\\
+Betriebsbedingungen $\underline{U}_{1}'=\underline{U}_{2r}'=\underline{U}_{q}$\\
+Reziprozitätsbedingungen $\underline{I}_{2}'=\underline{I}_{1r}'$\\
+Daraus folgt: $\underline{Y}_{21}'=\underline{Y}_{12}'$\\
+Falls Tabelle 1 digitalisiert wird hier korrekt verweisen!\\
+Aus Tabelle 1 folgt:\\
+\begin{align}
+	\frac{\underline{Z}_{21}'}{det[\underline{Z}']}=\frac{-\underline{Z}_{12}'}{det[\underline{Z}']}\nonumber\\
+	\Rightarrow \underline{Z}_{21}'=\underline{Z}_{12}'\nonumber\\
+	\text{Reziprozitätsbedingungen:}\nonumber\\
+	\boxed{\underline{Z}_{21}=\underline{Z}_{12}}\\
+	\text{bzw }\boxed{\underline{Y}_{21}=\underline{Y}_{12}}\nonumber\\
+	\boxed{det[\underline{A}]=1}\nonumber
+\end{align}
+Beispiel Bild 8\\
+Skript Seite 57\\
+
