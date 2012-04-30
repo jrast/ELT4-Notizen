@@ -25,16 +25,18 @@
 \newpage
 \pagenumbering{arabic}
 
-\include{sections/Schwingkreise}
+\input{sections/Schwingkreise}
 \input{sections/reaktanzeintore}
-\include{sections/elektrischeNetzwerke}
-\include{sections/zweitore}
-\newpage
+\input{sections/elektrischeNetzwerke}
+\input{sections/zweitore}
+
+\begin{appendix}
+\input{sections/abkuerzungen}
+\input{sections/symbole}
 \listoffigures 
- 
-\listoftables
- 
+\listoftables 
 \newpage
 \printindex
+\end{appendix}
 
 \end{document}
