@@ -1,0 +1,22 @@
+\begin{tikzpicture}[thick]
+  \draw (-1,0.2) -- (0.5,0.2);
+  \draw (-0.3,0.8) -- (0.5,0.8);
+  \draw (-0.8,0.8) -- (-1,0.8);
+  \draw [->] (0.1,0.7) -- (0.1,0.3);
+  \node at (-0.2,0.5) {$\underline{U}_1$};
+  \draw [->, dashed] (0.3,0.5) -- (0.8,0.5);
+  \draw [dashed] (0.3,0.5) -- (0.3,0) node [below] {$\underline{Z}_1$};
+  \draw (-0.8,0.7) rectangle (-0.3,0.9) node [above left] {$\underline{Z}_a$};
+  \draw (-1,0.8) -- (-1,0.2);
+  \draw (-1,0.5) circle (0.2cm);
+  \draw [->] (3.2,0.8) -- (2,0.8)  node[above right] {$\underline{I}_2$};
+  \draw (3.2,0.2) -- (2,0.2);
+  \draw [->] (2.2,0.7) -- (2.2,0.3);
+  \node at (2.5,0.5) {$\underline{U}_2$};
+  \draw (3.2,0.8) -- (3.2,0.7);
+  \draw (3.2,0.3) -- (3.2,0.2);
+  \draw (3,0.7) rectangle (3.4,0.3);
+  \node at (3.7,0.5) {$\underline{Z}_b$};
+  \draw (0.5,0) rectangle	(2,1);
+  \node at (1.25,0.5) {2Tor};
+\end{tikzpicture}

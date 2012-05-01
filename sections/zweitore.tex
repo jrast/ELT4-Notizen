@@ -190,14 +190,14 @@ $\frac{\underline{I}_2}{\underline{U}_1}$\\
 	\underline{I}_2=\underline{Y}_{21}\underline{U}_1\Rightarrow\frac{\underline{I}_2}{\underline{U}_1}=\underline{Y}_{21}\nonumber
 \end{align}
 Spannungsübersetzung rückwärts $\underline{V}_{U12}$\\
-Bild 1\\
+\input{tikzPictures/zweitore/UUebersetzungRueck.tex}\\
 \begin{align}
 	\underline{V}_{U12}=\left.\frac{\underline{U}_1}{\underline{U}_2}\right|_{I_1=0}=\underline{H}_{12}=\frac{\underline{Z}_{12}}{\underline{Z}_{22}}\nonumber
 \end{align}
 Tabellen übernehmen? Umrechnung, herleitung etc\\
 \subsection{Betrieb-Eingangs- und Übertragungsgrössen}
 Last-(bzw Quellen-) Impedanz nicht $0$ oder $\infty$ \\
-\textbf{Bsp} Bild 2\\
+\textbf{Bsp} \input{tikzPictures/zweitore/BetriebsEingangsImped.tex}\\
 \subsubsection{Eingangsimpedanz}
 \begin{align}
 	\underline{Z}_1&=\frac{\underline{U}_1}{\underline{I}_1}=\frac{\underline{A}_{11}\underline{U}_{2}+\underline{A}_{12}\left(-\underline{I}_2\right)}{\underline{A}_{21}\underline{U}_2+\underline{A}_{22}\left(-\underline{I}_2\right)}\nonumber\\
@@ -209,14 +209,14 @@ Ausgedrückt durch $\underline{Z}$-Parameter
 \end{align}
 \subsubsection{Betriebs-Spannungsübersetzung}
 $\underline{V}_{Uba}=\frac{\underline{U}_{2}}{\underline{U}_{1}}$\\
-Bild 3\\
+\input{tikzPictures/zweitore/BetriebsSpannungsUebersetzung.tex}\\
 rechts vom bild:
 $\underline{I}_{2}=\frac{-\underline{U}_{2}}{\underline{Z}_{b}}$\\
 \begin{align}
 	\underline{U}_{1}&=\underline{U}_{2}\left(\underline{A}_{11}+\frac{\underline{A}_{12}}{\underline{Z}_{b}}\right)\nonumber\\
 	\frac{\underline{U}_{2}}{\underline{U}_{1}}&=\frac{1}{\underline{A}_{11}+\frac{\underline{A}_{12}}{\underline{Z}_{b}}}=\frac{\underline{Z}_{b}}{\underline{A}_{11}\underline{Z}_{b}+\underline{A}_{12}}=\underline{V}_{Uba}\nonumber
 \end{align}
-Bild 4\\
+\input{tikzPictures/zweitore/BetriebsSpannungsUebersetzung2.tex}\\
 \begin{align}
  	\frac{\underline{U}_{2}}{\underline{U}_{1}}&=?\nonumber\\
 	\underline{U}_{1}&=\underline{U}_{q}\frac{\underline{Z}_{1}}{\underline{Z}_{a}+\underline{Z}_{1}}\nonumber\\
@@ -228,6 +228,24 @@ Skript Seite 65 (Parallelschaltung)\\
 Parallelschaltung Achtung: Beim Zusammenschalten dürfen keine Zweige
 kurzgeschlossen oder stromlos werden\\
 Bild 5. Zusammenschaltregel von Brun\\
+\\
+\begin{figure}[!h]
+\centering
+%\subfloat[\math{\underline{Z} \neq \underline{Z}' + \underline{Z}''}]{
+\subfloat[Falsche Parallelschaltung]{
+	\input{tikzPictures/zweitore/RegelvBrunFalsch.tex}
+	\label{fig:zweitor:regelvbrun:falsch}
+}
+\qquad
+%\subfloat[$\underline{Z} = \underline{Z}' + \underline{Z}''$]{
+\subfloat[Richtige Parallelschaltung]{
+	\input{tikzPictures/zweitore/RegelvBrunRichtig.tex}
+	\label{fig:zweitor:regelvbrun:richtig}
+}\\
+\caption{Zusammenschaltregel von Brun}
+\label{fig:zweitor:regelvbrun}
+\end{figure}
+
 \subsection{Reziprozität}
 $\Rightarrow$ Ausgangsgrössen sind unabhängig von der Betriebsrichtung, sofern
 $\underline{Z}_{Q}=\underline{Z}_{L} \left(=\underline{Z}_{0}\right)$\\
