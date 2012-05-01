@@ -1,4 +1,5 @@
 \section{Zweitore}
+\tikzsetexternalprefix{compiledFigures/zweitore/}
 \index{Zweitore}
 \index{Zweitore!Umrechnung}
 Skript\\
@@ -227,17 +228,15 @@ Skript Seite 64 (Kaskaden- oder Kettenschaltung)\\
 Skript Seite 65 (Parallelschaltung)\\
 Parallelschaltung Achtung: Beim Zusammenschalten dürfen keine Zweige
 kurzgeschlossen oder stromlos werden\\
-Bild 5. Zusammenschaltregel von Brun\\
-\\
+\subsection{Zusammenschaltregel von Brun}
+$\underline{Z} = \underline{Z}^\prime + \underline{Z}^{\prime\prime}$\\
 \begin{figure}[!h]
 \centering
-%\subfloat[\math{\underline{Z} \neq \underline{Z}' + \underline{Z}''}]{
 \subfloat[Falsche Parallelschaltung]{
 	\input{tikzPictures/zweitore/RegelvBrunFalsch.tex}
 	\label{fig:zweitor:regelvbrun:falsch}
 }
 \qquad
-%\subfloat[$\underline{Z} = \underline{Z}' + \underline{Z}''$]{
 \subfloat[Richtige Parallelschaltung]{
 	\input{tikzPictures/zweitore/RegelvBrunRichtig.tex}
 	\label{fig:zweitor:regelvbrun:richtig}
