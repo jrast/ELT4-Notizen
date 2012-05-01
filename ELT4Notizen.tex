@@ -1,13 +1,13 @@
 \newcommand{\titleinfo}{ELT4 - Vorlesungsnotizen}
 \newcommand{\authorinfo}{J\"urg Rast, Gian Claudio K\"oppel}
 \newcommand{\versioninfo}{V0.1.1}
-
 \include{header}
+
+\usepackage{currfile}
 
 \usetikzlibrary{external} % Achtung, pdftex jetzt nur noch mit der option -enable-write18 aufrufen!
 \tikzexternalize[shell escape=-enable-write18] 
 \tikzsetexternalprefix{compiledFigures/} 
-
 
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}
