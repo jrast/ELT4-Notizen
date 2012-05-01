@@ -6,8 +6,9 @@
 \usepackage{currfile}
 
 \usetikzlibrary{external} % Achtung, pdftex jetzt nur noch mit der option -enable-write18 aufrufen!
-\tikzexternalize[shell escape=-enable-write18] 
-\tikzsetexternalprefix{compiledFigures/} 
+\tikzexternalize[shell escape=-enable-write18 ] 
+\tikzsetexternalprefix{compiledFigures/}
+\tikzsetfigurename{\currfilepath}
 
 % \usepackage{draftwatermark}
 % \SetWatermarkText{Draft}
