@@ -177,16 +177,16 @@ Beispiel Seite 55\\
 \textbf{Bsp} (Leerlauf-)Spannungsübersetzung vorwärts\\
 Vorwärts bedeutet speisung am Eingang\\
 \input{tikzPictures/zweitore/zweitorLeerlauf.tex}\\
+	$\underline{V}_{U21}=\left.\frac{\underline{U}_2}{\underline{U}_1}\right|_{\underline{I}_2=0}=?$\\
 \begin{align}
-	\underline{V}_{U21}&=\left.\frac{\underline{U}_2}{\underline{U}_1}\right|_{\underline{I}_2=0}=?\nonumber\\
 	\underline{U}_1&=\underline{A}_{11}\underline{U}_{2}+\underline{A}_{12}\left(-\underline{I}_2\right)\nonumber\\
 	\frac{\underline{U}_2}{\underline{U}_1}&=\left.\frac{1}{\underline{A}_{11}}\right|_{\underline{I}_2=0}=\frac{\underline{Z}_{21}}{\underline{Z}_{11}}=\frac{-\underline{H}_{21}}{det[H]}\nonumber
 \end{align}
 (Kurzschluss-)Übertragungsadmittanz vorwärts
 $\frac{\underline{I}_2}{\underline{U}_1}$\\
 \input{tikzPictures/zweitore/zweitorKurz.tex}\\
+	$\left.\frac{\underline{I}_2}{\underline{U}_1}\right|_{U_2=0}=?$\\
 \begin{align}
-	\left.\frac{\underline{I}_2}{\underline{U}_1}\right|_{U_2=0}=?\nonumber\\
 	\underline{I}_2=\underline{Y}_{21}\underline{U}_1\Rightarrow\frac{\underline{I}_2}{\underline{U}_1}=\underline{Y}_{21}\nonumber
 \end{align}
 Spannungsübersetzung rückwärts $\underline{V}_{U12}$\\
@@ -210,15 +210,15 @@ Ausgedrückt durch $\underline{Z}$-Parameter
 \subsubsection{Betriebs-Spannungsübersetzung}
 $\underline{V}_{Uba}=\frac{\underline{U}_{2}}{\underline{U}_{1}}$\\
 \input{tikzPictures/zweitore/BetriebsSpannungsUebersetzung.tex}\\
-rechts vom bild:
-$\underline{I}_{2}=\frac{-\underline{U}_{2}}{\underline{Z}_{b}}$\\
 \begin{align}
+	\underline{I}_{2}=\frac{-\underline{U}_{2}}{\underline{Z}_{b}}\nonumber\\
 	\underline{U}_{1}&=\underline{U}_{2}\left(\underline{A}_{11}+\frac{\underline{A}_{12}}{\underline{Z}_{b}}\right)\nonumber\\
 	\frac{\underline{U}_{2}}{\underline{U}_{1}}&=\frac{1}{\underline{A}_{11}+\frac{\underline{A}_{12}}{\underline{Z}_{b}}}=\frac{\underline{Z}_{b}}{\underline{A}_{11}\underline{Z}_{b}+\underline{A}_{12}}=\underline{V}_{Uba}\nonumber
 \end{align}
 \input{tikzPictures/zweitore/BetriebsSpannungsUebersetzung2.tex}\\
+
+$\frac{\underline{U}_{2}}{\underline{U}_{1}}=?$\\
 \begin{align}
- 	\frac{\underline{U}_{2}}{\underline{U}_{1}}&=?\nonumber\\
 	\underline{U}_{1}&=\underline{U}_{q}\frac{\underline{Z}_{1}}{\underline{Z}_{a}+\underline{Z}_{1}}\nonumber\\
 	\text{daraus: }
 	\frac{\underline{U}_{2}}{\underline{U}_{q}}&=\frac{\underline{U}_{2}}{\underline{U}_{1}}\frac{\underline{U}_{1}}{\underline{U}_{q}}\nonumber
@@ -249,6 +249,20 @@ $\Rightarrow$ Ausgangsgrössen sind unabhängig von der Betriebsrichtung, sofern
 $\underline{Z}_{Q}=\underline{Z}_{L} \left(=\underline{Z}_{0}\right)$\\
 Versuchsanordnung:\\
 Bild 7\\
+\begin{figure}[!h]
+\centering
+\subfloat[Reziprozität]{
+	\input{tikzPictures/zweitore/ReziLinks.tex}
+	\label{fig:zweitor:rezi:links}
+}
+\qquad
+\subfloat[Reziprozität]{
+	\input{tikzPictures/zweitore/ReziRechts.tex}
+	\label{fig:zweitor:rezi:rechts}
+}\\
+\caption{Reziprozität}
+\label{fig:zweitor:rezi}
+\end{figure}
 Für das erweiterte Zweitor gilt:\\
 \begin{align}
 	\begin{bmatrix}
@@ -283,6 +297,22 @@ Aus Tabelle 1 folgt:\\
 	\text{bzw }\boxed{\underline{Y}_{21}=\underline{Y}_{12}}\nonumber\\
 	\boxed{det[\underline{A}]=1}\nonumber
 \end{align}
-Beispiel Bild 8\\
+\textbf{Beispiel}
+% \input{tikzPictures/zweitore/ReziBspLinks.tex}
+% \input{tikzPictures/zweitore/ReziBspRechts.tex}
+\begin{figure}[!h]
+\centering
+\subfloat[]{
+	\input{tikzPictures/zweitore/ReziBspLinks.tex}
+	\label{fig:zweitor:rezibsp:links}
+}
+\qquad
+\subfloat[]{
+	\input{tikzPictures/zweitore/ReziBspRechts.tex}
+	\label{fig:zweitor:rezibsp:rechts}
+}\\
+\caption{Beispiel Reziprozität}
+\label{fig:zweitor:rezibsp}
+\end{figure}\\
 Skript Seite 57\\
 

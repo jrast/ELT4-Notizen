@@ -1,0 +1,8 @@
+\tikzexternaldisable
+\begin{circuitikz}[scale=2, european, american inductors]
+% \ctikzset{voltage/european label distance=3}
+\ctikzset{bipoles/length=1.2cm}
+\draw (0,0) to [R] (1,0) to (2,0) to [R] (2,-0.5) to [V=$\underline{U}_q$] (2,-1) to (0,-1) to (0,0);
+\draw (1,0) to [R] (1,-1);
+\end{circuitikz}
+\tikzexternalenable

@@ -1,0 +1,15 @@
+\tikzexternaldisable
+\begin{circuitikz}[scale=2, european, american inductors, american voltages]
+% \ctikzset{voltage/european label distance=3}
+\ctikzset{bipoles/length=1.2cm}
+  \draw (0,0) to [R=$10\Omega$, *-*] (1,0);
+  \draw (1,0) to (2,0) to [R=$30\Omega$, *-*] (2,-1) to (0,-1) to [V=$\underline{U}_q \ 10V$, *-*] (0,0);
+  \draw (1,0) to [R=$20\Omega$, *-*] (1,-1);
+%   \draw {
+%     [ anchor=south west]
+%     (0,0) node {$1$}
+%     [anchor=north west]
+%     (0,-1) node {$1^\prime$}
+%     (1.5,-1) node {$2^\prime$}};
+\end{circuitikz}
+\tikzexternalenable
