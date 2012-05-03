@@ -1,0 +1,14 @@
+\tikzexternaldisable
+\begin{circuitikz} [scale=2, european]
+	\ctikzset{bipoles/length=1.2cm}
+	\draw (0,0) to [R=$50\Omega$] (1,0) to [cspst=$0$] (1.9,0) to (5,0) to [R=$25\Omega$] (5,-1)
+	to (0,-1)
+	(0,0) to [V=$12V$] (0,-1);
+	\draw node at (2.5,-0.5) {$\underline{Z}_0 50\Omega$};
+	%Spannungspfeile
+	\draw [red] (2,0) to[open, v>=$\underline{U}_1$] (2,-1);
+	\draw [blue] (3.5,0) to[open, v>=$\underline{U}_2$] (3.5,-1);
+	\draw [green] (5,0) to[open, v>=$\underline{U}_3$] (5,-1);
+	%Strompfeile
+\end{circuitikz}
+%\tikzexternalenable

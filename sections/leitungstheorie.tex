@@ -2,7 +2,23 @@
 \index{Leitungstheorie}
 Ebook Strauss\\
 Zur Einführung:\\
-Bild 1\\
+\begin{figure}[!h]
+\centering
+\subfloat[Schema]{
+	\input{tikzPictures/leitungstheorie/LaufzeitBsp1.tex}
+	\label{fig:leitungstheorie:bsp1:schema}}\\
+\subfloat[Spannung U]{
+	\input{tikzPictures/leitungstheorie/LaufzeitBsp1U.tex}
+	\label{fig:leitungstheorie:bsp1:u}
+}
+\qquad
+\subfloat[Strom I]{
+	\input{tikzPictures/leitungstheorie/LaufzeitBsp1I.tex}
+	\label{fig:leitungstheorie:bsp1:i}
+}\\
+\caption{U und I im Beispiel, T ist Laufzeit für die Länge}
+\label{fig:leitungstheorie:bsp}
+\end{figure}
 \begin{align}
 	\Delta U &= -R^\prime\cdot\Delta Z \cdot i - L^\prime\Delta Z \cdot \dot
 	i\nonumber\\
