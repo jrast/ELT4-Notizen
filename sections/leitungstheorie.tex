@@ -26,5 +26,52 @@ Einsetzen, ergibt Telegrafengleichungen\\
 % 	\frac{\delta^2i}{\delta z^2} = R^\primeG^\prime i+\left(R^\prime
 % 	C^\prime+L^\prime G^\prime\right)\\
 % \end{align}
-Lösung der Wellengleichungen \ref{leitungstheorie:wellengleichung1} und
+Ansatz:
+\begin{align}
+	u(t,z) &= Re \{ \underline{\hat U}(z)\cdot e^{j\omega t} \} \nonumber\\
+	u(t,z) &= Re \{ \underline{\hat I}(z)\cdot e^{j\omega t} \} \nonumber
+\end{align}
+angewandt auf \ref{leitungstheorie:wellengleichung1} und
 \ref{leitungstheorie:wellengleichung2}\\
+\begin{align}
+	\frac{d\underline{U}}{dZ}=-R^\prime\cdot\underline{I}-j\omega
+	L^\prime\cdot\underline{I}=- \underbrace{\left(R^\prime+j\omega
+	L^\prime\right)}_{\underline{Z}^\prime=\text{Belag der
+	Längsimpedanz}}\cdot\underline{I}\label{leitungstheorie:angewandt1}\\
+	\frac{d\underline{I}}{dZ}=-G^\prime\cdot\underline{U}-j\omega
+	C^\prime\cdot\underline{U}=- \underbrace{\left(G^\prime+j\omega
+	C^\prime\right)}_{\underline{Y}^\prime=\text{Belag der
+	Queradmittanz}}\cdot\underline{U}\label{leitungstheorie:angewandt2}
+\end{align}
+\ref{leitungstheorie:angewandt1} ableiten, \ref{leitungstheorie:angewandt2}:
+\begin{align}
+	\frac{d^2\underline{U}}{dz^2}&=-\left(R^\prime+j\omega
+	L^\prime\right)\frac{d\underline{I}}{d\underline{Z}}\nonumber\\
+	\frac{d^2\underline{U}}{dz^2}&=\underbrace{\left(R^\prime+j\omega
+	L^\prime\right)}_{\underline{Z}^\prime}\underbrace{\left(G^\prime+j\omega
+	C^\prime\right)}_{\underline{Y}^\prime}\underline{U}=\underline{\gamma}^2\underline{U}\label{leitungstheorie:telegrafengleichung1}\\
+	\frac{d^2\underline{I}}{dz^2}&=\left(\ldots\right)\left(\ldots\right)\underline{I}=\underline{\gamma}^2\underline{I}\label{leitungstheorie:telegrafengleichung2}
+\end{align}
+\ref{leitungstheorie:telegrafengleichung1} und
+\ref{leitungstheorie:telegrafengleichung2} sind die Telegrafengleichungen im
+Frequenzbereich.\\
+\begin{align}
+	\frac{d^2\underline{U}(z)}{dz^2}-\underline{\gamma}^2\underline{U}(z)&=0\nonumber\\
+	\underline{U}(z)&=\underline{U}\cdot e^{pt}&&\text{Ansatz, }(p \neq
+	j\omega)\nonumber\\
+	p^2\cdot
+	\underline{U}e^{pt}-\underline{\gamma}\underline{U}e^{pt}&=0\nonumber\\
+	\underline{U}e^{pt}\left(p^2-\underline{\gamma}^2\right)&=0\nonumber\\
+	p^2-\underline{\gamma}^2&=0)&&\text{Charakteristische Gleichung}\nonumber\\
+	p&=\sqrt{\underline{\gamma}^2}\nonumber
+\end{align}
+\begin{tabular}{lll}
+$\gamma$ & Ausbreitungskonstante \\
+$\gamma$ & $= \alpha +j\beta$ \\
+$\alpha$ & Dampf.-Belag & $[\alpha]=Np/m$\\
+$1Np$ & $=$1 Neper & $\mathrel{\widehat{=}}$ Dämpfung um Faktor
+$e^1=2.718\mathrel{\widehat{=}}8.686dB$\\
+$\beta$ & Phasenbelag & $[\beta]=rad/m$\\
+\end{tabular}
+
+
