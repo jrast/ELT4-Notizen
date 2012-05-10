@@ -20,8 +20,8 @@ Zur Einführung:\\
 \label{fig:leitungstheorie:bsp}
 \end{figure}
 \begin{align}
-	\Delta U &= -R^\prime\cdot\Delta Z \cdot i - L^\prime\Delta Z \cdot \dot
-	i\nonumber\\
+	\Delta Z &= -R^\prime\cdot\Delta Z \cdot i - L^\prime\Delta Z
+	\cdot \dot i\nonumber\\
 	\frac{\Delta U}{\Delta Z} &= \left. -R^\prime\cdot i - L^\prime\dot i \right|
 	\Delta Z \rightarrow 0\nonumber\\
 	\boxed{\frac{\delta u}{\delta z}=-R^\prime i- L^\prime \frac{\delta i}{\delta
@@ -32,9 +32,19 @@ Korrektur Buch Seite 61, Formel 3.3, Untere Formel u durch i ersetzen\\
 	\Delta i &= -G^\prime \Delta Z \cdot U - C^\prime \Delta Z \cdot \dot
 	U\nonumber\\
 	\boxed{\frac{\delta i}{\delta Z}=-G^\prime U - C^\prime \frac{\delta u}{\delta
-	t}}\label{leitungstheorie:wellengleichung2}
+	t}}\label{leitungstheorie:wellengleichung2}\\
+	\gamma = \sqrt{\left(R^\prime+j\omega L\right)\left(G^\prime+j\omega
+	C\right)}\nonumber
 \end{align}
 Einsetzen, ergibt Telegrafengleichungen\\
+% \begin{align}
+% 	\underline{U}(z)=\underline{U}_{Vo}e^{-\underline{\gamma}
+% 	z}+\underline{U}_{ro}e^{\underline{\gamma}Z}\nonumber\\
+% 	\underline{I}(z)=\underline{I}_{Vo}e^{-\underline{\gamma}
+% 	z}+\underline{I}_{ro}e^{\underline{\gamma}Z}\nonumber\\
+% 	\underline{Z}_0=\sqrt{\frac{R^\prime+j\omega L^\prime}{G^\prime+j\omega
+% 	C^\prime}}=\sqrt{\frac{Z^\prime}{C^\prime}}\nonumber
+% \end{align}
 % \begin{align}
 % 	\frac{\delta^2u}{\delta z^2}=R^\prime G^\prime U+R^\prime C^\prime
 % 	\frac{\delta u}{\delta t} +L^\prime G^\prime\frac{\delta u}{\delta t}+L^\prime
@@ -90,4 +100,39 @@ $e^1=2.718\mathrel{\widehat{=}}8.686dB$\\
 $\beta$ & Phasenbelag & $[\beta]=rad/m$\\
 \end{tabular}
 
-
+\begin{align}
+	\underline{U}(z) &= \underline{U}_{V0}\cdot e^{-\underline{\gamma}
+	z}+\underline{U}_{r0}\cdot
+	e^{\underline{\gamma}z}=\underline{U}_v(z)+\underline{U}_r(z)\nonumber\\
+	%Links vom + gelb unterstrichen, rechts blau
+	&= \underline{U}_{vo}\cdot e^{-\alpha z}\cdot e^{-j\beta
+	z}+\underline{U}_{r0}\cdot e^{\alpha z}\cdot e^{j\beta z}\nonumber
+\end{align}
+Bild 1 Bild 2\\
+Eine Umdrehung des Zeigers entspricht einer Wellenlänge $\lambda$\\
+\begin{align}
+	\Rightarrow \beta z = \beta \lambda = 2 \pi\nonumber\\
+	\boxed{\beta=\frac{2\pi}{\lambda}}\nonumber
+\end{align}
+\textbf{Zurück in den Zeitbereich}
+\begin{align}
+	u(t,z)&=Re\{\hat{\underline{U}}(z)\cdot e^{j\omega t}\nonumber\\
+	%links gelb, rechts vom + blau
+	&=Re\{\hat{\underline{U}}_{v0}e^{-\underline{\gamma}z}e^{j\omega
+	t}\}+Re\{\hat{\underline{U}}_{r0}e^{\underline{\gamma}z}e^{j\omega
+	t}\}\nonumber\\
+	U_v(t,z)&=Re\{\underline{\hat{U}}_{v0}\cdot e^{j\varphi_v}\cdot e^{-\alpha
+	z}\cdot e^{-j\beta z}\cdot e^{j\omega t}\}\nonumber\\
+	%gelb boxed:
+	U_v&=\hat{U}_{v0}\cdot e^{-\alpha z}\cdot \cos\left(\omega t-\beta
+	z+\varphi_v\right)\nonumber
+\end{align}
+Bild 3\\
+Wie schnell kommt die Welle vorwärts?\\
+$\omega t-\beta Z=konst$ (d.h. konstanter Winkel in der cos-Funktion)\\
+$\omega\Delta T=\beta\Delta Z$\\
+%blau boxed:
+$v_p=\frac{\Delta Z}{\Delta t}=\frac{\omega}{\beta}$\\
+Skript Seite 64\\
+dazu: falls $v=konst. v=\frac{\omega}{\beta}\Rightarrow \omega=v\beta$\\
+Bild 4\\
