@@ -1,0 +1,17 @@
+\tikzexternaldisable
+\begin{tikzpicture}[thick]
+	\draw [->] (-3.2,0) -- (3.2,0);
+	\draw [->] (0,-3.2) -- (0,3.2);
+	\draw (0,0) circle (3);
+	%Beschriftungen
+	\node at (3,0) [anchor=north west] {$1$};
+	\node at (0,3) [anchor=south west] {$r=j$};
+	\node at (-3,0) [anchor=north east] {$-1$};
+	\node at (0,-3) [anchor=north west] {$r=-j$};
+	\node at (0,0) [anchor=north west] {$r=0$};
+	\node at (-2.5,1.5) [anchor=south east] {$|\underline{r}|=1$};
+	%Pfeil
+	\draw [->,green] (0,0) -- (1,0.5) node [green,anchor=west] at (1,0.5) {$\underline{r}=r\cdot e^{j\varphi}$};
+	\draw [green] (0.8,0) arc (0:20:1) node [anchor=north west] {$\varphi$};
+\end{tikzpicture}
+\tikzexternalenable

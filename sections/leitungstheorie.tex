@@ -157,10 +157,13 @@ Skript Seite 68 ff\\
 \end{align}
 343: $\underline{Z}=\underline{Z}_0\frac{1+r}{1-r}$\\
 
-Mitschrift 24.05.12\\
-Skript\\
 \subsection{Leitungen als Zweitor}
-Bild 1\\
+\begin{figure}[!h]
+	\centering
+	\input{tikzPictures/leitungstheorie/LeitungZweitor.tex}
+	\caption{Leitung als Zweitor dargestellt}
+	\label{fig:leitungstheorie:zweitor}
+\end{figure}\\
 Suche $[A]$-Matrix\\
 Leitungsgleichungen:\\
 \begin{align}
@@ -185,14 +188,32 @@ Leitungsgleichungen:\\
 \subsection{Smith Chart}
 Polardarstellung des kompl. Refl-Faktors $\underline{r}$ (mit
 Impedanzgitter-Netz)\\
-Bild 2\\
+\begin{figure}[!h]
+	\centering
+ 	\input{tikzPictures/leitungstheorie/asdffdsa.tex}
+	\caption{Polardarstellung des Smith Chart}
+	\label{fig:leitungstheorie:smith}
+\end{figure}\\
 $z$-Ebene wird abgebildet in $r$-Ebene\\
 $\underline{r}=\frac{\underline{Z}-R_0}{\underline{Z}+R_0}$\\
 allg: $\underline{w}=\frac{a\underline{Z}+b}{c\underline{Z}+d}$ gebrochen
 lineare Fkz (Abb)\\
 $\rightarrow$ konform (winkeltreu)\\
 $\rightarrow$ kreistreu ("`Kreise"'$\rightarrow$"'Kreise"')\\
-Bild 3\\
+\begin{figure}[!h]
+\centering
+\subfloat[Z-Ebene]{
+	\input{tikzPictures/leitungstheorie/SmithZRZ.tex}
+	\label{fig:leitungstheorie:smith:zrz}
+}
+\qquad
+\subfloat[R-Ebene]{
+	\input{tikzPictures/leitungstheorie/SmithZRR.tex}
+	\label{fig:leitungstheorie:smith:zrr}
+}\\
+\caption{Transformation zwischen Z- und R-Ebene}
+\label{fig:leitungstheorie:smith}
+\end{figure}\\
 Wertetabelle\\
 \begin{tabular}{|l|l|l|l|l|l|l|}
 	\hline
@@ -200,4 +221,7 @@ Wertetabelle\\
 	\hline
 	$\underline{r}$ & 0 & -1 & 1 & $-\frac{1}{2}$ & $\frac{1}{2}$ & $j$\\
 	\hline
-\end{tabular}
+\end{tabular}\\
+Mitschrift 31.5.\\
+Kompl. r-Ebene:\\
+Bild 1\\
