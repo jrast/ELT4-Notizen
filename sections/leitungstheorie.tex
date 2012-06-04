@@ -104,11 +104,25 @@ $\beta$ & Phasenbelag & $[\beta]=rad/m$\\
 	\underline{U}(z) &= \underline{U}_{V0}\cdot e^{-\underline{\gamma}
 	z}+\underline{U}_{r0}\cdot
 	e^{\underline{\gamma}z}=\underline{U}_v(z)+\underline{U}_r(z)\nonumber\\
-	%Links vom + gelb unterstrichen, rechts blau
+	%Links vom + grün unterstrichen, rechts blau
 	&= \underline{U}_{vo}\cdot e^{-\alpha z}\cdot e^{-j\beta
 	z}+\underline{U}_{r0}\cdot e^{\alpha z}\cdot e^{j\beta z}\nonumber
 \end{align}
 Bild 1 Bild 2\\
+\begin{figure}[!h]
+\centering
+\subfloat[Impedanz in Abhängigkeit von Z]{
+	\input{tikzPictures/leitungstheorie/ImpedanzAbhZ.tex}
+	\label{fig:leitungstheorie:impedanz:abhz}
+}
+\qquad
+\subfloat[Formlen zur Zeigerdarstellung]{
+	\input{tikzPictures/leitungstheorie/ImpedanzFormeln.tex}
+	\label{fig:leitungstheorie:impedanzen:formeln}
+}\\
+\caption{Zeigerdarstellung}
+\label{fig:leitungstheorie:impedanz}
+\end{figure}\\
 Eine Umdrehung des Zeigers entspricht einer Wellenlänge $\lambda$\\
 \begin{align}
 	\Rightarrow \beta z = \beta \lambda = 2 \pi\nonumber\\
@@ -163,7 +177,7 @@ Skript Seite 68 ff\\
 	\input{tikzPictures/leitungstheorie/LeitungZweitor.tex}
 	\caption{Leitung als Zweitor dargestellt}
 	\label{fig:leitungstheorie:zweitor}
-\end{figure}\\
+\end{figure}
 Suche $[A]$-Matrix\\
 Leitungsgleichungen:\\
 \begin{align}

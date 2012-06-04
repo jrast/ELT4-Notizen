@@ -1,0 +1,13 @@
+\tikzexternaldisable
+\begin{tikzpicture}[thick,scale=2]
+	%Achsen
+	\draw [->] (-1,0) -- (1,0) node[anchor=west] {Z};
+	\draw [->] (0,-0.2) -- (0,1) node[anchor=south] {Im};
+	%Grüne Pfeile
+	\draw [green, ->] (0,0) -- (0.2,0.8) node[anchor=south] {$\underline{U}_{U0}$};
+	\draw [green, dotted, ->] (0.1,0.7) arc (80:40:0.5);
+	%Blaue Pfeile
+	\draw [blue, ->] (0,0) -- (-0.4,0.3) node[anchor=south] {$\underline{U}_{r0}$};
+	\draw [blue, dotted, ->] (-0.2,0.3) arc (110:170:0.36) node[anchor=north] {$e^{\alpha 2}\cdot e^{\j\beta 2}$};
+\end{tikzpicture}
+\tikzexternalenable
