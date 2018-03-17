@@ -2,6 +2,12 @@ ELT4Notizen.pdf
 /tmp
 *.synctex
 *.synctex.gz
+*.auxlock
+*.aux
+*.lof
+*.lot
+*.log
+*.out
+*.toc
 ELT4Notizen.idx
 compiledFigures/*
-*.auxlock
